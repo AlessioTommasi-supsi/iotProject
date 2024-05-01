@@ -1,0 +1,37 @@
+
+Cannot Open the File: Mk:@MSITStore:C:\....
+----------------------------------------------------------
+Open a CMD window, type the following on the command line:
+
+regsvr32 %systemroot%\system32\hhctrl.ocx
+regsvr32 %systemroot%\system32\itss.dll
+
+=============================================
+
+
+Inserire name, company e seriale di 16 cifre
+
+BPX Hmemcpy
+F11
+F10 fino a modscan32
+
+ricercare il seriale inserito
+
+s 0 l ffffffffffffffff "xxxxxxxxxxxxxxxx"
+es. 0030:014F45C0
+
+BPM 0030:014F45C0
+
+Ctrl D o F5
+
+d ESP
+
+F10 fino alla costruzione del seriale corretto
+
+es. Name: pippo
+    Company: pluto
+    Serial: 3465M534633LK454
+    
+    Name: ModScan32
+    Company: ModScan32
+    Serial: 54553544J3ML6444

@@ -1,0 +1,3 @@
+    Name: ModScan32
+    Company: ModScan32
+    Serial: 54553544J3ML6444
