@@ -1,23 +1,29 @@
 #include <Arduino.h>
-#include "./LedEsp32.h"
+#include "LedEsp32.h"
 
 const int LedEsp32Pin = 13; // Pin del LedEsp32
 
 void setup()
 {
   // Inizializzazione del LedEsp32
-  LedEsp32 led(LedEsp32Pin);
+  LedEsp32 LedEsp32(LedEsp32Pin);
 
   // Accensione del LedEsp32
-  led.turnOn();
+  /*
+  LedEsp32.turnOn();
   delay(500);
-  led.turnOff();
+  LedEsp32.turnOff();
   delay(500);
-  led.turnOn();
+  LedEsp32.turnOn();
   delay(500);
-  led.turnOff();
+  LedEsp32.turnOff();
   delay(500);
-  led.turnOn();
+  LedEsp32.turnOn();
+  */
+
+  LedEsp32.blink(2);
+  delay(5000);
+  LedEsp32.stopBlink();
 }
 
 void loop()

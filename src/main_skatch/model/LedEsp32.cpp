@@ -1,6 +1,6 @@
 #include "./model/LedEsp32.h"
 
-void LedEsp32::blinkTaskFunction(void *parameter)
+static void LedEsp32::blinkTaskFunction(void *parameter)
 {
     LedEsp32 *LedEsp32 = static_cast<LedEsp32 *>(parameter);
     for (;;)

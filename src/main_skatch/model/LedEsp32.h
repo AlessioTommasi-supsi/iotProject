@@ -10,8 +10,6 @@ private:
     TaskHandle_t blinkTask;
     int blinkSpeed = 500; // in millisecondi
 
-    static void blinkTaskFunction(void *parameter);
-
 public:
     LedEsp32(int pin);
     void turnOn();
@@ -21,6 +19,9 @@ public:
     void stopBlink();
     virtual void actionOK();
     virtual void actionError();
+
+    // Static member function for the task
+    static void blinkTaskFunction(void *parameter);
 };
 
 #endif
