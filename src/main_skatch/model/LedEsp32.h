@@ -17,8 +17,8 @@ public:
     void blink();
     void blink(float speed);
     void stopBlink();
-    virtual void actionOK();
-    virtual void actionError();
+    void actionOK();
+    void actionError();
 
     // Static member function for the task
     static void blinkTaskFunction(void *parameter);

@@ -1,14 +1,14 @@
-#include "./model/LedEsp32.h"
+#include "LedEsp32.h"
 
-static void LedEsp32::blinkTaskFunction(void *parameter)
+void LedEsp32::blinkTaskFunction(void *parameter)
 {
-    LedEsp32 *LedEsp32 = static_cast<LedEsp32 *>(parameter);
+    LedEsp32 *led = static_cast<LedEsp32 *>(parameter);
     for (;;)
     {
-        LedEsp32->turnOn();
-        vTaskDelay(pdMS_TO_TICKS(LedEsp32->blinkSpeed));
-        LedEsp32->turnOff();
-        vTaskDelay(pdMS_TO_TICKS(LedEsp32->blinkSpeed));
+        led->turnOn();
+        vTaskDelay(pdMS_TO_TICKS(led->blinkSpeed));
+        led->turnOff();
+        vTaskDelay(pdMS_TO_TICKS(led->blinkSpeed));
     }
 }
 

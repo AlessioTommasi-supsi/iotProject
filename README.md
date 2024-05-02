@@ -21,5 +21,8 @@ si consiglia di usare windows poiche estensione modbus a pagamento su MacOs!
 SETUP ARDUINO IDE:
 https://www.youtube.com/watch?v=UuuqnmJIjR0
 
+-> per poter compilare i file nelle sottocartelle devi aggiungerle cone librerie (quindi .zip) all arduino 
+    ho creato appositamente cartella library da mettere / sostituire i file zip;
+    poi vai su arduino:  Sketch -> include Library e seleziona il file zip -> magari in futuro faccio uno script che automaticamente fa update delle librerie!
 
 NOTA: NON FUNZIONA SEPARAZIONE .H DA .CPP IN QUESTO CASO FAI UN UNICO FILE! PER EVITARE PROBLEMI DI DIPENDENZA CIRCOLARE IMPORTA EMPRE FIGLIO PIU IN BASSO DELLA GERARCHIA!
