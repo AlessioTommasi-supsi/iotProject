@@ -25,4 +25,8 @@ https://www.youtube.com/watch?v=UuuqnmJIjR0
     ho creato appositamente cartella library da mettere / sostituire i file zip;
     poi vai su arduino:  Sketch -> include Library e seleziona il file zip -> magari in futuro faccio uno script che automaticamente fa update delle librerie!
 
-NOTA: NON FUNZIONA SEPARAZIONE .H DA .CPP IN QUESTO CASO FAI UN UNICO FILE! PER EVITARE PROBLEMI DI DIPENDENZA CIRCOLARE IMPORTA EMPRE FIGLIO PIU IN BASSO DELLA GERARCHIA!
+NOTA: NON FUNZIONA SEPARAZIONE .H DA .CPP IN QUESTO CASO FAI UN UNICO FILE! PER EVITARE PROBLEMI DI DIPENDENZA CIRCOLARE IMPORTA EMPRE FIGLIO PIU IN BASSO DELLA GERARCHIA!rfaccia c
+
+
+try to follow to setup webserver: 
+https://randomnerdtutorials.com/esp32-web-server-arduino-ide/

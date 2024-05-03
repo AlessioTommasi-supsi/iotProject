@@ -18,6 +18,12 @@ LedEsp32::LedEsp32(int pin)
     pinMode(pin, OUTPUT);
 }
 
+LedEsp32::~LedEsp32()
+{
+    stopBlink();
+    turnOff();
+}
+
 void LedEsp32::turnOn()
 {
     digitalWrite(pin, HIGH);
@@ -48,6 +54,11 @@ void LedEsp32::actionOK()
 {
     stopBlink();
     turnOn();
+}
+
+void LedEsp32::action()
+{
+    actionOK();
 }
 
 void LedEsp32::actionError()
