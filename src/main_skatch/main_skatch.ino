@@ -22,7 +22,8 @@ void setup()
   led = new LedEsp32(13);
   webServer.begin();
 
-  led->blink(2);
+  led->blink(1);
+  delay(50000);
 
   destroy();
 }
