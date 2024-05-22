@@ -1,5 +1,7 @@
 #include "MasterModbus.h"
 
+// link prof: se non funziona questo: https://embeddedthere.com/how-to-interface-esp32-with-rs485-modbus-sensors-with-example-code/#Modbus_Library_Functions
+
 MasterModbus::MasterModbus() {}
 
 void MasterModbus::begin(HardwareSerial &serial)

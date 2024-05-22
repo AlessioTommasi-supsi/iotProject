@@ -11,7 +11,7 @@ private:
 
 public:
     MasterModbus();
-    static bool cbWrite(Modbus::ResultCode event, uint16_t transactionId, void* data);
+    static bool cbWrite(Modbus::ResultCode   event, uint16_t transactionId, void* data);
     void begin(HardwareSerial &serial);
     void readCoils(uint8_t slaveId, uint16_t startAddress, bool *coils, uint16_t quantity);
     void task();
