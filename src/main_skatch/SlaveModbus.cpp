@@ -1,10 +1,13 @@
 #include "SlaveModbus.h"
-
+//ModbusRTUSlave
+//  -> BEGIN DELLA SERIAL
+//      POOL
+// CAMBIA PORTE  SLAVE!!
 
 SlaveModbus::SlaveModbus()
 {
     REGN = 100;
-    Serial.begin(9600, SERIAL_8N1);
+    Serial.begin(9600, SERIAL_8N1);//qui problema devo definire pin della porta seriale!
     mb.slave(1);
     mb.begin(&Serial);
     mb.addHreg(REGN);
