@@ -41,6 +41,11 @@ std::vector<float> SystemState::getAllRegisterValue(int addres)
     return values;
 }
 
+std::vector<float> SystemState::getAllRegisterValue()
+{
+    return value;
+}
+
 std::vector<int> SystemState::getAllRegisterAddress()
 {
     return address;

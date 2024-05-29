@@ -1,4 +1,5 @@
 #include "WebServer.h"
+#include "Routes.h"
 
 WebServer::WebServer(const char *ssid, const char *password) : ssid(ssid), password(password) {}
 
@@ -39,7 +40,8 @@ void WebServer::begin()
 
     server.onNotFound([this](AsyncWebServerRequest *request)
                       { this->notFound(request); });
-
+                      
+    Routes::defineRoutes(server);
     server.begin();
     Serial.println("Server started");
 }

@@ -24,6 +24,8 @@ private:
 public:
     WebServer(const char *ssid, const char *password);
     void begin();
+
+    
 };
 
 #endif

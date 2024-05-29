@@ -44,6 +44,8 @@ public:
 
     std::vector<float> getAllRegisterValue(int address);
 
+    std::vector<float> getAllRegisterValue();
+
     std::vector<int> getAllRegisterAddress();
 
     void clearRegisters();

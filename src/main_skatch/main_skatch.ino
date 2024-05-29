@@ -33,15 +33,16 @@ void setup()
 
   //systemState->setState(State::INIT);
 
-  while (true)
+  for (int i = 0; i < 10; i++)
   {
     masterModbus->task();
     systemState->pushRegister(122, masterModbus->readHoldingFloatRegisters(122));
-    delay(5000);
+    systemState->pushRegister(500, masterModbus->readHoldingIntRegisters(500));
+    delay(50);
   }
   
   
-  delay(50000);
+  delay(500000);
 
   destroy();
 }
@@ -50,9 +51,10 @@ void destroy()
 {
   //delete slaveModbus;
   delete masterModbus;
+  delete systemState;
 }
 
 void loop()
 {
-  delay(500);
+  delay(5000);
 }
