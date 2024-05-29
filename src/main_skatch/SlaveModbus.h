@@ -2,7 +2,7 @@
 #define SLAVEMODBUS_H
 
 #include <Arduino.h>
-
+/*
 #include <ModbusRTU.h>
 
 class SlaveModbus
@@ -21,5 +21,5 @@ public:
     void task();
     void loopTask();
 };
-
+*/
 #endif
