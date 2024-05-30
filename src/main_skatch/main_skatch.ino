@@ -162,15 +162,6 @@ void setup() {
   delay(1000); // Wait a second to ensure serial connection is initialized
   logEvent("ESP32 started and ready!");
 
-  // Initialize watchdog timer to reset system if task watchdog is not reset within 30 seconds
-  esp_task_wdt_config_t wdtConfig = {
-    .timeout_ms = 30000, // 30 seconds timeout
-    .idle_core_mask = 0, // Reset on both cores
-    .trigger_panic = true
-  };
-  esp_task_wdt_init(&wdtConfig);
-  esp_task_wdt_add(NULL); // Add current task to watchdog
-
   if (!LittleFS.begin()) {
     logEvent("An error has occurred while mounting LittleFS, attempting to format...");
     formatLittleFS();
