@@ -1,4 +1,3 @@
-/*
 #include "SlaveModbus.h"
 //ModbusRTUSlave
 //  -> BEGIN DELLA SERIAL
@@ -51,4 +50,3 @@ void SlaveModbus::loopTask()
     }
     
 }
-*/
