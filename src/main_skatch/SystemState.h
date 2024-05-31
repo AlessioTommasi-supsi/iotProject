@@ -29,6 +29,7 @@ private:
 public:
     static MasterModbus *masterModbus;
 
+    static bool isStopped;
 
     static SystemState *getInstance();
 

@@ -42,8 +42,12 @@ void setup()
     delay(50);
   }
   */
+  while (SystemState::isStopped == false && systemState->getState() != State::ERROR)
+  {
+    delay(1000);//controllo ogni secondo se devo fermarmi
+  }
   
-  delay(500000);
+  
 
   destroy();
 }
@@ -57,5 +61,5 @@ void destroy()
 
 void loop()
 {
-  delay(5000);
+  //delay(5000);
 }

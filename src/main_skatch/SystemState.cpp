@@ -4,6 +4,7 @@
 
 SystemState *SystemState::instance = nullptr;
 MasterModbus *SystemState::masterModbus = nullptr;
+bool SystemState::isStopped = false;
 
 char * SystemState::error_message = "";
 
