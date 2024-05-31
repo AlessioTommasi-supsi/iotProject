@@ -3,14 +3,30 @@
 
 
 SystemState *SystemState::instance = nullptr;
+MasterModbus *SystemState::masterModbus = nullptr;
+
 char * SystemState::error_message = "";
 
+
+SystemState::~SystemState()
+{
+    defaultClear();
+}
+
+void SystemState::defaultClear()
+{
+    delete instance;
+    delete masterModbus;
+    instance = nullptr;
+    masterModbus = nullptr;
+}
 
 SystemState *SystemState::getInstance()
 {
     if (instance == nullptr)
     {
         instance = new SystemState();
+        masterModbus = new MasterModbus();
         error_message = "";
     }
     return instance;

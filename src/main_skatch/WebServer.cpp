@@ -15,32 +15,10 @@ void WebServer::begin()
     Serial.print("IP Address: ");
     Serial.println(WiFi.localIP());
 
-    server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
-              { request->send(200, "text/plain", "Hello, world"); });
-
-    server.on("/get", HTTP_GET, [this](AsyncWebServerRequest *request)
-              {
-        String message;
-        if (request->hasParam(PARAM_MESSAGE)) {
-            message = request->getParam(PARAM_MESSAGE)->value();
-        } else {
-            message = "No message sent";
-        }
-        request->send(200, "text/plain", "Hello, GET: " + message); });
-
-    server.on("/post", HTTP_POST, [this](AsyncWebServerRequest *request)
-              {
-        String message;
-        if (request->hasParam(PARAM_MESSAGE, true)) {
-            message = request->getParam(PARAM_MESSAGE, true)->value();
-        } else {
-            message = "No message sent";
-        }
-        request->send(200, "text/plain", "Hello, POST: " + message); });
-
     server.onNotFound([this](AsyncWebServerRequest *request)
                       { this->notFound(request); });
-                      
+
+
     Routes::defineRoutes(server);
     server.begin();
     Serial.println("Server started");

@@ -16,6 +16,9 @@ private:
 public:
     static String html ;
     static String generateHTML();
+    static String generateEmptyFormRegister();
+    static String generateHTML(String registerAddress, float registerValue);
+    static String generateHTMLConfirm(String registerAddress, float registerValue);
 };
 
 

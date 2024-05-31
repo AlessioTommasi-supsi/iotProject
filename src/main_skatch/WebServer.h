@@ -10,6 +10,8 @@
 #include <ESPAsyncTCP.h>
 #endif
 #include <ESPAsyncWebSrv.h>
+#include <SPIFFS.h>
+
 
 class WebServer
 {
@@ -24,8 +26,6 @@ private:
 public:
     WebServer(const char *ssid, const char *password);
     void begin();
-
-    
 };
 
 #endif

@@ -33,6 +33,7 @@ void setup()
 
   //systemState->setState(State::INIT);
 
+  /*
   for (int i = 0; i < 10; i++)
   {
     masterModbus->task();
@@ -40,7 +41,7 @@ void setup()
     systemState->pushRegister(500, masterModbus->readHoldingIntRegisters(500));
     delay(50);
   }
-  
+  */
   
   delay(500000);
 

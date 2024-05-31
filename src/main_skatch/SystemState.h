@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <Arduino.h>
+#include "MasterModbus.h"
 
 enum class State
 {
@@ -26,7 +27,12 @@ private:
     SystemState() {}
 
 public:
+    static MasterModbus *masterModbus;
+
+
     static SystemState *getInstance();
+
+    ~SystemState();
 
     void update();
 
@@ -49,6 +55,8 @@ public:
     std::vector<int> getAllRegisterAddress();
 
     void clearRegisters();
+
+    void defaultClear();
 
 };
 

@@ -4,6 +4,8 @@
 #include <ESPAsyncWebSrv.h>
 #include <Arduino.h>
 #include "viewCurrentRegister.h"
+#include "viewHistory.h"
+
 
 class Routes
 {
