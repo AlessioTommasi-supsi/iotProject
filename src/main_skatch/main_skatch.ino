@@ -17,7 +17,7 @@ MasterModbus *masterModbus;
 
 void setup()
 {
-  Serial.begin(1100);
+  Serial.begin(9600);
   while (!Serial)
   {
     ; // Attendi finché la porta seriale non è pronta a

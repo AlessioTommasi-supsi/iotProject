@@ -16,6 +16,7 @@ class viewGeneric
         static String defaultCssHeader(String title);
         static String defaultFooter();
         static String addCss();
+        static String addNavbar();
 
 };
 
