@@ -85,6 +85,10 @@ String viewGeneric::addCss()
     css += ".history-table tr:nth-child(odd) {";
     css += "background-color: #fff;";
     css += "}";
+    css += "canvas {";
+    css += "max-width: 100%;";
+    css += "height: auto;";
+    css += "}";
     return css;
 }
 

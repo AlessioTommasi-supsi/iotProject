@@ -5,6 +5,7 @@
 #include <Arduino.h>
 #include "viewCurrentRegister.h"
 #include "viewHistory.h"
+#include "viewGraph.h"
 
 
 class Routes

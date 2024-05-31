@@ -92,4 +92,28 @@ void Routes::defineRoutes(AsyncWebServer &server)
                 request->send(200, "text/html", htmlContentPtr); 
     });
 
+    // update del grafico!
+    server.on("/getRegisterValues", HTTP_GET, [](AsyncWebServerRequest *request){
+        if (request->hasParam("address")) {
+            String address = request->getParam("address")->value();
+            std::vector<float> values = SystemState::getInstance()->getAllRegisterValue(address.toInt());
+
+            String json = "[";
+            for (size_t i = 0; i < values.size(); ++i) {
+                if (i > 0) json += ",";
+                json += String(values[i]);
+            }
+            json += "]";
+
+            request->send(200, "application/json", json);
+        } else {
+            request->send(400, "application/json", "{\"error\":\"Address parameter missing\"}");
+        } 
+    });
+
+    server.on("/graph", HTTP_GET, [](AsyncWebServerRequest *request){
+                String htmlContent = viewGraph::generateHTML();
+                const char *htmlContentPtr = htmlContent.c_str();
+                request->send(200, "text/html", htmlContentPtr); 
+    });
 }
