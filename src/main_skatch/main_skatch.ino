@@ -27,18 +27,37 @@ void setup()
     ; // Attendi finché la porta seriale non è pronta a
   }
 
-  systemState = SystemState::getInstance();
-  //slaveModbus = new SlaveModbus();
-  masterModbus = new MasterModbus();
-
-  Serial.println("La porta seriale è pronta! Hello, world!");
+ 
 
   /*
   my_webServer = new WebServer(ssid, password);
   my_webServer->begin();
   */
+  try
+  {
+    systemState = SystemState::getInstance();
+    // slaveModbus = new SlaveModbus();
+    masterModbus = new MasterModbus();
 
-  WiFiManager *wifiManager = new WiFiManager(ssid, password);
+    Serial.println("La porta seriale è pronta! Hello, world!");
+
+    WiFiManager *wifiManager = new WiFiManager(ssid, password);
+
+    std::vector<std::string> networks = wifiManager->scanNetworks();
+
+    for (std::string network : networks)
+    {
+      Serial.println(network.c_str());
+    }
+    
+  }
+  catch(const std::exception& e)
+  {
+    Serial.println("Errore durante la connessione alla rete Wi-Fi! o master modbus!");
+  }
+  
+
+  
 
   while (SystemState::isStopped == false && systemState->getState() != State::ERROR)
   {

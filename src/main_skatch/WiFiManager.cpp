@@ -22,7 +22,7 @@ void WiFiManager::connect()
 {
     if (my_webServer != nullptr)
     {
-        delete my_webServer;
+        //delete my_webServer;
         my_webServer = nullptr;
     }
     try

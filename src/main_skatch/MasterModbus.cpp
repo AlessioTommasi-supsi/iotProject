@@ -45,11 +45,6 @@ void MasterModbus::processError()
 
 void MasterModbus::begin()
 {
-    Serial.begin(9600);
-    Serial.setTimeout(100);
-    while (!Serial)
-    {
-    }
 
     modbus.begin(9600, SERIAL_8N1, rxPin, txPin, false);
     modbus.setTimeout(100);
