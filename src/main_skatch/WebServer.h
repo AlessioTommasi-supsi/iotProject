@@ -12,6 +12,8 @@
 #include <ESPAsyncWebSrv.h>
 #include <SPIFFS.h>
 
+#include "Routes.h"
+
 
 class WebServer
 {

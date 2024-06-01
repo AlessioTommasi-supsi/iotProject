@@ -4,13 +4,20 @@
 #include <vector>
 #include <Arduino.h>
 #include "MasterModbus.h"
+//#include "WiFiManager.h"
+#include "WebServer.h"
+#include <string>
+
+
+class WiFiManager;
 
 enum class State
 {
     INIT,
     MASTER,
     SLAVE,
-    ERROR
+    ERROR,
+    WIFI_CHANGE
 };
 
 class SystemState
@@ -28,6 +35,8 @@ private:
 
 public:
     static MasterModbus *masterModbus;
+
+    static WiFiManager *wifiManager;
 
     static bool isStopped;
 
@@ -59,6 +68,9 @@ public:
 
     void defaultClear();
 
+    void setWifiManager(WiFiManager *wifiController);
+
+    void switchNetwork(const char *ssid, const char *password);
 };
 
 #endif // SYSTEMSTATE_H

@@ -1,10 +1,12 @@
 
 #include "SystemState.h"
-
+#include "WiFiManager.h"
 
 SystemState *SystemState::instance = nullptr;
 MasterModbus *SystemState::masterModbus = nullptr;
 bool SystemState::isStopped = false;
+WiFiManager *SystemState::wifiManager = nullptr;
+
 
 char * SystemState::error_message = "";
 
@@ -29,6 +31,7 @@ SystemState *SystemState::getInstance()
         instance = new SystemState();
         masterModbus = new MasterModbus();
         error_message = "";
+        
     }
     return instance;
 }
@@ -115,6 +118,19 @@ void SystemState::setError(char* message)
 char * SystemState::getError()
 {
     return error_message;
+}
+
+
+void SystemState::setWifiManager(WiFiManager *wifiController)
+{
+    wifiManager = wifiController;
+}
+
+
+void SystemState::switchNetwork(const char *ssid, const char *password)
+{
+    setState(State::WIFI_CHANGE);
+    wifiManager->setNetwork(ssid, password);
 }
 
 

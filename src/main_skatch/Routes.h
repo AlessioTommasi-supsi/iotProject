@@ -6,6 +6,9 @@
 #include "viewCurrentRegister.h"
 #include "viewHistory.h"
 #include "viewGraph.h"
+//#include "WiFiManager.h"
+#include "SystemState.h"
+
 
 
 class Routes
