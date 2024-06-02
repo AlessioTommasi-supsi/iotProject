@@ -43,14 +43,6 @@ void setup()
 
     systemState->setWifiManager(wifiManager);
 
-    /*
-    std::vector<std::string> networks = wifiManager->scanNetworks();
-
-    for (std::string network : networks)
-    {
-      //Serial.println(network.c_str());
-    }
-    */
     
   }
   catch(const std::exception& e)
