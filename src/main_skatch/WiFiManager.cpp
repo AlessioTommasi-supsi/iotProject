@@ -6,10 +6,56 @@ WebServer *my_webServer = nullptr;
 
 WiFiManager::WiFiManager()
 {
-    this->ssid = "HomeInternet";
-    this->password = "occhioallapennachecade";
-    this->connect();
+    /*qui creo Esp32 funziona come AP!*/
+    this->ssid = "ESP32-Access-Point";
+    this->password = "123456789";
+    this->setupAP();
 }
+
+void WiFiManager::setupAP()
+{
+    clear_var();
+    try
+    {
+       
+        WiFi.mode(WIFI_AP);
+        delay(100);
+        WiFi.softAP(ssid, password);
+        IPAddress IP = WiFi.softAPIP();
+        Serial.print("ESP32 AP IP address: ");
+        Serial.println(IP);
+
+        my_webServer = new WebServer(ssid, password);
+        my_webServer->begin();
+    }
+    catch(const std::exception& e)
+    {
+        Serial.println("Errore durante la creazione dell'access point!");
+    }
+    
+}
+
+void WiFiManager::clear_var()
+{
+    if (my_webServer != nullptr)
+    {
+        try
+        {
+            if (!isFirstStart)
+            {
+                delete my_webServer; // da errore di double free soprattutto all avvio non riesco a catturarlo con eccezzione.
+            }
+                       
+        }
+        catch (const std::exception &e)
+        {
+            Serial.println("Errore durante la distruzione del web server!");
+        }
+        my_webServer = nullptr;
+    }
+    WiFi.disconnect(); // Disconnetti eventuali connessioni pregresse
+}
+
 
 WiFiManager::WiFiManager(const char *ssid, const char *password)
 {
@@ -20,16 +66,12 @@ WiFiManager::WiFiManager(const char *ssid, const char *password)
 
 void WiFiManager::connect()
 {
-    if (my_webServer != nullptr)
-    {
-        //delete my_webServer;
-        my_webServer = nullptr;
-    }
+   clear_var();
+
     try
     {
         WiFi.mode(WIFI_STA);
-        WiFi.disconnect(); // Disconnetti eventuali connessioni pregresse
-
+        
         delay(100);
 
         Serial.println("Connessione alla rete Wi-Fi...");
@@ -52,7 +94,7 @@ void WiFiManager::connect()
     catch(const std::exception& e)
     {
         Serial.println("Errore durante la connessione alla rete Wi-Fi!");
-        throw new std::runtime_error("Errore durante la connessione alla rete Wi-Fi!");
+        //throw new std::runtime_error("Errore durante la connessione alla rete Wi-Fi!");
     }
     
     
@@ -82,12 +124,12 @@ void WiFiManager::setNetwork(const char *ssid_new, const char *password_new)
     try
     {
         this->connect();
+        isFirstStart = false;
     }
     catch(const std::exception& e) //se qualcosa e andato storto ripristino i vecchi valori
     {
-        this->setNetwork(old_ssid, old_password);
         Serial.println("Errore durante la connessione alla Nuova rete Wi-Fi!");
-        throw new std::runtime_error("Errore durante la connessione alla rete Wi-Fi!");
+        this->setNetwork(old_ssid, old_password);
     }
     
 }

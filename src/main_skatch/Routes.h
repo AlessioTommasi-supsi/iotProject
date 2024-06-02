@@ -3,9 +3,14 @@
 
 #include <ESPAsyncWebSrv.h>
 #include <Arduino.h>
+#include <vector>
+#include <string>
+
 #include "viewCurrentRegister.h"
 #include "viewHistory.h"
 #include "viewGraph.h"
+#include "viewConfig.h"
+
 //#include "WiFiManager.h"
 #include "SystemState.h"
 

@@ -38,17 +38,19 @@ void setup()
     systemState = SystemState::getInstance();
     // slaveModbus = new SlaveModbus();
     masterModbus = new MasterModbus();
+    //WiFiManager *wifiManager = new WiFiManager(ssid, password);
+    WiFiManager *wifiManager = new WiFiManager();
+    
+    systemState->setWifiManager(wifiManager);
 
-    Serial.println("La porta seriale è pronta! Hello, world!");
-
-    WiFiManager *wifiManager = new WiFiManager(ssid, password);
-
+    /*
     std::vector<std::string> networks = wifiManager->scanNetworks();
 
     for (std::string network : networks)
     {
-      Serial.println(network.c_str());
+      //Serial.println(network.c_str());
     }
+    */
     
   }
   catch(const std::exception& e)

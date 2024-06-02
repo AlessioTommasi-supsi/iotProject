@@ -4,7 +4,7 @@
 #include <vector>
 #include <Arduino.h>
 #include "MasterModbus.h"
-//#include "WiFiManager.h"
+#include "WiFiManager.h"
 #include "WebServer.h"
 #include <string>
 

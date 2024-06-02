@@ -121,12 +121,14 @@ void Routes::defineRoutes(AsyncWebServer &server)
                 //String htmlContent = viewGraph::generateHTMLData();
                 //const char *htmlContentPtr = htmlContent.c_str();
                 //qui devo modificare stato di systemState
-                request->send(200, "text/html", "Config page"); 
+                String htmlContent = viewConfig::generateHTML(SystemState::getInstance()->wifiManager->scanNetworks());
+                const char *htmlContentPtr = htmlContent.c_str();
+                request->send(200, "text/html", htmlContentPtr);
     });
 
-    server.on("switch_wifi", HTTP_GET, [](AsyncWebServerRequest *request){
-                String ssid_new = request->getParam("ssid_new")->value();
-                String password_new = request->getParam("password_new")->value();
+    server.on("/switch_wifi", HTTP_GET, [](AsyncWebServerRequest *request){
+                String ssid_new = request->getParam("ssid")->value();
+                String password_new = request->getParam("password")->value();
                 try
                 {
                     SystemState::getInstance()->switchNetwork(ssid_new.c_str(), password_new.c_str());

@@ -20,6 +20,7 @@ class WiFiManager
 public:
     const char *ssid;
     const char *password;
+    bool isFirstStart = true;
 
     WebServer *my_webServer;
 
@@ -27,6 +28,8 @@ public:
     WiFiManager();
     ~WiFiManager(); // Distruttore
     void connect();
+    void setupAP();
+    void clear_var();
     
     void setNetwork(const char *ssid, const char *password);
 
