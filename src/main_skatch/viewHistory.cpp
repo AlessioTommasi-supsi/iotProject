@@ -7,29 +7,37 @@ String viewHistory::generateHTML()
     html = viewGeneric::defaultCssHeader("History Register");
 
     html += "<h1>History Register</h1>";
-    html += "<div class='scrollable-container' style='overflow-y: auto; max-height: 80vh;'>"; // Aggiunto stile inline per la scrollbar
+    html += "<div class='scrollable-container' style='overflow-y: auto; max-height: 80vh;'>"; // Add inline style for scrollbar
     html += "<table class='history-table'>";
     html += "<tr>";
     html += "<th>Address</th>";
     html += "<th>Value</th>";
+    html += "<th>Actions</th>"; // Add Actions column header
     html += "</tr>";
 
     std::vector<float> valuesVector = SystemState::getInstance()->getAllRegisterValue();
-    int prec_register = -1;
+    std::vector<int> addresses = SystemState::getInstance()->getAllRegisterAddress();
 
-    for (int i = 0; i < SystemState::getInstance()->getAllRegisterAddress().size(); i++)
+    // Loop through each value in the vector
+    for (size_t i = 0; i < valuesVector.size(); i++)
     {
         html += "<tr>";
+        html += "<td>" + String(addresses[i]) + "</td>"; // Display the address
+
+        // Display the value with an input field for editing inside a form
         html += "<td>";
-        if (prec_register != SystemState::getInstance()->getAllRegisterAddress()[i])
-        {
-            html += String(SystemState::getInstance()->getAllRegisterAddress()[i]);
-            prec_register = SystemState::getInstance()->getAllRegisterAddress()[i];
-        }
+        html += "<form action='/editRegister' method='GET'>";
+        html += "<input type='hidden' name='index' value='" + String(i) + "'>";
+        html += "<input type='text' class='edit-input' name='value' value='" + String(valuesVector[i]) + "'>";
+        html += "<input type='submit' value='Edit' class='action-link edit-link'>";
+        html += "</form>";
         html += "</td>";
+
+        // Add delete button with link
         html += "<td>";
-        html += String(valuesVector[i]);
+        html += "<a href='/deleteRegister?index=" + String(i) + "' class='action-link delete-link'>Delete</a>"; // Delete link
         html += "</td>";
+
         html += "</tr>";
     }
 

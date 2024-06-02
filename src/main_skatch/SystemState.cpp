@@ -134,3 +134,13 @@ void SystemState::switchNetwork(const char *ssid, const char *password)
 }
 
 
+void SystemState::deleteValue(int index)
+{
+    address.erase(address.begin() + index);
+    value.erase(value.begin() + index);
+}
+
+void SystemState::editValue(int index, float value)
+{
+    this->value[index] = value;
+}

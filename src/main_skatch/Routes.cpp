@@ -47,6 +47,23 @@ void Routes::defineRoutes(AsyncWebServer &server)
                 request->send(200, "text/html", htmlContentPtr); 
     });
 
+    server.on("/deleteRegister", HTTP_GET, [](AsyncWebServerRequest *request){
+                String registerAddress = request->getParam("index")->value();
+                SystemState::getInstance()->deleteValue(registerAddress.toInt());
+                String htmlContent = viewHistory::generateHTML();
+                const char *htmlContentPtr = htmlContent.c_str();
+                request->send(200, "text/html", htmlContentPtr); 
+    });
+
+    server.on("/editRegister", HTTP_GET, [](AsyncWebServerRequest *request){
+                String registerAddress = request->getParam("index")->value();
+                String registerValue = request->getParam("value")->value();
+                SystemState::getInstance()->editValue(registerAddress.toInt(), registerValue.toFloat());
+                String htmlContent = viewHistory::generateHTML();
+                const char *htmlContentPtr = htmlContent.c_str();
+                request->send(200, "text/html", htmlContentPtr); 
+    });
+
     server.on("/currentregister", HTTP_GET, [](AsyncWebServerRequest *request){
                 String htmlContent = viewCurrentRegister::generateHTML();
                 const char *htmlContentPtr = htmlContent.c_str();

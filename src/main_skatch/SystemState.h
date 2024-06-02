@@ -71,6 +71,11 @@ public:
     void setWifiManager(WiFiManager *wifiController);
 
     void switchNetwork(const char *ssid, const char *password);
+
+    void deleteValue(int index);
+
+    void editValue(int index, float value);
+    
 };
 
 #endif // SYSTEMSTATE_H

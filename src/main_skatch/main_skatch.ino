@@ -38,9 +38,9 @@ void setup()
     systemState = SystemState::getInstance();
     // slaveModbus = new SlaveModbus();
     masterModbus = new MasterModbus();
-    //WiFiManager *wifiManager = new WiFiManager(ssid, password);
-    WiFiManager *wifiManager = new WiFiManager();
-    
+    WiFiManager *wifiManager = new WiFiManager(ssid, password);//per comodita versione finale usa quello sotto
+    //WiFiManager *wifiManager = new WiFiManager();
+
     systemState->setWifiManager(wifiManager);
 
     /*
