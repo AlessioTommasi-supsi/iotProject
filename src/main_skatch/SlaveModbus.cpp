@@ -1,24 +1,25 @@
-/*
 #include "SlaveModbus.h"
-//ModbusRTUSlave
+
+// ModbusRTUSlave
 //  -> BEGIN DELLA SERIAL
 //      POOL
-// CAMBIA PORTE  SLAVE!!
+// CAMBIA PORTE SLAVE!!
 
-SlaveModbus::SlaveModbus()
+SlaveModbus::SlaveModbus(int rxPin, int txPin)
 {
     REGN = 100;
-    Serial.begin(9600, SERIAL_8N1);//qui problema devo definire pin della porta seriale!
+    Serial2.begin(115200, SERIAL_8N1, rxPin, txPin);
     mb.slave(1);
-    mb.begin(&Serial);
+    mb.begin(&Serial2);
     mb.addHreg(REGN);
     mb.Hreg(REGN, 100);
     is_stopped = false;
     loopTask();
 }
 
-SlaveModbus::SlaveModbus(uint8_t slaveId)
+SlaveModbus::SlaveModbus(uint8_t slaveId, int rxPin, int txPin)
 {
+    Serial2.begin(9600, SERIAL_8N1, rxPin, txPin);
     mb.slave(slaveId);
 }
 
@@ -48,7 +49,6 @@ void SlaveModbus::loopTask()
     {
         task();
         yield();
+        delay(100);
     }
-    
 }
-*/
