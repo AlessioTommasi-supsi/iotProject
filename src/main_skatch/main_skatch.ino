@@ -44,7 +44,7 @@ void setup()
 
     systemState->setWifiManager(wifiManager);
 
-    slaveModbus = new SlaveModbus(23, 32);
+    slaveModbus = new SlaveModbus(32, 33);
   }
   catch (const std::exception &e)
   {

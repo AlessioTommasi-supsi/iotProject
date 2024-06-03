@@ -1,37 +1,25 @@
 # iotProject
-iotProject developed in SUPSI Master in Computer science course iot, focus on esp32.
- cioao
+iotProject developed in SUPSI Master in Computer Science course IoT, focusing on ESP32, ESAM, and Modbus Protocol.
 
 ### Dependency:
-###Prof docs:
-https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/establish-serial-connection.html
+If you are on a Windows environment, install `iotProject/driver/CP210x_Universal_Windows_Driver`.
 
-### VS code extension:
-->ESPRESSIFF e estenzione NON HO FINITO DOWNLOAD!
-https://www.phippselectronics.com/run-your-first-esp32-program-in-visual-studio-code/
+### SETUP ARDUINO IDE:
 
+To compile the files in the subfolders, you need to add them as libraries (i.e., .zip files) to the Arduino IDE.
+I have specifically created a library folder to place/replace the zip files;
+For proper compilation, you need to import all the zip folders in /Library:
 
-PLATFORM IO:
-https://www.youtube.com/watch?v=5edPOlQQKmo
+![alt text](image/Library.png)
 
-si consiglia di usare windows poiche estensione modbus a pagamento su MacOs!
+### Electrical Schematic:
 
+![alt text](image/schema_elettrico.jpeg)
 
+### UML Diagram:
 
-SETUP ARDUINO IDE:
-https://www.youtube.com/watch?v=UuuqnmJIjR0
+![alt text](image/uml.png)
 
--> per poter compilare i file nelle sottocartelle devi aggiungerle cone librerie (quindi .zip) all arduino 
-    ho creato appositamente cartella library da mettere / sostituire i file zip;
-    poi vai su arduino:  Sketch -> include Library e seleziona il file zip -> magari in futuro faccio uno script che automaticamente fa update delle librerie!
+## State Machine: 
 
-NOTA: NON FUNZIONA SEPARAZIONE .H DA .CPP IN QUESTO CASO FAI UN UNICO FILE! PER EVITARE PROBLEMI DI DIPENDENZA CIRCOLARE IMPORTA EMPRE FIGLIO PIU IN BASSO DELLA GERARCHIA!rfaccia c
-
-
-try to follow to setup webserver: 
-https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
-
-
-PRESENTAZIONE SARA IN PRESENZA IL 12 GIUGNO. 
-
-### 
+![alt text](image/state_machine.png)
