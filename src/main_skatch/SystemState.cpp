@@ -6,6 +6,7 @@ SystemState *SystemState::instance = nullptr;
 MasterModbus *SystemState::masterModbus = nullptr;
 bool SystemState::isStopped = false;
 WiFiManager *SystemState::wifiManager = nullptr;
+int SystemState::sd_pin = 0; 
 
 
 char * SystemState::error_message = "";
@@ -31,6 +32,9 @@ SystemState *SystemState::getInstance()
         instance = new SystemState();
         masterModbus = new MasterModbus();
         error_message = "";
+        sd_pin = 5;
+        // Inizializza il Logger e la scheda SD
+        Logger::getInstance().begin(sd_pin);
         
     }
     return instance;
@@ -39,7 +43,12 @@ SystemState *SystemState::getInstance()
 void SystemState::update()
 {
     //qui per esempio posso modificare led in base allo stato del componente!
+    logCurrentState();
     
+}
+
+void SystemState::logCurrentState() {
+    Logger::getInstance().log(String(getStateString()) + " " + String(error_message) + "\n");
 }
 
 void SystemState::pushRegister(int addr, float val)
@@ -105,7 +114,7 @@ char * SystemState::getStateString()
     }
 }
 
-void SystemState::setError(char* message)
+void SystemState::setError( char* message)
 {
     
     error_message = message;

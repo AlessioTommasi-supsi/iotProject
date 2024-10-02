@@ -6,6 +6,8 @@
 #include "MasterModbus.h"
 #include "WiFiManager.h"
 #include "WebServer.h"
+#include "Logger.h"
+
 #include <string>
 
 
@@ -30,6 +32,8 @@ private:
     
     std::vector<int> address;
     std::vector<float> value;
+    
+    static int sd_pin;
 
     SystemState() {}
 
@@ -45,6 +49,8 @@ public:
     ~SystemState();
 
     void update();
+
+    void  logCurrentState();
 
     void setState(State newState);
 

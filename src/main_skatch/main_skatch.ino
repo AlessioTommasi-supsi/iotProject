@@ -28,11 +28,7 @@ void setup()
 
   pinMode(32, OUTPUT);   // Set GPIO 32 as an output
   digitalWrite(32, LOW); // Set initial state for GPIO 32
-
-  /*
-  my_webServer = new WebServer(ssid, password);
-  my_webServer->begin();
-  */
+  
   try
   {
     systemState = SystemState::getInstance();
