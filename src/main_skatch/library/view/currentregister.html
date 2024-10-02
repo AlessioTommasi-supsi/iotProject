@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Register</title>
+    <style>
+        .scrollable-container {
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .history-table th,
+        .history-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .edit-input {
+            width: 80px;
+        }
+
+        .action-link {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>History Register</h1>
+    <div class="scrollable-container">
+        <table class="history-table">
+            <tr>
+                <th>Address</th>
+                <th>Value</th>
+                <th>Actions</th>
+            </tr>
+            <!-- Example rows -->
+            <tr>
+                <td>0</td>
+                <td><input type="text" class="edit-input" id="value0" value="10.5"></td>
+                <td>
+                    <a href="/deleteRegister?index=0" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=0" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" class="edit-input" id="value1" value="20.3"></td>
+                <td>
+                    <a href="/deleteRegister?index=1" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=1" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" class="edit-input" id="value2" value="15.7"></td>
+                <td>
+                    <a href="/deleteRegister?index=2" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=2" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" class="edit-input" id="value3" value="18.2"></td>
+                <td>
+                    <a href="/deleteRegister?index=3" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=3" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" class="edit-input" id="value4" value="22.1"></td>
+                <td>
+                    <a href="/deleteRegister?index=4" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=4" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input type="text" class="edit-input" id="value5" value="12.8"></td>
+                <td>
+                    <a href="/deleteRegister?index=5" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=5" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><input type="text" class="edit-input" id="value6" value="16.6"></td>
+                <td>
+                    <a href="/deleteRegister?index=6" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=6" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><input type="text" class="edit-input" id="value7" value="19.4"></td>
+                <td>
+                    <a href="/deleteRegister?index=7" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=7" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><input type="text" class="edit-input" id="value8" value="14.9"></td>
+                <td>
+                    <a href="/deleteRegister?index=8" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=8" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><input type="text" class="edit-input" id="value9" value="17.3"></td>
+                <td>
+                    <a href="/deleteRegister?index=9" class="action-link delete-link">Delete</a>
+                    <a href="/editRegister?index=9" class="action-link edit-link">Edit</a>
+                </td>
+            </tr>
+
+            <!-- Repeat for remaining rows -->
+        </table>
+    </div>
+    <script>
+        function editRegister(index) {
+            var value = document.getElementById('value' + index).value;
+            var url = '/editRegister?index=' + index + '&value=' + value;
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
