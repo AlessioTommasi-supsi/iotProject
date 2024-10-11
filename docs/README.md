@@ -61,23 +61,26 @@ ESP32 - Modbus Master - Local Data Storage	|The ESP32's capability to save diffe
 <br>
 <br>
 
-## Todo
+## Attivita Completate:
 
 | Attivita                             | Percentuale svolgimento | Tempo impiegato | Data completamento |
 |--------------------------------------|-------------------------|-----------------|--------------------|
-| . | .                   | .          | .       |
+| Starting Point | .Creazione Report iniziale, demo video, upload materiale e setup enviroment  e creazione README.md                 | 2h          | .       |
 | . | .               | .        | .       |
 
 ---
 
 
 ## Demo funzionamento attuale:
-<br>
-<video src="./video/puntoIniziale.mkv" controls loop>
-    Il tuo browser non supporta la visualizzazione dei video.
-</video>
 
 <br>
 <br>
+
+![Demo Video](./video/InitialPoint.gif)
+
+<br>
+<br>
+
+
 Link al report pdf del report finale anno precedente: [Report](./ReportIotProject.pdf)
 
