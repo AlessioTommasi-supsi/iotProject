@@ -52,6 +52,47 @@ ESP32 - Modbus Master - Local Data Storage	|The ESP32's capability to save diffe
 <br>
 <br>
 
+## Nuove attivita di progetto:
+
+# ALPHA: Acquisizione Locale di Parametri con Hardware Avanzato
+
+
+## Descrizione
+Il progetto consiste nella realizzazione di un sistema di acquisizione misure basato su un microcontrollore ESP32, con lo scopo di raccogliere dati da sonde di temperatura, segnali analogici e gestire uscite digitali e analogiche. Il sistema dovrà inoltre comunicare con dispositivi esterni tramite il protocollo **Modbus RTU** (RS485) e **Ethernet TCP/IP**, includendo la funzionalità di **datalogging** per la storicizzazione dei dati. Il candidato lavorerà con hardware fornito da un'azienda collaborante e utilizzerà la piattaforma di sviluppo **Arduino IDE**.
+
+## Compiti
+| Attività                                     | Descrizione                                                                                      |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Configurazione sensori di temperatura**    | Configurare e integrare sensori di temperatura **PT100**, **PT1000** e **termocoppie** utilizzando moduli come **MAX31865** e **MAX31855**. |
+| **Lettura segnali analogici**                | Implementare la lettura di segnali analogici tramite gli ingressi **ADC** dell'ESP32 e eventuali moduli esterni.              |
+| **Gestione uscite digitali e analogiche**    | Sviluppare la gestione delle uscite digitali e analogiche tramite l'ESP32.                                                |
+| **Comunicazione RS485 (Modbus RTU)**         | Integrare la comunicazione **RS485** utilizzando il protocollo **Modbus RTU** per interfacciarsi con altri dispositivi.     |
+| **Server Web (Ethernet TCP/IP)**             | Sviluppare un server **Web** basato su **Ethernet TCP/IP** per il monitoraggio e controllo remoto dei dati acquisiti.      |
+| **Datalogging**                              | Implementare un sistema di **datalogging** per salvare e storicizzare i dati raccolti dai sensori.                        |
+| **Test e validazione**                       | Testare e validare il sistema attraverso simulazioni e test su hardware reale.                                            |
+
+
+## Recap Obiettivi
+- Creare un sistema completo di acquisizione misure utilizzando l'ESP32.
+- Garantire una corretta lettura e gestione delle sonde di temperatura (**PT100**, **PT1000**, **TC**) e segnali analogici.
+- Implementare la comunicazione via **Modbus RTU** ed **Ethernet TCP/IP** con un web server integrato.
+- Implementare funzionalità di **datalogging** per permettere la storicizzazione dei dati acquisiti.
+- Garantire la funzionalità del sistema su hardware reale fornito dall'azienda collaborante.
+
+## Tecnologie
+- **Microcontrollore**: ESP32
+- **Piattaforma di sviluppo**: Arduino IDE
+- **Comunicazione**: RS485 (Modbus RTU), Ethernet TCP/IP
+- **Web server**: Librerie per ESP32
+- **Sensori**: Moduli MAX31865 (PT100/PT1000), MAX31855 (Termocoppie)
+- **Datalogging**: Sistema di memorizzazione dati su SD card o altra memoria persistente
+- **Linguaggio di programmazione**: C/C++ (Arduino)
+
+
+Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/dettaglio.php?p=C10936)
+<br>
+<br>
+
 ## Attivita che si intendono implementare prossimamente
 | Criteria Name                             | Criteria Description                                                                 | Max score |
 |-------------------------------------------|---------------------------------------------------------------------------------------|-----------|
@@ -65,7 +106,7 @@ ESP32 - Modbus Master - Local Data Storage	|The ESP32's capability to save diffe
 
 | Attivita                             | Percentuale svolgimento | Tempo impiegato | Data completamento |
 |--------------------------------------|-------------------------|-----------------|--------------------|
-| Starting Point | .Creazione Report iniziale, demo video, upload materiale e setup enviroment  e creazione README.md                 | 2h          | .       |
+| Starting Point | .Creazione Report iniziale, demo video, upload materiale e setup enviroment  e creazione README.md                 | 2h 15min          | .       |
 | . | .               | .        | .       |
 
 ---
