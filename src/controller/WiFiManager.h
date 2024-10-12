@@ -22,6 +22,7 @@ public:
     const char *password;
     std::string ip_address="none";
     bool isFirstStart = true;
+    bool isAP = true;
 
     WebServer *my_webServer;
 

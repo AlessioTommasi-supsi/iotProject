@@ -108,7 +108,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |--------------------------------------|-------------------------|-----------------|--------------------|
 | Starting Point | .Creazione Report iniziale, demo video, upload materiale e setup enviroment  e creazione README.md                 | 2h 15min          | .       |
 | IP Address Communication                  | Accurate communication of the new IP address to the user after connecting to the new WiFi network. |  4 ore    |si e notato crash e reboot quando si immette chiave wifi errara che causa crash e reboot! |
-| . | .               | .        | .       |
+| IP Address Communication |  fix 1       | 5h       | risoluzione errori pero non posso fare sia da AP che da wifi in 2 diverse quindi quando mi disconnetto da 1 rete per fare connessione a quella nuova non posso visualizzare messaggio con ip  non si presenta problema con AP per che ESP32 puo fungere sia da Wifi che da AP contemporaneamente       |
 
 ---
 

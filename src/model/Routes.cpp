@@ -142,15 +142,19 @@ void Routes::defineRoutes(AsyncWebServer &server)
                 {
 
                     SystemState::getInstance()->switchNetwork(ssid_new.c_str(), password_new.c_str());
-                    delay(1000);
+                    //delay(1000);
                     String htmlContent = viewWifiSuccessChange::generateHTML(SystemState::getInstance()->wifiManager->ip_address);
                     const char *htmlContentPtr = htmlContent.c_str();
                     request->send(200, "text/html", htmlContentPtr);
                     //request->send(200, "text/html", "success Switch wifi page");
                 }
-                catch(const std::exception& e)
+                catch(...)
                 {
-                    request->send(500, "text/html", "error Switch wifi page");
+                    String htmlContent = viewWifiSuccessChange::generateErrorPage(SystemState::getInstance()->wifiManager->ssid, SystemState::getInstance()->wifiManager->ip_address);
+                    const char *htmlContentPtr = htmlContent.c_str();
+                    request->send(500, "text/html", htmlContentPtr);
+
+                    //request->send(500, "text/html", "error Switch wifi page");
                 }
                 
     });

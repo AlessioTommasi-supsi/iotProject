@@ -14,7 +14,7 @@ public:
     static String html;
     static String generateHTML();
     static String generateHTML( std::string ip_address);
-
+    static String generateErrorPage(const char* ssid,std::string ip_address);
     static String generateContent(std::string ip_address);
 };
 
