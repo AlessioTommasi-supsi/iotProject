@@ -142,7 +142,6 @@ void SystemState::switchNetwork(const char *ssid, const char *password)
     wifiManager->setNetwork(ssid, password);
 }
 
-
 void SystemState::deleteValue(int index)
 {
     address.erase(address.begin() + index);

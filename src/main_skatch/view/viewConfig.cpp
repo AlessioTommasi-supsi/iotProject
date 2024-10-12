@@ -35,7 +35,7 @@ String viewConfig::generateHTML(std::vector<std::string> ssidList)
     return html;
 }
 
-String viewConfig::generateHTML() // codice generato solo la prima volta quando nessun registro e stato ancora selezionato!
+String viewConfig::generateHTML() 
 {
     html = "Config Page";
 

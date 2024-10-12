@@ -25,6 +25,8 @@ void WiFiManager::setupAP()
         Serial.print("ESP32 AP IP address: ");
         Serial.println(IP);
 
+        this->ip_address = std::string(WiFi.localIP().toString().c_str());
+
         my_webServer = new WebServer(ssid, password);
         my_webServer->begin();
     }
@@ -90,6 +92,10 @@ void WiFiManager::connect()
         Serial.println("Connessione Wi-Fi stabilita!");
         Serial.print("Indirizzo IP: ");
         Serial.println(WiFi.localIP());
+        //this->ip_address = WiFi.localIP().toString();
+        this->ip_address = std::string(WiFi.localIP().toString().c_str());
+    
+
     }
     catch(const std::exception& e)
     {
@@ -98,6 +104,40 @@ void WiFiManager::connect()
     }
     
     
+}
+
+void WiFiManager::smoothConnect() //nota ce ancora errore quando sbaglio a inserire password!
+{
+    try
+    {
+        //WiFi.mode(WIFI_STA);
+        
+        delay(100);
+
+        Serial.println("Connessione alla rete Wi-Fi...");
+
+        WiFi.begin(ssid, password);
+
+        while (WiFi.status() != WL_CONNECTED)
+        {
+            delay(1000);
+            Serial.println("Connessione in corso...");
+        }
+
+        
+        Serial.println("smooth Connessione Wi-Fi stabilita!");
+        Serial.print("Indirizzo IP: ");
+        Serial.println(WiFi.localIP());
+        this->ip_address = std::string(WiFi.localIP().toString().c_str());
+        Serial.println("ip_address: ");
+        Serial.println(this->ip_address.c_str());
+    }
+    catch(const std::exception& e)
+    {
+        Serial.println("Errore durante la connessione alla rete Wi-Fi!");
+        //throw new std::runtime_error("Errore durante la connessione alla rete Wi-Fi!");
+    }
+    //return std::string(WiFi.localIP().toString().c_str());
 }
 
 
@@ -123,7 +163,7 @@ void WiFiManager::setNetwork(const char *ssid_new, const char *password_new)
     this->password = password_new;
     try
     {
-        this->connect();
+        this->smoothConnect();
         isFirstStart = false;
     }
     catch(const std::exception& e) //se qualcosa e andato storto ripristino i vecchi valori

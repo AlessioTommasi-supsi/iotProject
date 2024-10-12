@@ -20,6 +20,7 @@ class WiFiManager
 public:
     const char *ssid;
     const char *password;
+    std::string ip_address="none";
     bool isFirstStart = true;
 
     WebServer *my_webServer;
@@ -28,6 +29,7 @@ public:
     WiFiManager();
     ~WiFiManager(); // Distruttore
     void connect();
+    void smoothConnect();
     void setupAP();
     void clear_var();
     

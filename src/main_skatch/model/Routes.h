@@ -10,6 +10,7 @@
 #include "viewHistory.h"
 #include "viewGraph.h"
 #include "viewConfig.h"
+#include "viewWifiSuccessChange.h"
 
 //#include "WiFiManager.h"
 #include "SystemState.h"
