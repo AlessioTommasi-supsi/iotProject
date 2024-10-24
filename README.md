@@ -21,5 +21,9 @@ For proper compilation, you need to import all the zip folders in /Library:
 ![alt text](image/uml.png)
 
 ## State Machine: 
-
 ![alt text](image/state_machine.png)
+
+
+
+## Elettrical schematization of semester project:
+![alt text](docs/EsamElettric.jpg)

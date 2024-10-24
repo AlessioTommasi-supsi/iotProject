@@ -17,6 +17,8 @@
 
 # REPORT:
 
+
+
 ### Old Evaluation Criteria
 
 
@@ -60,6 +62,10 @@
 ## Descrizione
 
 Il progetto consiste nella realizzazione di un sistema di acquisizione misure basato su un microcontrollore ESP32, con lo scopo di raccogliere dati da sonde di temperatura, segnali analogici e gestire uscite digitali e analogiche. Il sistema dovrà inoltre comunicare con dispositivi esterni tramite il protocollo **Modbus RTU** (RS485) e **Ethernet TCP/IP**, includendo la funzionalità di **datalogging** per la storicizzazione dei dati. Il candidato lavorerà con hardware fornito da un'azienda collaborante e utilizzerà la piattaforma di sviluppo **Arduino IDE**.
+
+
+## Elettrical schematization of semester project:
+![alt text](EsamElettric.jpg)
 
 ## Compiti
 
