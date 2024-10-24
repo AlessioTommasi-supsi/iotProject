@@ -149,3 +149,21 @@ Link al report pdf del report finale anno precedente: [Report](./ReportIotProjec
 
 <br>
 <br>
+
+---
+<br>
+<br>
+
+## Demo AnalyticsPage:
+
+
+<br>
+
+![Demo Video](./video/AnalyticsPage.gif )
+
+
+   #### RICORDA: non si possono fare 2 volte rec dello stesso registro altrimenti crasha il sistema
+
+    
+
+<br>
