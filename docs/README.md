@@ -108,7 +108,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Criteria Name            | Criteria Description                                                                               | tempo                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | IP Address Communication | Accurate communication of the new IP address to the user after connecting to the new WiFi network. | inizio: 11.00    fine 14.50  tot 4 ore |
-| Analytics Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |                                        |
+| History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |     make it dynamic update data                                   |
 
 <br>
 <br>
