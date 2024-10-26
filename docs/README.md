@@ -168,3 +168,19 @@ Link al report pdf del report finale anno precedente: [Report](./ReportIotProjec
     
 
 <br>
+<br>
+<br>
+
+# Ricerca e sviluppo
+
+## componente modbus TCP/IP
+
+### Descrizione
+
+Modbus TCP è stato sviluppato per sfruttare le infrastrutture di rete LAN esistenti, permettendo la comunicazione attraverso reti Ethernet. Attualmente viene utilizzato per qualsiasi connessione tra dispositivi connessi a internet.
+
+Questo protocollo incapsula i messaggi Modbus RTU in pacchetti TCP, il che facilita la loro trasmissione su reti Ethernet standard. Uno dei principali vantaggi del Modbus TCP è la sua capacità di connettere un numero illimitato di dispositivi, grazie all’uso di indirizzi IP invece delle limitazioni di indirizzamento dei protocolli seriali.
+
+In questo contesto, Modbus TCP ridefinisce la relazione master-slave in termini di client-server, permettendo una comunicazione più flessibile e scalabile. I dispositivi possono agire come client o server, facilitando l’integrazione di più sistemi e migliorando l’efficienza delle comunicazioni nelle reti industriali.
+
+source: [Link](https://v2charge.com/it/che-cose-modbus-rtu-tpc/)
