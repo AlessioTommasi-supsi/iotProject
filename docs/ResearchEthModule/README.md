@@ -67,6 +67,8 @@ Il modulo W5500 è la scelta migliore per applicazioni che richiedono prestazion
 
 - [Github repo 2 (Wiring explaination)](https://github.com/flusflas/esp32-ethernet)
 
+- [link amazon](https://www.amazon.it/ESP32-DevKitC-LAN8720-Terminal-Sviluppo-Ethernet-LAN8720/dp/B0CKJ7XVTB/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RV4KR2PNQI19&dib=eyJ2IjoiMSJ9.feOTzET2s7jNBnRPauYCYeznY5AY03DZJFxADOgEPAoJET0iQIaBJbNPT0UU2PA7tUDI1xXmEYhJtevVqFSjaVdVt9OYD-bcZmjr1yiFcw2ncy265Tn2zm0KcY0RQvAtDIXZgDA14Kcoh_0JgQh5ghF7vU0web2YJWdLgL3L2AQjAqrVRSublvRp4iYvTtBun6XaK2Pz_ZeFrP5OJcGGZi1NiV3sdizHO14b47mjaAp3DVsQlmnvjs5X6LvYAksCTmD8bjI6yfQSZ2jvIAt16fyo88jYbLtDYcaa6-qg-pQ.J6VqYsrHPKdDobRc2RLmHcd4yzGMS9Pti3q7qGud8tQ&dib_tag=se&keywords=ethernet+kit+esp32&qid=1730299847&sprefix=ethernet+kit+esp32%2Caps%2C137&sr=8-5)
+
 
 ### RTL8201 e IP101G
  sono opzioni valide per progetti industriali, specialmente per ambienti con requisiti di durata e affidabilità ma con scarsa documentazione in caso si decide di utilizzare questi moduli e necessario fare una ricerca piu approfondita su di essi.
