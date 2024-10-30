@@ -126,7 +126,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Analytics Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        | 4.00              |                        ore impiegate: 19.30 -> 23.30   tot: 4.00 fix bug precedenti, creazione popup start e stop lettura. ora non funziona: lettura doppia dello stesso registro causa crash sistema,  da testare: grafico                                                                                                           
 | Graph Page           |  real-time data display on the graph page         | 1h.00              |                        ore impiegate: 8.30 -> 9.30  
 | Ricerca e sviluppo           |  Mobus protocol component and pinout         | 3h              |                        
-
+|  wiznet W5500 e   ENC28J60       |  ricerca         | 4h             | 12.00 -> 16.00 of 30/10/2024
 
 <br>
 
@@ -388,3 +388,8 @@ standard di comunicazione seriale che si distingue per la sua capacità di conse
 ### Connessioni tra Dispositivi
 
 simili a Modbus RTU
+
+
+## Ricerca modulo Ethernet:
+
+link alla pagina dedi cata creata: [Link](ResearchEthModule/README.md)
