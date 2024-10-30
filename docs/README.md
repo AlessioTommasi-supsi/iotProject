@@ -108,7 +108,9 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Criteria Name            | Criteria Description                                                                               | tempo                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | IP Address Communication | Accurate communication of the new IP address to the user after connecting to the new WiFi network. | inizio: 11.00    fine 14.50  tot 4 ore |
-| History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |     make it dynamic update data                                   |
+| History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |                                        |
+| wiznet W5500 e   ENC28J60         | Ricerca: stabilire quale e meglio allegare nella documentazione snipset di codice di 1 vs altro e perche la scelta <br> ** TODO da mail: ** "capire quale sia quello integrabile meglio a livello software cercando in rete esempi di integrazione appunto di modBus TCP/IP su ethernet"        |                                        |
+
 
 <br>
 <br>
@@ -293,8 +295,8 @@ Modbus RTU è basato su una comunicazione seriale asincrona, che consente la tra
 
 ---
 
-#### **2. PC (Master) e ESP32 (Slave) con Modulo RS-485 (MAX485)**
-**Collegamenti tra Master (PC) e Slave (ESP32) con Convertitore USB-RS485 e MAX485**
+#### **2. PC (Master) e ESP32 (Slave) con protocollo seriale RS-485 e Modulo (MAX485)**
+**Collegamenti tra Master (PC) e Slave (ESP32) con Convertitore generico convertitore da USB a RS485 e Modulo MAX485**
 - **Master - Convertitore USB-RS485**
   - Collegare il convertitore USB-RS485 alla porta USB del PC.
   - A (D+) e B (D-) del convertitore collegati al bus RS-485.
