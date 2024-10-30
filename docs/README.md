@@ -107,7 +107,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 
 | Criteria Name            | Criteria Description                                                                               | tempo                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| IP Address Communication | Accurate communication of the new IP address to the user after connecting to the new WiFi network. | inizio: 11.00    fine 14.50  tot 4 ore |
+| ESP32 - Modbus Slave | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers |  |
 | History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |                                        |
 | wiznet W5500 e   ENC28J60         | Ricerca: stabilire quale e meglio allegare nella documentazione snipset di codice di 1 vs altro e perche la scelta <br> ** TODO da mail: ** "capire quale sia quello integrabile meglio a livello software cercando in rete esempi di integrazione appunto di modBus TCP/IP su ethernet"        |    inizio: 12.00                                    |
 
