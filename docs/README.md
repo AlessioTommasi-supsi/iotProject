@@ -130,7 +130,8 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        | 2h |  9.30 -> 11.30 of 31/10/2024
 | risoluzione watchdog triggered, deadlock problem when same register multiple time, fix crash and rebbot problem|  ricerca         | 24h e 30min             | 1/11/2024 9.00 -> 12.30 AND 14.00 -> 17.00, 2/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00 , 4/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00, 6/11/2024 8.00 -> 14.00 |
 | doks usage graph and history page + test |  see the video in the follwing section    |   1h  | 14.00 -> 15.00 of 6/11/2024 
-| doks fixed preview problem    | see [Here](./issues/README.md) error detail       |  1h  | 15.00 -> 16.00 of 6/11/2024      
+| doks fixed preview problem    | see [Here](./issues/README.md) error detail       |  1h  | 15.00 -> 16.00 of 6/11/2024    
+| gant diagram   | in this file at section Diagramma di Gantt per le Attività       |  1h  | 16.00->17 of 6/11/2024    
 
 <br>
 
@@ -151,8 +152,9 @@ gantt
     History Page              :done, s9, 31/10/2024, 2h
     Watchdog Issue Fix        :done, s10, 01/11/2024, 24h
     Graph and History Page    :done, s11, 06/11/2024, 1h
-    Preview Fix               :done, s12, 06/11/2024, 1h
-
+    docx Fix               :done, s12, 06/11/2024, 1h
+    gant giagram               :done, s12, 06/11/2024, 1h
+    
     section Attività Future
     Modbus Slave              :active, s13, 15/11/2024, 24h
 
