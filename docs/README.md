@@ -129,6 +129,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Ricerca e sviluppo           |  Mobus protocol component and pinout         | 3h              |                        
 |  wiznet W5500 e   ENC28J60       |  ricerca         | 4h             | 12.00 -> 16.00 of 30/10/2024
 | risoluzione watchdog triggered, deadlock problem when same register multiple time, fix crash and rebbot problem|  ricerca         | 24h e 30min             | 1/11/2024 9.00 -> 12.30 AND 14.00 -> 17.00, 2/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00 , 4/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00, 6/11/2024 8.00 -> 14.00 |
+| doks usage graph and history page + test |  see the video in the follwing section    |   1h  | 14.00 -> 15.00 of 6/11/2024       
 
 <br>
 
@@ -176,6 +177,12 @@ Link al report pdf del report finale anno precedente: [Report](./ReportIotProjec
 
 <br>
 <br>
+<br>
+
+
+## Demo history, graph, multiple register read:
+![Demo history, graph, multiple register read](video/usage_history_graph.gif)
+
 <br>
 
 # Ricerca e sviluppo
