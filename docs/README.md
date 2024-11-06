@@ -135,8 +135,33 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 <br>
 
 
----
+```mermaid
+gantt
+    title Diagramma di Gantt per le Attività
+    dateFormat  DD/MM/YYYY
+    section Attività Completate
+    Starting Point            :done, s1, 29/10/2024, 2h
+    IP Address Communication  :done, s2, 29/10/2024, 4h
+    IP Address Fix 1          :done, s3, 30/10/2024, 5h
+    Analytics Page Fix        :done, s4, 30/10/2024, 4h
+    Analytics Page Fix 2      :done, s5, 30/10/2024, 4h
+    Graph Page                :done, s6, 30/10/2024, 1h
+    Ricerca Modbus            :done, s7, 30/10/2024, 3h
+    Wiznet Research           :done, s8, 30/10/2024, 4h
+    History Page              :done, s9, 31/10/2024, 2h
+    Watchdog Issue Fix        :done, s10, 01/11/2024, 24h
+    Graph and History Page    :done, s11, 06/11/2024, 1h
+    Preview Fix               :done, s12, 06/11/2024, 1h
 
+    section Attività Future
+    Modbus Slave              :active, s13, 15/11/2024, 24h
+
+    
+```
+
+    section Attività Future
+    ESP32 - Modbus Slave      :active, f1, 07/11/2024, 2d
+    Gantt Chart               :active, f2, 09/11/2024, 1d
 ## Demo funzionamento attuale:
 
 <br>
