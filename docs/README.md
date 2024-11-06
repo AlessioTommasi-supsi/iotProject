@@ -109,8 +109,9 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | ESP32 - Modbus Slave | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers |  |
 | History Page           | The accuracy and clarity of real-time data display on the analytics page in textual format.        |                                        |
-| wiznet W5500 e   ENC28J60         | Ricerca: stabilire quale e meglio allegare nella documentazione snipset di codice di 1 vs altro e perche la scelta <br> ** TODO da mail: ** "capire quale sia quello integrabile meglio a livello software cercando in rete esempi di integrazione appunto di modBus TCP/IP su ethernet"        |    inizio: 12.00                                    |
-
+| Gant chart         | requested by Fabio on mail        |    
+| doks fixed preview problem    | requested by Fabio on mail        |
+| doks usage graph and history page  |      |                                                                                                                                                      
 
 <br>
 <br>
@@ -127,6 +128,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Graph Page           |  real-time data display on the graph page         | 1h.00              |                        ore impiegate: 8.30 -> 9.30  
 | Ricerca e sviluppo           |  Mobus protocol component and pinout         | 3h              |                        
 |  wiznet W5500 e   ENC28J60       |  ricerca         | 4h             | 12.00 -> 16.00 of 30/10/2024
+| risoluzione watchdog triggered, deadlock problem when same register multiple time, fix crash and rebbot problem|  ricerca         | 24h e 30min             | 1/11/2024 9.00 -> 12.30 AND 14.00 -> 17.00, 2/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00 , 4/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00, 6/11/2024 8.00 -> 14.00 |
 
 <br>
 
