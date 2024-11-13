@@ -73,3 +73,57 @@ Il modulo W5500 è la scelta migliore per applicazioni che richiedono prestazion
 ### RTL8201 e IP101G
  sono opzioni valide per progetti industriali, specialmente per ambienti con requisiti di durata e affidabilità ma con scarsa documentazione in caso si decide di utilizzare questi moduli e necessario fare una ricerca piu approfondita su di essi.
 
+
+
+<br><br><br><br>
+
+# Modulo fornito:
+ ![alt text](ENC28J60.webp)
+ 
+ tale modulo sembra essere il seguente:
+ https://www.amazon.it/ARCELI-ENC28J60-Ethernet-Shield-Arduino/dp/B07JL333FD/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=5BLZDWVLMKBC&dib=eyJ2IjoiMSJ9.vQdgSXCCHNioofOgClbgQk4vGgn5_d4BuNbfN56eBcRTLzkZZKe7jy-uDl_uQgFyy378WFZeUI8bJaSYHENsQ4cgJa56I5GbBLqrLcZsZDKFg_7g4rX_Qwu9BLEreYfqVLqk9JboMxVrs-4BJ7Xq2NkU_zIoWUIbk7Ceon5jw443hr1sALWVHU7bZf4RfZGXWS5G9zrlD7d8Hrb2jHjW1IqbVKWdoo8SD892gBzD-H8JelmVwrRfcx2S61YKGJMrZcBSl2nJOlHJ3EReLmT-SglSNpw1pAe9rO2FGWwqAuc._qN8FFmN65TIWU8oznYZZ4MzZIqJsteX0i63IHF_5K4&dib_tag=se&keywords=ENC28J60&nsdOptOutParam=true&qid=1731512289&sprefix=enc28j60%2Caps%2C170&sr=8-6
+
+--- 
+ da quanto emerso dalle ricerche effettuate, il modulo sembra essere un
+ Ethernet Shield progettato per l’Arduino NANO o per altre schede compatibili, il che spiega perché i pin riportati corrispondano alla numerazione dei pin di Arduino e non dell'ESP32 
+
+ --- 
+ da verificare se succede il problema qui descritto: ![alt text](issue1.png)
+
+ ---
+
+ basandoci su arduino nano pinout: 
+ 
+ ![alt text](arduinoNanoPinout.png)
+
+    infatti se si confrontano sono esattamente uguali la nomenclatura dei pin!!
+
+
+ potremmo creare dei collegamenti per esp: 
+ 
+ ![alt text](esp32DevKitV1Pinout.png)
+
+ facendo un adattatore:  pero con riserva di dubbio sul funzionamento!
+
+ possibili collegamenti: 
+| Pin del Modulo ENC28J60 | Collegamento ESP32 | Funzione                        |
+|-------------------------|--------------------|---------------------------------|
+| VIN                     | 3.3V o 5V          | Alimentazione (in base al modulo)|
+| GND                     | GND                | Massa                           |
+| D13                     | GPIO 18            | SPI Clock (SCK)                 |
+| D12                     | GPIO 19            | SPI MISO (Master In, Slave Out) |
+| D11                     | GPIO 23            | SPI MOSI (Master Out, Slave In) |
+| D10                     | GPIO 5             | Chip Select (CS)                |
+| RST                     | RST o GPIO 17 (opzionale) | Reset                    |
+
+ per ora ho fatto test di tale modulo con arduino nano:
+
+## Risultati TEST: 
+ modulo eth perfettamente funzionante:
+ codice utilizzato: [file](arduino_nano_sketch_eth/arduino_nano_sketch_eth.ino)
+
+![alt text](testArduinoNano.png)
+
+## Collegamenti:
+
+![alt text](AduinoNanoCollegamenti.webp)

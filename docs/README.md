@@ -131,7 +131,8 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | risoluzione watchdog triggered, deadlock problem when same register multiple time, fix crash and rebbot problem|  ricerca         | 24h e 30min             | 1/11/2024 9.00 -> 12.30 AND 14.00 -> 17.00, 2/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00 , 4/11/2024 8.00 -> 11.00 AND 14.00 -> 17.00, 6/11/2024 8.00 -> 14.00 |
 | doks usage graph and history page + test |  see the video in the follwing section    |   1h  | 14.00 -> 15.00 of 6/11/2024 
 | doks fixed preview problem    | see [Here](./issues/README.md) error detail       |  1h  | 15.00 -> 16.00 of 6/11/2024    
-| gant diagram   | in this file at section Diagramma di Gantt per le Attività       |  1h  | 16.00->17 of 6/11/2024    
+| gant diagram   | in this file at section Diagramma di Gantt per le Attività       |  1h  | 16.00->17 of 6/11/2024   
+|  Modulo ENC28J60    | research initial + test with arduino nano       |  3h  | 15.00->18 of 13/11/2024  
 
 <br>
 
