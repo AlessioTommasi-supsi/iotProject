@@ -109,7 +109,8 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | ESP32 - Modbus Slave | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers |  |
 | Gant chart         | requested by Fabio on mail        |    
-
+|  Modulo ENC28J60      | test if work with modbusrtu and modscan        |
+|  Modulo ENC28J60      | adapter for esp32        |      
                                                                                                                                                     
 
 <br>
