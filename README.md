@@ -27,3 +27,17 @@ For proper compilation, you need to import all the zip folders in /Library:
 
 ## Elettrical schematization of semester project:
 ![alt text](docs/EsamElettric.jpg)
+
+
+## Dispositivo utilizzato in fase di sviluppo:
+![alt text](image/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
+
+## Pinout proposti per slave Modbus
+
+file che si e utilizzato per testare slave: [Qui](src/SLAVE_EXAMPLE/modbusSlave2/modbusSlave2.ino)
+
+
+![alt text](image/SlavePinout.png)
+
+
+Secondo me non funzionantew perche ho devkit V1 e non altri tipi di ESP!
