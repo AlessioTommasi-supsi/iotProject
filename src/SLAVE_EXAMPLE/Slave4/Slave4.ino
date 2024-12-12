@@ -20,11 +20,14 @@ void fillHoldingRegisters(uint16_t startAddress, uint16_t quantity) {
 
 void setup() {
     Serial.begin(9600);
+    Serial.println("setup slave");
     modbusSlave.begin(SLAVE_ID, 9600, SERIAL_8N1, RX_PIN_SLAVE, TX_PIN_SLAVE);
     modbusSlave.configureHoldingRegisters(holdingRegisters, 100);
+    
     modbusSlave.setFillHoldingRegistersCallback(fillHoldingRegisters);
 }
 
 void loop() {
     modbusSlave.poll();
+    Serial.println("poool");
 }

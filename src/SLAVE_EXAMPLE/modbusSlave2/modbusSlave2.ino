@@ -36,10 +36,11 @@ void setup() {
   }
 
   // Utilizzare la funzione di callback corretta per onSetHreg
-  mb.onSetHreg(0, cbWrite, 5); // Offset 0, callback cbWrite, 5 registri
+  //mb.onSetHreg(0, cbWrite, 5); // Offset 0, callback cbWrite, 5 registri
 }
 
 void loop() {
   mb.task();
+  Serial.println("loop");
   delay(10);
 }
