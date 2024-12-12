@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 Modbus Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr {
+            border-bottom-color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            /* margin-left: 20%; */
+            margin-right: 50%;
+        }
+
+        input[type="text"], input[type="number"], input[type="submit"], button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #555;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESP32 Modbus Configuration</h1>
+    <h2>Data Entries:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Units</th>
+                <th>Slave ID</th>
+                <th>Register Type</th>
+                <th>Register Start</th>
+                <th>Register Size</th>
+                <th>Data Type</th>
+                <th>Data Size</th>
+                <th>Value</th>
+                <th>Instance Offset</th>
+                <th>Parameter Options</th>
+                <th>Access Mode</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body">
+            <!-- Dynamic rows will be populated here -->
+        </tbody>
+    </table>
+
+    <h2>Add/Edit Measurement</h2>
+    <form id="addForm">
+        <!-- <h3 id="entry-id" name="id"></h3> -->
+        <input id="entry_id"  name="entry_id" disabled><br>
+        <label>Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label>Description:</label><br>
+        <input type="text" id="description" name="description"><br>
+        <label>Units:</label><br>
+        <input type="text" id="units" name="units"><br>
+        <label>Slave ID:</label><br>
+        <input type="number" id="slave_id" name="slave_id"><br>
+        <label>Register Type:</label><br>
+        <input type="number" id="reg_type" name="reg_type"><br>
+        <label>Register Start:</label><br>
+        <input type="number" id="reg_start" name="reg_start"><br>
+        <label>Register Size:</label><br>
+        <input type="number" id="reg_size" name="reg_size"><br>
+        <label>Data Type:</label><br>
+        <input type="number" id="data_type" name="data_type"><br>
+        <label>Data Size:</label><br>
+        <input type="number" id="data_size" name="data_size"><br>
+        <label>Instance Offset:</label><br>
+        <input type="number" id="instance_offset" name="instance_offset"><br>
+        <label>Parameter Options:</label><br>
+        <input type="number" id="parameter_options" name="parameter_options"><br>
+        <label>Access Mode:</label><br>
+        <input type="number" id="access_mode" name="access_mode"><br><br>
+        <input type="submit" value="Save">
+        <button type="button" id="cancel-button" class="hidden">Cancel</button>
+    </form>
+
+
+    <script>
+        //Fetches data entries from the server
+        let current_cid = '';
+
+        async function fetchData() {
+            const response = await fetch('/data');
+            const data = await response.json();
+            return data;
+        }
+        //Populates the table with data entries
+        function populateTable(data) {
+            const tableBody = document.getElementById('data-table-body');
+            tableBody.innerHTML = '';
+            data.forEach(entry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${entry.id}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.description}</td>
+                    <td>${entry.units}</td>
+                    <td>${entry.slave_id}</td>
+                    <td>${entry.reg_type}</td>
+                    <td>${entry.reg_start}</td>
+                    <td>${entry.reg_size}</td>
+                    <td>${entry.data_type}</td>
+                    <td>${entry.data_size}</td>
+                    <td class="bold-text">${entry.value}</td>
+                    <td>${entry.instance_offset}</td>
+                    <td>${entry.parameter_options}</td>
+                    <td>${entry.access_mode}</td>
+                    <td>
+                        <button onclick="editRow(${entry.id})">Edit</button>
+                        <button onclick="deleteRow(${entry.id})">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        //Sends a POST request to add or update an entry
+        async function addEntry(entry) {
+            console.log("Adding entry:", entry);  // Log for debugging
+            const response = await fetch('/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(entry),
+            });
+            console.log("Response status:", response.status);  // Log for debugging
+            if (response.ok) {
+                const data = await fetchData();
+                populateTable(data);
+            } else {
+                console.error("Failed to add entry:", response.statusText);
+            }
+        }
+
+        //Sends a DELETE request to remove an entry.
+        async function deleteRow(id) {
+            const response = await fetch('/data', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: String(id),
+            });
+            console.log("Delete response status:", response.status);  // Log for debugging
+            const data = await fetchData();
+            populateTable(data);
+        }
+
+        document.getElementById('addForm').addEventListener('submit', async function(event) {
+
+            // Get the number of current elements, the number of parameters
+
+            const num_params = document.getElementById('data-table-body').children.length
+            console.log("num_params:", num_params);
+            console.log("current_cid:", current_cid);
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const entry = Object.fromEntries(formData);
+            // console.log("Form data id:", entry.entry_id);  // Log form data for debugging
+            entry.id = current_cid ? parseInt(current_cid) : num_params;  // Generate a new ID for new entries            entry.slave_id = parseInt(entry.slave_id);
+            entry.reg_type = parseInt(entry.reg_type);
+            entry.reg_start = parseInt(entry.reg_start);
+            entry.slave_id = parseInt(entry.slave_id);
+            entry.reg_size = parseInt(entry.reg_size);
+            entry.data_type = parseInt(entry.data_type);
+            entry.data_size = parseInt(entry.data_size);
+            entry.instance_offset = parseInt(entry.instance_offset);
+            entry.parameter_options = parseInt(entry.parameter_options);
+            entry.access_mode = parseInt(entry.access_mode);
+
+            console.log("Form data:", entry);  // Log form data for debugging
+
+            await addEntry(entry);
+
+            // event.target.reset();
+            current_cid = '';
+            document.getElementById('entry_id').value = '';  // Reset the entry_id field
+            document.getElementById('cancel-button').classList.add('hidden');
+        });
+
+        //Fills the form with the selected entry's data for editing
+        function editRow(id) {
+            fetchData().then(data => {
+                const entry = data.find(e => e.id === id);
+                current_cid = id;
+                document.getElementById('entry_id').value = entry.id;
+                document.getElementById('name').value = entry.name;
+                document.getElementById('description').value = entry.description;
+                document.getElementById('units').value = entry.units;
+                document.getElementById('slave_id').value = entry.slave_id;
+                document.getElementById('reg_type').value = entry.reg_type;
+                document.getElementById('reg_start').value = entry.reg_start;
+                document.getElementById('reg_size').value = entry.reg_size;
+                document.getElementById('data_type').value = entry.data_type;
+                document.getElementById('data_size').value = entry.data_size;
+                document.getElementById('instance_offset').value = entry.instance_offset;
+                document.getElementById('parameter_options').value = entry.parameter_options;
+                document.getElementById('access_mode').value = entry.access_mode;
+                document.getElementById('cancel-button').classList.remove('hidden');
+                document.getElementById('entry_id').classList.remove('hidden');
+            });
+        }
+
+        document.getElementById('cancel-button').addEventListener('click', function() {
+            document.getElementById('addForm').reset();
+            document.getElementById('entry_id').value = '';
+            this.classList.add('hidden');
+        });
+
+        // document.getElementById('modeForm').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+        //     const formData = new FormData(event.target);
+        //     const mode = Object.fromEntries(formData).mode;
+        //     alert(`Set mode to: ${mode}`);
+        // });
+
+        fetchData().then(data => populateTable(data));
+        
+        // Set interval to refresh data every 3 seconds
+        setInterval(async () => {
+            const data = await fetchData();
+            populateTable(data);
+        }, 1000);
+    </script>
+</body>
+</html>
