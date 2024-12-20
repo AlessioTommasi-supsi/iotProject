@@ -111,7 +111,7 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 | Gant chart         | requested by Fabio on mail        |    
 |  Modulo ENC28J60      | test if work with modbusrtu and modscan        |
 |  Modulo ENC28J60      | adapter for esp32        |      
-                                                                                                                                                    
+|  Multiplex      | creazione pagina web che stampa dedicata: tutti i valori letti in input sul pin gpio, e possibilita di registrarli e plotgtarli in un grafico come accade per modbus registry         |                                                                                                                                                        
 
 <br>
 <br>

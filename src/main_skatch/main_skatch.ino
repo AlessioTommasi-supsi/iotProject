@@ -33,24 +33,6 @@ void setup()
   
   try
   {
-    // Disabilita il task watchdog 
-    /* questa da errori sul seriale stampa: E: esp_task_wdt_reset non dichiarato
-    esp_task_wdt_config_t wdt_config = {
-        .timeout_ms = 0, // 0 per disabilitare
-        .idle_core_mask = 0, // Disabilita il watchdog per entrambi i core
-        .trigger_panic = false // Non attivare il panic handler
-    };
-    esp_task_wdt_init(&wdt_config); // Passa la configurazione alla funzione
-
-    esp_task_wdt_delete(xTaskGetIdleTaskHandleForCPU(0)); // Disabilita il watchdog per il core 0
-    esp_task_wdt_delete(xTaskGetIdleTaskHandleForCPU(1)); // Disabilita il watchdog per il core 1
-    esp_task_wdt_delete(NULL);
-    */
-    // Disabilita il watchdog RTC
-    /*non funziona
-    rtc_wdt_protect_off();
-    rtc_wdt_disable();
-    */
     systemState = SystemState::getInstance();
     // Initialize the SlaveModbus with the correct pins
     
