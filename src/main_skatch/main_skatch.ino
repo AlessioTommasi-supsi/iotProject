@@ -14,7 +14,7 @@ const char *password = "occhioallapennachecade";
 
 SystemState *systemState;
 
-PinoutData *pinoutData;
+//PinoutData *pinoutData;
 
 void setup()
 {
@@ -31,13 +31,13 @@ void setup()
     
     //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
     WiFiManager *wifiManager = new WiFiManager();
-    pinoutData = new Esp32_38pin();
+    //pinoutData = new Esp32_38pin();
 
     
 
 
     systemState->setWifiManager(wifiManager);
-    systemState->setPinoutData(pinoutData);
+    //systemState->setPinoutData(pinoutData);
 
   }
   catch (const std::exception &e)
