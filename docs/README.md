@@ -136,6 +136,8 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Modulo ENC28J60    | research initial + test with arduino nano       |  3h  | 15.00->18 of 13/11/2024  
 |  Fix driver issues Adattatore convertitore da USB a RS485 per w11   |see [Here](./issues/Adattatore%20convertitoreUSBaRS485.md) the detail of this error and the research done       |  11h  |   15.00->18.00 of 19/11/2024 <br> 9.00->11.00; 14.00->18.00 of 20/11/2024 <br> 9.30->12.30 of 21/11/2024 
 |  Modbus Slave test and work   | not working yet       |  7h  |   9.00->12.00 AND <br> 13.30->17.30;  of 06/12/2024 <br> 
+|  Multiplex   | not working yet       |  10  |   8.00->12.00 AND <br> 13.00->19.00;  of 21/12/2024 <br> 
+|  Multiplex   | ho trovato errore: limite  memoria ESP vedi    [link](https://github.com/AlessioTommasi-supsi/ArduinoLibrary/blob/progettosemestreOttimizzaz/model/Esp32_38pin.cpp) se aggiungo qualcosa altro dopo il commento ESP crasha per limite memoria superato!     |  7.30  |   7.30->11.00 AND <br> 14.00->18.00;  of 21/12/2024 POSSIBILI SOLUZIONI passare al chip ESP32-S3 che ha il doppio della memoria integrata pero si devono adattare i pin<br> 
 
 <br>
 
