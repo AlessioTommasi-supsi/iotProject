@@ -27,9 +27,6 @@ void setup()
   {
     ; // Attendi finché la porta seriale non è pronta
   }
-
-  pinMode(32, OUTPUT);   // Set GPIO 32 as an output
-  digitalWrite(32, LOW); // Set initial state for GPIO 32
   
   try
   {
@@ -42,7 +39,7 @@ void setup()
 
     systemState->setWifiManager(wifiManager);
 
-    slaveModbus = new SlaveModbus(32, 33);
+    //slaveModbus = new SlaveModbus(32, 33);//non funzionante
   }
   catch (const std::exception &e)
   {
@@ -51,7 +48,8 @@ void setup()
 
   while (SystemState::isStopped == false && systemState->getState() != State::ERROR)
   {  
-    delay(1000); // controllo ogni secondo se devo fermarmi
+    systemState->update();
+    delay(5000); // controllo ogni secondo se devo fermarmi
   }
 
   destroy();
