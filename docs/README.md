@@ -67,6 +67,13 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 ## Elettrical schematization of semester project:
 ![alt text](EsamElettric.jpg)
 
+## Microcontrollore utilizzato:
+ 
+ ESP32 38 pin 
+
+### pinout: 
+![alt text](../image/ESP-38Pin-pinout.jpg)
+
 ## Compiti
 
 

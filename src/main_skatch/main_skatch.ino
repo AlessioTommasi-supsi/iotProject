@@ -1,9 +1,7 @@
 #include <Arduino.h>
-//#include "WebServer.h"
 
 
 #include "MasterModbus.h"
-#include "SlaveModbus.h"
 #include "SystemState.h"
 
 #include <vector>
@@ -27,7 +25,6 @@ void setup()
     ; // Attendi finché la porta seriale non è pronta
   }
   Serial.println("Inizializzazione porta seriale effettuata!");
-  //delay(3000);
   try
   {
     systemState = SystemState::getInstance();
@@ -43,7 +40,6 @@ void setup()
     systemState->setWifiManager(wifiManager);
     systemState->setPinoutData(pinoutData);
 
-    //slaveModbus = new SlaveModbus(32, 33);
   }
   catch (const std::exception &e)
   {
@@ -73,5 +69,5 @@ void destroy()
   // delete slaveModbus;
   //delete masterModbus;
   //delete systemState;
-  
+
 }
