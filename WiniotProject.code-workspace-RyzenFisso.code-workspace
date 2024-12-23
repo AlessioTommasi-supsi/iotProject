@@ -5,7 +5,17 @@
 		},
 		{
 			"path": "C:/Users/Alessio/Documents/Arduino/libraries"
+		},
+		{
+			"path": "../../../../Users/none/Documents/Arduino/libraries"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"iosfwd": "cpp",
+			"sstream": "cpp",
+			"new": "cpp",
+			"vector": "cpp"
+		}
+	}
 }
