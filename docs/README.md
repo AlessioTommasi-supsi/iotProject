@@ -148,10 +148,10 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Multiplex   | fix parziale memoria da mac riesco a fare 2 pin + multithead start and stop + grafico con i valori di tensione letti [video demo](./video/MULTIPLEX.mov) <br> NOTA: <br> da testare se magari e perche non uso memoria dinamica e quindi statica preallocata va fuori range massimo  per far cio successivamente prevedo di implementare pagina con circular progress bar per vedere la memoria utilizzata e libera   |  23h = 7+8+8  |   9.00->11.00 AND <br> 14.00->19.00;  of 22/12/2024 <br> 9.00->11.00 AND <br> 13.00->19.00;  of 23/12/2024 <br> 9.00->11.00 AND <br> 14.00->19.00;  of 24/12/2024  
 |  Monitor    | implementazione pagina per monitoraggio di risorse      |  3.15 + 3.30 + 5.30 = 12.15h  |   8.00->11.15 AND <br> 13.30->17.00;  of 26/12/2024 <br>  <br> 13.30->19.00  of 27/12/2024 <br>
 |  Multiplex    | ho provato a implementare utilizzando heap ma da ancora sesso problema, crash dopo aggiunta di 2 pin!  inoltre heap risulta utilizzato solo al 50%!!    | 6h |   13.00->19.00 AND <br> 13.30->17.00;  of 26/12/2024 <br> 
-|  Multiplex    | risolto errore con static e gestendo add pin in initializepin    | 6.30h |   9.00->11.00 AND <br> 13.30->17.00;  of 27/12/2024 <br> 
-|  Multiplex    | risolto errore initializepin  con certi pin da errore perche provo a leggere da risorse che sono utilizzatte per wifi!   | 6.30h |   9.00->11.00 AND <br> 13.30->17.00;  of 27/12/2024 <br> 
+|  Multiplex    | risolto errore con static e gestendo add pin in initializepin    | 6.30h |   9.00->11.00 AND <br> 13.30->17.00;  of 28/12/2024 <br> 
+|  Multiplex    | risolto errore initializepin  con certi pin da errore perche provo a leggere da risorse che sono utilizzatte per wifi!   | 6.30h |   9.00->11.00 AND <br> 13.30->17.00;  of 29/12/2024 <br> 
 |  Multiplex    | DEBUG errore ADC3 - SENSOGuru Meditation Error: Core  1 panic'ed   accade quando compilo ma ho aperto http://192.168.178.144/pinout  perche prova a leggere quando in effetti non ho ancora finito di costruire oggetto!   | 2h |   9.00->11.00  of 28/12/2024  ANCORA DA APPROFONDIRE BENE COME GESTIRE pero siccome e errore che puo accadere solo in fase di boot non e approfondito per ora<br> 
-|  Monitor    | TODO GRAFICO stack per ogni singolo thread di registrazione nella pagina monitor!     |  3.15 + 3.30 + 5.30 = 12.15h  |   8.00->11.15 AND <br> 13.30->17.00;  of 26/12/2024 <br>  <br> 13.30->19.00  of 27/12/2024 <br>
+|  Monitor    | GRAFICO stack per ogni singolo thread di registrazione nella pagina monitor!     |  3.15 + 3.30 + 5.30 = 12.15h  |   8.00->11.15 AND <br> 13.30->17.00;  of 26/12/2024 <br>  <br> 13.30->19.00  of 30/12/2024 <br>
 
 <br> 
 <br> 
