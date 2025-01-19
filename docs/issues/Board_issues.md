@@ -1,7 +1,7 @@
 
 ## issues related to the board
 
-
+Link goodnotes: [Qui](https://web.goodnotes.com/s/MFs1q0628At8S2OhyxoSrB#page-4)
 
 
 
