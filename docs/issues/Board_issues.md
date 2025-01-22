@@ -119,3 +119,11 @@ BOARD SCOLLEGATA DA ALIMENTAZIONE ESP CONNESSO LIVE SULLA BOARD:
 BOARD CON ALIMENTAZIONE 19V da TESTER ESP CONNESSO LIVE SULLA BOARD:
 
 [text](BoardCOnnessaALIMENTAZIONE.pdf)
+
+
+## found 
+on pin  13 -- tutti quelli ingressi digitali--
+  trovato 5V all avvio che magari causavano crash del sistema poiche all avvie esp tenta di tirare a 0 tutti i pin ma non ce la fa
+
+
+  -- guarda se posso fare fix 

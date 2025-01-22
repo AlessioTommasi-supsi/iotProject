@@ -1,8 +1,6 @@
 #include "ModbusRTUMaster.h"
-#include "DisplayOled.h"
 #include "ModbusRTUSlave.h"
 #include "Utils.h"
-#include "WebServerManager.h"
 #include <HardwareSerial.h>
 
 #define SLAVE_ID 1 
@@ -10,8 +8,8 @@
 #define TX_PIN_MASTER 17
 #define DE_PIN_MASTER 15
 
-#define RX_PIN_SLAVE 32
-#define TX_PIN_SLAVE 33
+#define RX_PIN_SLAVE 23
+#define TX_PIN_SLAVE 32
 #define DE_PIN_SLAVE 27
 
 HardwareSerial SerialPort(1); 
@@ -27,7 +25,6 @@ const long intervalRead = 750;
 ModbusRTUMaster modbus(Serial2, DE_PIN_MASTER);
 ModbusRTUSlave modbusSlave(SerialPort, DE_PIN_SLAVE);
 
-WebServerManager webServerManager("CONFIGURE_ME_ESP32_G2", "", master, swap);
 
 void fillHoldingRegisters(uint16_t startAddress, uint16_t quantity) {
     uint16_t holdingRegistersSlave[20];
@@ -57,25 +54,18 @@ void fillHoldingRegisters(uint16_t startAddress, uint16_t quantity) {
 
 void setup() {
   Serial.begin(9600);
-  setupDisplay();
   modbus.setTimeout(2000);
   modbus.begin(9600, SERIAL_8N1, RX_PIN_MASTER, TX_PIN_MASTER); 
 
   modbusSlave.begin(SLAVE_ID, 9600, SERIAL_8N1, RX_PIN_SLAVE, TX_PIN_SLAVE);
   modbusSlave.setFillHoldingRegistersCallback(fillHoldingRegisters);
-  webServerManager.begin(modbus);
 }
 
 void loop() {
-  webServerManager.handleClient();
 
-  if (master) {
-    printOnDisplay("Master");
-  } else {
-    printOnDisplay("Slave");
     Serial.println("Slave");
     modbusSlave.poll();
-  }
+  
 
   unsigned long currentMillisMainLoop = millis();
   if (currentMillisMainLoop - previousMillisMainLoop >= intervalMainLoop) {
