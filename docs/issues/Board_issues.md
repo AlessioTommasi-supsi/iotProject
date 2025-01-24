@@ -127,3 +127,5 @@ on pin  13 -- tutti quelli ingressi digitali--
 
 
   -- guarda se posso fare fix 
+
+  e'esattamente questo il problema. vistro che funziona mettendo in input tutti i pin
