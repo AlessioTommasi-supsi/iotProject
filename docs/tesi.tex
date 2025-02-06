@@ -16,6 +16,7 @@
 
 \tableofcontents
 
+\centering
 \chapter{Introduzione}
 
 Il progetto \textit{iotProject} è stato sviluppato nel corso di IoT del Master in Informatica presso SUPSI. Il focus principale è sull'ESP32 e il protocollo Modbus.
@@ -52,13 +53,41 @@ Per compilare i file nelle sottocartelle, è necessario aggiungerli come libreri
 \end{figure}
 
 \chapter{Hardware}
-
-
-\paragraph{Pin utilizzabili:}
-asd
 \section{Board Esam}
 \subsection{Funzionamento}
 \subsubsection{Multiplex}
+\paragraph{ }
+Il dispositivo di multiplexing riulta essere il \textbf{CD405xB}. \\
+sviluppato da Texas Insreumet, link alla documentazione ufficiale: \href{https://www.ti.com/lit/ds/symlink/cd4051b.pdf}{CD405xB}. \\ 
+
+Siccome successivamente servira diporto di seguito la tabella di verita di tale dispositivo. Figura 5.1 \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{../image/CD405xB.png}
+    \caption{Tabella di verita del CD405xB}
+\end{figure}
+
+\subsubsection{Collegamenti Multiplexer}
+
+I pin di ingresso A, B, C del multiplexer \textbf{CD405xB} sono collegati rispettivamente ai pin GPIO 12, 13, 14 dell'ESP32. La selezione dei canali del multiplexer avviene impostando i pin A, B, C come segue:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Canale} & \textbf{Pin A} & \textbf{Pin B} & \textbf{Pin C} \\ \hline
+        0 & 0 & 0 & 0 \\ \hline
+        1 & 1 & 0 & 0 \\ \hline
+        2 & 0 & 1 & 0 \\ \hline
+        3 & 1 & 1 & 0 \\ \hline
+        4 & 0 & 0 & 1 \\ \hline
+        5 & 1 & 0 & 1 \\ \hline
+        6 & 0 & 1 & 1 \\ \hline
+        7 & 1 & 1 & 1 \\ \hline
+    \end{tabular}
+    \caption{Configurazione dei pin per la selezione dei canali del multiplexer}
+\end{table}
+
 \subsection{ hardware esterno posizionabile sulla board}
 \subsubsection{MAX31865}
 asd
@@ -71,8 +100,9 @@ asd
     \caption{Pinout dell'ESP32-DOIT-DEV-KIT v1}
 \end{figure}
 
-\chapter{Modbus}
-
+\chapter{Software}
+\section{WebServer}
+\section{Modbus}
 Il file utilizzato per testare lo slave è disponibile qui: \href{src/SLAVE\_EXAMPLE/modbusSlave2/modbusSlave2.ino}{modbusSlave2.ino}.
 
 \begin{figure}[H]

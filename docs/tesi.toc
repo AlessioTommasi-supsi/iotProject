@@ -9,12 +9,15 @@
 \contentsline {paragraph}{}{5}{section*.5}%
 \contentsline {chapter}{\numberline {4}Diagramma UML}{6}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Hardware}{7}{chapter.5}%
-\contentsline {paragraph}{Pin utilizzabili:}{7}{section*.6}%
 \contentsline {section}{\numberline {5.1}Board Esam}{7}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Funzionamento}{7}{subsection.5.1.1}%
-\contentsline {subsubsection}{Multiplex}{7}{section*.7}%
-\contentsline {subsection}{\numberline {5.1.2} hardware esterno posizionabile sulla board}{7}{subsection.5.1.2}%
-\contentsline {subsubsection}{MAX31865}{7}{section*.8}%
-\contentsline {subsubsection}{ESP32 38 Pin}{8}{section*.9}%
-\contentsline {chapter}{\numberline {6}Modbus}{9}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Attività}{10}{chapter.7}%
+\contentsline {subsubsection}{Multiplex}{7}{section*.6}%
+\contentsline {paragraph}{ }{7}{section*.7}%
+\contentsline {subsubsection}{Collegamenti Multiplexer}{8}{section*.8}%
+\contentsline {subsection}{\numberline {5.1.2} hardware esterno posizionabile sulla board}{8}{subsection.5.1.2}%
+\contentsline {subsubsection}{MAX31865}{8}{section*.9}%
+\contentsline {subsubsection}{ESP32 38 Pin}{9}{section*.10}%
+\contentsline {chapter}{\numberline {6}Software}{10}{chapter.6}%
+\contentsline {section}{\numberline {6.1}WebServer}{10}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Modbus}{10}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Attività}{11}{chapter.7}%

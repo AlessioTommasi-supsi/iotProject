@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  6 FEB 2025 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  6 FEB 2025 20:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -263,11 +263,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tesi.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
+(Font)              <6> on input line 12.
 )
 \tf@toc=\write4
 \openout4 = `tesi.toc'.
@@ -276,7 +276,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 \chapter
+l.20 \chapter
              {Introduzione} [1
 
 ]
@@ -289,73 +289,74 @@ Capitolo 2.
 
 ]
 Capitolo 3.
-<../image/Library.png, id=79, 315.1775pt x 558.085pt>
+<../image/Library.png, id=89, 315.1775pt x 558.085pt>
 File: ../image/Library.png Graphic file (type png)
 <use ../image/Library.png>
-Package pdftex.def Info: ../image/Library.png  used on input line 40.
+Package pdftex.def Info: ../image/Library.png  used on input line 41.
 (pdftex.def)             Requested size: 117.00119pt x 207.16948pt.
 [4
 
  <../image/Library.png>] [5]
 Capitolo 4.
-<../image/uml.png, id=94, 1657.19125pt x 858.20625pt>
+<../image/uml.png, id=104, 1657.19125pt x 858.20625pt>
 File: ../image/uml.png Graphic file (type png)
 <use ../image/uml.png>
-Package pdftex.def Info: ../image/uml.png  used on input line 50.
+Package pdftex.def Info: ../image/uml.png  used on input line 51.
 (pdftex.def)             Requested size: 390.0pt x 201.96658pt.
 [6
 
  <../image/uml.png>]
 Capitolo 5.
-<../image/ESP-38Pin-pinout.jpg, id=102, 832.5504pt x 473.6094pt>
-File: ../image/ESP-38Pin-pinout.jpg Graphic file (type jpg)
-<use ../image/ESP-38Pin-pinout.jpg>
-Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 70.
-(pdftex.def)             Requested size: 390.0pt x 221.85933pt.
+<../image/CD405xB.png, id=113, 694.595pt x 601.24625pt>
+File: ../image/CD405xB.png Graphic file (type png)
+<use ../image/CD405xB.png>
+Package pdftex.def Info: ../image/CD405xB.png  used on input line 66.
+(pdftex.def)             Requested size: 195.0pt x 168.78816pt.
 [7
 
-] [8 <../image/ESP-38Pin-pinout.jpg>]
+ <../image/CD405xB.png>]
+<../image/ESP-38Pin-pinout.jpg, id=122, 832.5504pt x 473.6094pt>
+File: ../image/ESP-38Pin-pinout.jpg Graphic file (type jpg)
+<use ../image/ESP-38Pin-pinout.jpg>
+Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 99.
+(pdftex.def)             Requested size: 390.0pt x 221.85933pt.
+ [8] [9 <../image/ESP-38Pin-pinout.jpg>]
 Capitolo 6.
-<../image/SlavePinout.png, id=117, 330.48468pt x 210.7875pt>
+<../image/SlavePinout.png, id=137, 330.48468pt x 210.7875pt>
 File: ../image/SlavePinout.png Graphic file (type png)
 <use ../image/SlavePinout.png>
-Package pdftex.def Info: ../image/SlavePinout.png  used on input line 80.
+Package pdftex.def Info: ../image/SlavePinout.png  used on input line 110.
 (pdftex.def)             Requested size: 390.0pt x 248.75604pt.
-[9
+[10
 
  <../image/SlavePinout.png>]
 Capitolo 7.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 86--89
+Overfull \hbox (24.0pt too wide) in alignment at lines 116--119
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 89--92
+Overfull \hbox (24.0pt too wide) in alignment at lines 119--122
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 92--94
+Overfull \hbox (24.0pt too wide) in alignment at lines 122--124
  [] [] 
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 97--97
-[]|\OT1/cmr/m/n/12 Sviluppare la ge-stio-ne del-le usci-te di-gi-ta-li e
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 98--98
+Underfull \hbox (badness 1331) in paragraph at lines 128--128
 []|\OT1/cmr/bx/n/12 Comunicazione RS485
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 94--102
+Overfull \hbox (24.0pt too wide) in alignment at lines 124--132
  [] [] 
  []
 
-[10
+[11
 
 ] (./tesi.aux)
  ***********
@@ -363,21 +364,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: F03DF934BB3C4FB0EE300A46BE1218A4;1278.
+(rerunfilecheck)             Checksum: 8F27296C8C1396254D4D3C3ED0F7E176;1473.
  ) 
 Here is how much of TeX's memory you used:
- 9729 strings out of 474116
- 154383 string characters out of 5743683
+ 9748 strings out of 474116
+ 154733 string characters out of 5743683
  1935187 words of memory out of 5000000
- 31956 multiletter control sequences out of 15000+600000
+ 31969 multiletter control sequences out of 15000+600000
  564666 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,385b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,385b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (11 pages, 619956 bytes).
+Output written on tesi.pdf (12 pages, 656256 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
