@@ -174,11 +174,7 @@ gantt
     Watchdog Issue Fix        :done, s10, 01/11/2024, 24h
     Graph and History Page    :done, s11, 06/11/2024, 1h
     docx Fix               :done, s12, 06/11/2024, 1h
-    gant giagram               :done, s12, 06/11/2024, 1h
-    
-    section Attività Future
-    Modbus Slave              :active, s13, 15/11/2024, 24h
-
+    GanttDiagram               :done, s12, 06/11/2024, 1h
     
 ```
 
