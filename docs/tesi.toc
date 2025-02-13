@@ -1,23 +1,43 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Dipendenze}{3}{chapter.2}%
-\contentsline {paragraph}{Driver}{3}{section*.2}%
-\contentsline {paragraph}{Compiler}{3}{section*.3}%
-\contentsline {chapter}{\numberline {3}Configurazione dell'Arduino IDE}{4}{chapter.3}%
-\contentsline {paragraph}{}{4}{section*.4}%
-\contentsline {paragraph}{}{5}{section*.5}%
-\contentsline {chapter}{\numberline {4}Diagramma UML}{6}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Hardware}{7}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Board Esam}{7}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Funzionamento}{7}{subsection.5.1.1}%
-\contentsline {subsubsection}{Multiplex}{7}{section*.6}%
-\contentsline {paragraph}{ }{7}{section*.7}%
-\contentsline {subsubsection}{Collegamenti Multiplexer}{8}{section*.8}%
-\contentsline {subsection}{\numberline {5.1.2} hardware esterno posizionabile sulla board}{8}{subsection.5.1.2}%
-\contentsline {subsubsection}{MAX31865}{8}{section*.9}%
-\contentsline {subsubsection}{ESP32 38 Pin}{9}{section*.10}%
-\contentsline {chapter}{\numberline {6}Software}{10}{chapter.6}%
-\contentsline {section}{\numberline {6.1}WebServer}{10}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Modbus}{10}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Attività}{11}{chapter.7}%
+\contentsline {section}{\numberline {1.1}Dipendenze}{2}{section.1.1}%
+\contentsline {paragraph}{Driver}{2}{section*.2}%
+\contentsline {paragraph}{Compiler}{2}{section*.3}%
+\contentsline {section}{\numberline {1.2}Configurazione dell'Arduino IDE}{2}{section.1.2}%
+\contentsline {paragraph}{}{2}{section*.4}%
+\contentsline {paragraph}{}{3}{section*.5}%
+\contentsline {chapter}{\numberline {2}Hardware}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Board Esam}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Funzionamento}{4}{subsection.2.1.1}%
+\contentsline {subsubsection}{Multiplex}{4}{section*.6}%
+\contentsline {paragraph}{ }{4}{section*.7}%
+\contentsline {subsubsection}{Collegamenti Multiplexer}{5}{section*.8}%
+\contentsline {subsubsection}{Canali Multiplexer}{5}{section*.9}%
+\contentsline {paragraph}{Ch0}{7}{section*.10}%
+\contentsline {paragraph}{Ch1}{7}{section*.11}%
+\contentsline {paragraph}{Ch2}{7}{section*.12}%
+\contentsline {paragraph}{Ch3}{7}{section*.13}%
+\contentsline {paragraph}{Ch4}{7}{section*.14}%
+\contentsline {paragraph}{Ch5}{7}{section*.15}%
+\contentsline {paragraph}{Ch6}{7}{section*.16}%
+\contentsline {subsection}{\numberline {2.1.2} hardware esterno posizionabile sulla board}{8}{subsection.2.1.2}%
+\contentsline {subsubsection}{MAX31865}{8}{section*.17}%
+\contentsline {subsubsection}{ESP32 38 Pin}{8}{section*.18}%
+\contentsline {chapter}{\numberline {3}Software}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagramma UML}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Pattern}{9}{subsection.3.1.1}%
+\contentsline {subsubsection}{Model-View-Controller (MVC)}{9}{section*.19}%
+\contentsline {paragraph}{Model}{9}{section*.20}%
+\contentsline {paragraph}{View}{10}{section*.21}%
+\contentsline {paragraph}{Controller}{10}{section*.22}%
+\contentsline {subsubsection}{Singleton}{10}{section*.23}%
+\contentsline {section}{\numberline {3.2}performace}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}WebServer}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Modbus}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Attività}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sviluppi futuri}{13}{section.5.1}%
+\contentsline {paragraph}{persistenza e datalogging su scheda SD}{13}{section*.24}%
+\contentsline {paragraph}{backup dati su cloud}{13}{section*.25}%
+\contentsline {section}{\numberline {5.2}Ringraziamenti}{13}{section.5.2}%

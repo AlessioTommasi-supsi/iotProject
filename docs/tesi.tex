@@ -21,7 +21,7 @@
 
 Il progetto \textit{iotProject} è stato sviluppato nel corso di IoT del Master in Informatica presso SUPSI. Il focus principale è sull'ESP32 e il protocollo Modbus.
 
-\chapter{Dipendenze}
+\section{Dipendenze}
 
 \paragraph{Driver}
 Per gli utenti Windows, è necessario installare \texttt{CP210xDriver}
@@ -29,7 +29,7 @@ Per gli utenti Windows, è necessario installare \texttt{CP210xDriver}
 Per compilare tale progetto e'stato utilizzato Arduino IDE 2.3.3.
 disponibile al seguente link: \href{https://www.arduino.cc/en/software}{Arduino IDE}.
 
-\chapter{Configurazione dell'Arduino IDE}
+\section{Configurazione dell'Arduino IDE}
 
 Link repo ufficiale: \href{https://github.com/AlessioTommasi-supsi/iotProject }{iotProject}.
 
@@ -44,13 +44,6 @@ Per compilare i file nelle sottocartelle, è necessario aggiungerli come libreri
 
 \paragraph{} Altrimenti clonare la versione Portable del progetto disponibile al seguente link: \href{https://github.com/AlessioTommasi-supsi/iotProject/tree/portable}{iotProject-portable}.
 
-
-\chapter{Diagramma UML}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{../image/uml.png}
-    \caption{Diagramma UML del sistema}
-\end{figure}
 
 \chapter{Hardware}
 \section{Board Esam}
@@ -88,6 +81,61 @@ I pin di ingresso A, B, C del multiplexer \textbf{CD405xB} sono collegati rispet
     \caption{Configurazione dei pin per la selezione dei canali del multiplexer}
 \end{table}
 
+\subsubsection{Canali Multiplexer}
+Nella figura nella pagina seguente seguito vennogno riportati i collegamenti dei canali del multiplexer con i collegamenti esterni. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/channelMultiplex.png}
+    \caption{Collegamenti dei canali del multiplexer}
+\end{figure}
+
+\paragraph{Ch0}
+Selezionando Ch0 dall apposita pagina dedicata segue il percorso evidenziato in arancione nella Figura 5.2.
+E' collegato a pin 8 della morsettiera CN2.
+Su tale morsetto ci aspettiamo in ingresso un segnale di corrente che il componente TL431 si occupera di regolare e stabilizzare la tensione in ingresso entro dei range indicati.
+a questo link potete trovare il datasheet di tale componente per maggiori info \href{https://www.ti.com/lit/ds/symlink/tl431.pdf}{TL431}.
+
+\paragraph{Ch1}
+percorso evidenziato in giallo nella Figura 5.2.
+
+Possibili funzioni del segnale sul segnale in ingreso al pin 7 della morsettiera CN2.
+
+- \textbf{Filtro Passa Basso}
+Se il segnale applicato su R7 è una tensione alternata (AC), il circuito potrebbe attenuare le alte frequenze, lasciando passare solo le frequenze più basse
+
+- \textbf{Stabilizzazione del segnale}
+
+\paragraph{Ch2}
+percorso evidenziato in viola nella Figura 5.2.
+
+Leggeremo il segnale in ingresso al pin 6 della morsettiera CN2.
+
+Il segnale verra amplificato dall operazionale U4 che e collegato come amplificatore non invertente (maggiori info al link \href{https://elettronicasemplice.weebly.com/amplificatore-operazionale-non-invertente.html}{LM358}).
+
+Il guadagno di U4 e' dato dalla formula $G = 1 + \frac{R9}{R10}= 1+330 = 331 $.
+
+inoltre tali alimentatore e alimentato tra 0 e +5v quindi clampera il segnale in ingresso tra 0 e +5v.
+Il condensatore C31 si occupa di stabilizzare il segnale in uscita.
+
+\paragraph{Ch3}
+percorso evidenziato in azzurro nella Figura 5.2.
+
+Leggeremo il segnale in ingresso al pin 1 della morsettiera CN2.
+
+tra il segnale sul pin 1 ed ESP e'presente un partitore di tensione composto da R11 = 1M e R12 = 270K dunque $Vesp = Vpin1 * \frac{R12}{R11+R12} = Vpin1 * \frac{270}{1270} = Vpin1 * 0.2126$.
+
+
+\paragraph{Ch4}
+Connessione equivalente a CH0 
+
+\paragraph{Ch5}
+Connessione equivalente a CH1
+
+\paragraph{Ch6}
+Connessione equivalente a CH3
+
+Tutte le connessioni equivalenti hanno un circuito hw separato per garantire la massima indipendenza tra i canali.
 \subsection{ hardware esterno posizionabile sulla board}
 \subsubsection{MAX31865}
 asd
@@ -101,6 +149,26 @@ asd
 \end{figure}
 
 \chapter{Software}
+\section{Diagramma UML}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/uml.png}
+    \caption{Diagramma UML del sistema}
+\end{figure}
+\subsection{Pattern}
+\subsubsection{Model-View-Controller (MVC)}
+\paragraph{Model} Contiene la struttura dei dati e le funzioni per accedere e modificarli. 
+Le classi coinvolte sono \texttt{SystemState}, \texttt{Pin}, \texttt{PinoutData}, \texttt{Routes}.
+\paragraph{View} Si occupa di visualizzare i dati e di interagire con l'utente.
+
+principalmente sono classi che si occupano della generazione dei componenti delle pagine web visualizzate dall utente.
+
+\paragraph{Controller} Gestisce le richieste dell'utente e aggiorna il modello di conseguenza.
+
+\subsubsection{Singleton}
+utilizzato per garantire unicita e atomicita dei dati \texttt{SystemState} e'la classe che implementa tale pattern.
+Sara particolarmente utile in futuro per l'implementazione di un sistema di datalogging e persistenza dei dati su scheda SD.
+\section{performace}
 \section{WebServer}
 \section{Modbus}
 Il file utilizzato per testare lo slave è disponibile qui: \href{src/SLAVE\_EXAMPLE/modbusSlave2/modbusSlave2.ino}{modbusSlave2.ino}.
@@ -131,6 +199,11 @@ Il file utilizzato per testare lo slave è disponibile qui: \href{src/SLAVE\_EXA
 \textbf{Test e validazione} & Testare e validare il sistema attraverso simulazioni e test su hardware reale. \\ \hline
 \end{longtable}
 
+\chapter{Conclusioni}
+\section{Sviluppi futuri}
+\paragraph{persistenza e datalogging su scheda SD}
+\paragraph{backup dati su cloud} implementazione backend etc
+\section{Ringraziamenti}
 
 
 \end{document}
