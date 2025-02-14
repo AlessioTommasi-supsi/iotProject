@@ -8,7 +8,10 @@
 
 \begin{document}
 
-\title{\textbf{iotProject}}
+\title{\textbf{ALPHA} 
+
+Acquisizione Locale di Parametri con Hardware Avanzato
+}
 \author{Alessio Tommasi}
 \date{\today}
 
@@ -19,8 +22,9 @@
 \centering
 \chapter{Introduzione}
 
-Il progetto \textit{iotProject} è stato sviluppato nel corso di IoT del Master in Informatica presso SUPSI. Il focus principale è sull'ESP32 e il protocollo Modbus.
+Il progetto \textit{ALPHA} è stato sviluppato nel corso di IoT del Master in Informatica presso SUPSI. Il focus principale è sull'ESP32 e il protocollo Modbus.
 
+La documentazione ufficiale del progetto disponibile al seguente link: \href{https://progettistudio.supsi.ch/dettaglio.php?p=C10936}{ALPHA}.
 \section{Dipendenze}
 
 \paragraph{Driver}
@@ -28,6 +32,15 @@ Per gli utenti Windows, è necessario installare \texttt{CP210xDriver}
 \paragraph{Compiler}
 Per compilare tale progetto e'stato utilizzato Arduino IDE 2.3.3.
 disponibile al seguente link: \href{https://www.arduino.cc/en/software}{Arduino IDE}.
+
+\paragraph{Pubblic library}
+
+\subparagraph[short]{AsyncTCP} ulteriori informazioni sono disponibili a questo  \href{https://github.com/dvarrel/AsyncTCP}{link}
+\subparagraph[short]{ESPAsyncTCP} ulteriori informazioni sono disponibili a questo  \href{https://github.com/dvarrel/ESPAsyncTCP}{link}
+\subparagraph[short]{ESPAsyncWebServer} ulteriori informazioni sono disponibili a questo  \href{https://github.com/dvarrel/ESPAsyncWebSrv}{link}
+\subparagraph[short]{UIPEthernet} ulteriori informazioni sono disponibili a questo  \href{https://github.com/UIPEthernet/UIPEthernet}{link}
+
+\paragraph{Modbus} Sono state testate diverse librerie, ma nessuna di esse ha funzionato in modo ottimale.
 
 \section{Configurazione dell'Arduino IDE}
 
@@ -46,9 +59,92 @@ Per compilare i file nelle sottocartelle, è necessario aggiungerli come libreri
 
 
 \chapter{Hardware}
-\section{Board Esam}
-\subsection{Funzionamento}
-\subsubsection{Multiplex}
+\section{Funzionamento}
+\subsection{Alimentazione}
+
+E' possibile alimentare la board tramite un alimentatore esterno da 24V DC che fornisca almeno 0.5A.
+
+In particolare e'stato utilizzato \href{https://www.e-repair.com/products-catalogue/sitop/6ep1331-5ba00}{SIMENS SITOP PSU100C 24V 0.5A.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/psu.png}
+    \caption{ }
+\end{figure}
+
+\paragraph{Descrizione } 
+Lo schema in Figura 2.1 
+rappresenta il sistema di alimentazione con regolatori di tensione e relativi condensatori di filtraggio. 
+
+I connettori P1:A e P1:B forniscono l'ingresso principale della tensione al circuito.
+
+\paragraph{Conversione DC-DC } 
+l primo stadio dell'alimentazione è rappresentato dal modulo DC-DC Wurth 177920531,( \href{https://www.we-online.com/components/products/datasheet/1769205341.pdf}{Data Sheet Here} )
+che si occupa della conversione della tensione di ingresso a un livello adeguato per il regolatore successivo. 
+
+La stabilizzazione della tensione è garantita dai condensatori C26 e C28 entrambi da 100 
+muF, 
+i quali riducono eventuali ripple presenti nella tensione di alimentazione.
+
+\paragraph{Regolazione di tensione}
+Dopo la conversione DC-DC, il regolatore lineare 
+\href{https://www.mouser.it/datasheet/2/389/ld1117-1849389.pdf}{LD1117S33TR} (U3 sulla board) fornisce una tensione stabile di 3.3V, 
+necessaria per l'alimentazione dei componenti successivi. 
+
+Questo regolatore include un condensatore di ingresso C28 di 10uF e 
+un condensatore di uscita C27 di 100nF per migliorare la stabilità del segnale.
+
+Un LED rosso (D3) con la resistenza R88 fornisce un'indicazione visiva della corretta alimentazione del sistema.
+
+\paragraph{Regolatore Switching LM7660}
+Un ulteriore regolatore di tensione, l'LM7660 (U10), 
+viene utilizzato per generare una tensione negativa o fornire una conversione di tensione specifica. 
+
+Questo componente opera con i condensatori C29 e C30 (entrambi da 10uF), i quali servono per stabilizzare la tensione e ridurre le oscillazioni indesiderate.
+
+\paragraph{Uscite}
+Le alimentazioni ottenute distribuiti tramite i connettori P20:1, P20:2, P21:1, P21:2, P22:1 e P22:2, 
+che permettono l'integrazione del sistema con altri moduli elettronici.
+
+P20:1 e P20:2 forniscono la tensione di alimentazione principale a 5V, mentre P21:1 e P21:2 forniscono la tensione negativa a -5V.
+
+P22:1 e P22:2 forniscono la tensione di alimentazione a 3.3V.
+
+\newpage
+
+\subsection{Ingressi Digitali}
+
+Questo sezione descrive l'implementazione degli ingressi digitali nel circuito, illustrando il principio di funzionamento, la protezione e il filtraggio dei segnali.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/IngressiDigitali.png}
+    \caption{ }
+\end{figure}
+
+\paragraph{Descrizione}
+Il circuito degli ingressi digitali è progettato per accettare segnali in ingresso e condizionarli adeguatamente prima di inviarli alla logica di elaborazione. 
+
+\textbf{Ogni ingresso è dotato di:}
+
+- \textbf{Resistenze} da 2.2 k$\Omega$
+ rispettivamente (R1, R2) per ingresso digitalale 1 e (R3, R4) per ingresso digitale 2: 
+il loro scopo è limitare la corrente di ingresso e formare un partitore resistivo.
+
+-\textbf{Condensatori} da 1.5 nF (C1, C2, C3, C4): 
+implementati per ridurre il rumore ad alta frequenza e migliorare l'integrità del segnale.
+
+-\textbf{Diodi Zener} da 4.7V (Z1, Z2, Z3, Z4): impiegati per proteggere l'ingresso da sovratensioni accidentali che potrebbero danneggiare i componenti a valle.
+
+\paragraph{Conclusioni}
+
+Grazie all'uso combinato di resistenze, condensatori e diodi di protezione, il circuito è in grado di accettare segnali digitali provenienti da diversi dispositivi, mantenendo una buona immunità al rumore. 
+
+Inoltre, la configurazione utilizzata permette di garantire livelli logici stabili e ben definiti.
+
+Dunque il sistema di ingressi digitali descritto rappresenta una soluzione efficace per la gestione di segnali binari, garantendo protezione, stabilità e robustezza. Questa configurazione assicura un'interfaccia affidabile tra il mondo fisico e il sistema di elaborazione.
+
+\newpage
+\subsection{Multiplex}
 \paragraph{ }
 Il dispositivo di multiplexing riulta essere il \textbf{CD405xB}. \\
 sviluppato da Texas Insreumet, link alla documentazione ufficiale: \href{https://www.ti.com/lit/ds/symlink/cd4051b.pdf}{CD405xB}. \\ 
@@ -136,11 +232,11 @@ Connessione equivalente a CH1
 Connessione equivalente a CH3
 
 Tutte le connessioni equivalenti hanno un circuito hw separato per garantire la massima indipendenza tra i canali.
-\subsection{ hardware esterno posizionabile sulla board}
-\subsubsection{MAX31865}
+\section{ hardware esterno posizionabile sulla board}
+\subsection{MAX31865}
 asd
 
-\subsubsection{ESP32 38 Pin}
+\subsection{ESP32 38 Pin}
 
 \begin{figure}[H]
     \centering
