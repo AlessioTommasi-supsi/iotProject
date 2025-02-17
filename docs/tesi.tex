@@ -5,6 +5,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage{needspace}
 
 \begin{document}
 
@@ -232,9 +233,77 @@ Connessione equivalente a CH1
 Connessione equivalente a CH3
 
 Tutte le connessioni equivalenti hanno un circuito hw separato per garantire la massima indipendenza tra i canali.
-\section{ hardware esterno posizionabile sulla board}
-\subsection{MAX31865}
-asd
+\section{ Hardware esterno }
+
+\subsection{Winzet W5500 Ethernet module}
+tale dispositivo e opzionale e deve essere collocato sulla board in alternativa alla scheda SD.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{../image/SD_and_W5500.png}
+    \caption{Winzet W5500 Ethernet module}
+\end{figure}
+
+per il corretto funzionamento si devono collocare manualmente sullla board seguenti jumper: J49, J50, J51, J52 e J38 visibili in figuras 2.5.
+
+\Needspace{5\baselineskip}
+
+Per una documentazione dettagliata sulla ricerca di tale modulo e sul codice e librerie utilizzate da esso consultare il seguente 
+
+link: \href{https://github.com/AlessioTommasi-supsi/iotProject/blob/main/docs/ResearchEthModule/W5500Example/README.md}{W5500}.
+
+Si e optato per l'utilizzo di un modulo Ethernet W5500 per la comunicazione tramite Modbus TCP/IP.
+
+- documentazione dettagliata modbus tcp/ip \href{https://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf}{Modbus TCP/IP}
+
+\subsubsection{funzionamento modbus TCP/IP }
+Modbus TCP è stato sviluppato per sfruttare le infrastrutture di rete LAN esistenti, permettendo la comunicazione attraverso reti Ethernet. Attualmente viene utilizzato per qualsiasi connessione tra dispositivi connessi a internet.
+
+Questo protocollo incapsula i messaggi Modbus RTU in pacchetti TCP, il che facilita la loro trasmissione su reti Ethernet standard. Uno dei principali vantaggi del Modbus TCP è la sua capacità di connettere un numero illimitato di dispositivi, grazie all’uso di indirizzi IP invece delle limitazioni di indirizzamento dei protocolli seriali.
+
+In questo contesto, Modbus TCP ridefinisce la relazione master-slave in termini di client-server, permettendo una comunicazione più flessibile e scalabile. I dispositivi possono agire come client o server, facilitando l’integrazione di più sistemi e migliorando l’efficienza delle comunicazioni nelle reti industriali.
+
+link bibiografia \href{https://v2charge.com/it/che-cose-modbus-rtu-tpc/}{Modbus TCP/IP}
+
+\subsubsection{Vantaggi W5500}
+\begin{itemize}
+    \item \textbf{Alta velocità e prestazioni}: Supporta fino a 80 Mbps grazie al buffer hardware dedicato.
+    \item \textbf{Stack TCP/IP hardware integrato}: Libera risorse sul microcontrollore ESP32.
+    \item \textbf{Consumo energetico ridotto}: Più efficiente rispetto all’ENC28J60, ideale per applicazioni a basso consumo.
+    \item \textbf{Compatibilità ampia}: Supportato dalla libreria Ethernet ufficiale di Arduino.
+\end{itemize}
+
+Per visualizzare una ricerca piu dettagliata sul confronto di tale modulo con altri moduli presenti sul mercato consultare il seguente link: \href{https://github.com/AlessioTommasi-supsi/iotProject/tree/main/docs/ResearchEthModule}{ResearchEthModule}.
+
+\subsection{MAX485 Modbus RTU} 
+
+Tale moduli sono utilizzati per la comunicazione seriale tra ESP32 e altri dispositivi che supportano il protocollo Modbus RTU.
+
+il dispositivo deve essere alimentato con 5V e collegato ai pin RX e TX dell'ESP32.
+per far si che la comunicazione funzioni correttamente collegare cavo trasporto dati dell usb e collegare al dispositivo Master o slave.
+
+\subsubsection{Descrizione Protocollo Modbus RTU}
+Modbus RTU è basato su una comunicazione seriale asincrona, che consente la trasmissione di dati su cavi.
+
+\begin{itemize}
+    \item \textbf{Caratteristiche}
+    \begin{itemize}
+        \item Formato di messaggio compatto: I messaggi sono compatti, il che consente una trasmissione più rapida ed efficiente.
+        \item Modalità binaria: I dati vengono trasmessi in un formato binario, il che significa che si usano bit (0 e 1).
+    \end{itemize}
+    \item \textbf{Vantaggi del Modbus RTU}
+    \begin{itemize}
+        \item Ideale per distanze brevi e medie.
+        \item Semplice ed economico per installazioni piccole o medie.
+    \end{itemize}
+    \item \textbf{Limitazioni del Modbus RTU}
+    \begin{itemize}
+        \item Limitazioni di distanza e velocità.
+        \item Numero limitato di dispositivi che possono essere collegati sulla stessa linea di comunicazione, ovvero 32 dispositivi.
+    \end{itemize}
+\end{itemize}
+
+
 
 \subsection{ESP32 38 Pin}
 
