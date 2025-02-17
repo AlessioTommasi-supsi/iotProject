@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.9)  17 FEB 2025 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.9)  17 FEB 2025 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,27 +461,27 @@ Overfull \hbox (320.12535pt too wide) in paragraph at lines 562--562
 [25]
 Capitolo 4.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 586--589
+Overfull \hbox (24.0pt too wide) in alignment at lines 587--590
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 589--592
+Overfull \hbox (24.0pt too wide) in alignment at lines 590--593
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 592--594
+Overfull \hbox (24.0pt too wide) in alignment at lines 593--595
  [] [] 
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 598--598
+Underfull \hbox (badness 1331) in paragraph at lines 599--599
 []|\OT1/cmr/bx/n/12 Comunicazione RS485
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 594--602
+Overfull \hbox (24.0pt too wide) in alignment at lines 595--603
  [] [] 
  []
 
@@ -506,13 +506,13 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 Here is how much of TeX's memory you used:
  10065 strings out of 473530
  162415 string characters out of 5713827
- 587613 words of memory out of 5000000
+ 586613 words of memory out of 5000000
  33066 multiletter control sequences out of 15000+600000
  565771 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,432b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Alessio\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Alessio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (28 pages, 2068842 bytes).
+Output written on tesi.pdf (28 pages, 2068868 bytes).
 PDF statistics:
  436 PDF objects out of 1000 (max. 8388607)
  117 named destinations out of 1000 (max. 500000)

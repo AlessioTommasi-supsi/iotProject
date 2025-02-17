@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739815050.90977 "c:/Users/Alessio/Documents/IotOldProject/iotProject/docs/tesi.tex" "tesi.pdf" "tesi" 1739815052.54712 0
+["pdflatex"] 1739816453.82035 "c:/Users/Alessio/Documents/IotOldProject/iotProject/docs/tesi.tex" "tesi.pdf" "tesi" 1739816455.50073 0
   "../image/ADC.png" 1739803586 108033 7b17269a5dd27992cd1a2222b9ce7398 ""
   "../image/CD405xB.png" 1739137628 54717 12f53fd501baa3ab0210ee76b9afc76f ""
   "../image/ESP-38Pin-pinout.jpg" 1735150763 415600 b22a588693a045ad5d469f3a83701b72 ""
@@ -86,11 +86,11 @@
   "C:/Users/Alessio/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/Alessio/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1730400552 15900 3cb191e576c7a313634d2813c55d4bf1 ""
   "C:/Users/Alessio/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Alessio/Documents/IotOldProject/iotProject/docs/tesi.tex" 1739815046 29878 852ad95baa55cd42dbad5fc49c0873c5 ""
-  "tesi.aux" 1739815052 10243 08fd6df3e792f2b7129182c5bb9faecf "pdflatex"
-  "tesi.out" 1739815052 3321 ae74f82d6cb4b0d6f1f2958bc87b51bf "pdflatex"
-  "tesi.tex" 1739815046 29878 852ad95baa55cd42dbad5fc49c0873c5 ""
-  "tesi.toc" 1739815052 4786 74e604fb2faf8547e54af7e518f0c111 "pdflatex"
+  "c:/Users/Alessio/Documents/IotOldProject/iotProject/docs/tesi.tex" 1739816453 29905 eff56e29f2ad013d988b756bd4551299 ""
+  "tesi.aux" 1739816455 10243 08fd6df3e792f2b7129182c5bb9faecf "pdflatex"
+  "tesi.out" 1739816455 3321 ae74f82d6cb4b0d6f1f2958bc87b51bf "pdflatex"
+  "tesi.tex" 1739816453 29905 eff56e29f2ad013d988b756bd4551299 ""
+  "tesi.toc" 1739816455 4786 74e604fb2faf8547e54af7e518f0c111 "pdflatex"
   (generated)
   "tesi.aux"
   "tesi.log"
