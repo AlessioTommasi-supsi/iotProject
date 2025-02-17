@@ -30,8 +30,8 @@ void setup()
     systemState = SystemState::getInstance();
 
     
-    WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
-    //WiFiManager *wifiManager = new WiFiManager();
+    //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
+    WiFiManager *wifiManager = new WiFiManager();
     //pinoutData = new Esp32_38pin();
     pinoutData = new Esp32_38pinBoard();
     

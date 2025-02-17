@@ -335,24 +335,70 @@ il datasheet dettagliato di tale dispositivo e' disponibile al seguente link: \h
 \newpage
 \subsection{ESP32 38 Pin}
 \subsubsection{Descrizione}
-L'ESP32 è un potente microcontrollore prodotto da Espressif Systems che integra funzionalità Wi-Fi e Bluetooth, rendendolo ideale per applicazioni IoT (Internet of Things), automazione domestica, sistemi indossabili, monitoraggio remoto e molti altri progetti. La versione a 38 pin offre una vasta gamma di GPIO (General Purpose Input/Output) utilizzabili per diversi scopi.
+L'ESP32 è un potente microcontrollore prodotto da Espressif Systems che integra funzionalità Wi-Fi e Bluetooth, rendendolo ideale per applicazioni IoT (Internet of Things), automazione domestica, sistemi indossabili, monitoraggio remoto e molti altri progetti. 
 
-Caratteristiche Principali
-Dual-core Tensilica LX6: Processore dual-core con velocità di clock fino a 240 MHz.
+La versione a 38 pin offre una vasta gamma di GPIO (General Purpose Input/Output) utilizzabili per diversi scopi.
 
-Wi-Fi e Bluetooth: Supporto per Wi-Fi 802.11b/g/n e Bluetooth v4.2 BR/EDR e BLE (Bluetooth Low Energy).
+\textbf{Caratteristiche principali}:
+\begin{itemize}
+    \item \textbf{Dual-core Tensilica LX6}: Processore dual-core con velocità di clock fino a 240 MHz.
+    \item \textbf{Wi-Fi e Bluetooth}: Supporto per Wi-Fi 802.11b/g/n e Bluetooth v4.2 BR/EDR e BLE (Bluetooth Low Energy).
+    \item \textbf{Interfacce Multiple}: Include SPI, I2C, I2S, UART, ADC, DAC, PWM, e touch sensor.
+    \item \textbf{Basso Consumo Energetico}: Modalità di basso consumo per applicazioni a batteria.
+    \item \textbf{Memoria Integrata}: SRAM da 520 KB e supporto per memoria esterna.
+\end{itemize}
 
-Interfacce Multiple: Include SPI, I2C, I2S, UART, ADC, DAC, PWM, e touch sensor.
-
-Basso Consumo Energetico: Modalità di basso consumo per applicazioni a batteria.
-
-Memoria Integrata: SRAM da 520 KB e supporto per memoria esterna.
+Link alla documentazione ufficiale: \href{https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf}{ESP32}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{../image/ESP-38Pin-pinout.jpg}
     \caption{Pinout dell'ESP32-DOIT-DEV-KIT v1}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Pinout dell'ESP32 (Versione a 38 pin)}
+    \label{tab:esp32_pinout}
+    \begin{tabular}{|c|c|c|p{8cm}|}
+        \hline
+        \textbf{GPIO} & \textbf{Input} & \textbf{Output} & \textbf{Notes} \\ \hline
+        0 & pulled up & OK & outputs PWM signal at boot, must be LOW to enter flashing mode \\ \hline
+        1 & TX pin & OK & debug output at boot \\ \hline
+        2 & OK & OK & connected to on-board LED, must be left floating or LOW to enter flashing mode \\ \hline
+        3 & OK & RX pin & HIGH at boot \\ \hline
+        4 & OK & OK & \\ \hline
+        5 & OK & OK & outputs PWM signal at boot, strapping pin \\ \hline
+        6 & x & x & connected to the integrated SPI flash \\ \hline
+        7 & x & x & connected to the integrated SPI flash \\ \hline
+        8 & x & x & connected to the integrated SPI flash \\ \hline
+        9 & x & x & connected to the integrated SPI flash \\ \hline
+        10 & x & x & connected to the integrated SPI flash \\ \hline
+        11 & x & x & connected to the integrated SPI flash \\ \hline
+        12 & OK & OK & boot fails if pulled high, strapping pin \\ \hline
+        13 & OK & OK & \\ \hline
+        14 & OK & OK & outputs PWM signal at boot \\ \hline
+        15 & OK & OK & outputs PWM signal at boot, strapping pin \\ \hline
+        16 & OK & OK & \\ \hline
+        17 & OK & OK & \\ \hline
+        18 & OK & OK & \\ \hline
+        19 & OK & OK & \\ \hline
+        21 & OK & OK & \\ \hline
+        22 & OK & OK & \\ \hline
+        23 & OK & OK & \\ \hline
+        25 & OK & OK & \\ \hline
+        26 & OK & OK & \\ \hline
+        27 & OK & OK & \\ \hline
+        32 & OK & OK & \\ \hline
+        33 & OK & OK & \\ \hline
+        34 & OK &  & input only \\ \hline
+        35 & OK &  & input only \\ \hline
+        36 & OK &  & input only \\ \hline
+        39 & OK &  & input only \\ \hline
+    \end{tabular}
+\end{table}
+    
+    
 
 \chapter{Software}
 \section{Diagramma UML}
@@ -374,16 +420,166 @@ principalmente sono classi che si occupano della generazione dei componenti dell
 \subsubsection{Singleton}
 utilizzato per garantire unicita e atomicita dei dati \texttt{SystemState} e'la classe che implementa tale pattern.
 Sara particolarmente utile in futuro per l'implementazione di un sistema di datalogging e persistenza dei dati su scheda SD.
-\section{performace}
-\section{WebServer}
-\section{Modbus}
-Il file utilizzato per testare lo slave è disponibile qui: \href{src/SLAVE\_EXAMPLE/modbusSlave2/modbusSlave2.ino}{modbusSlave2.ino}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{../image/SlavePinout.png}
-    \caption{Pinout proposto per il dispositivo slave Modbus}
-\end{figure}
+Dallo sketch principale e inoltre possibile definirsi una Board custom estendendo la classe pinout e un wifi di default sulla quale connettersi senza dover passare ogni volta dall AP dell esp per garantirne una migliore usabilita.
+
+
+\section{Performace}
+
+Il programma caricato ottiene i seguenti risultati dal compilatore integrato ad Arduino IDE:
+\begin{verbatim}
+    Sketch uses 1291045 bytes (98%) of program storage space.
+     Maximum is 1310720 bytes.
+    Global variables use 50448 bytes (15%) of dynamic memory, 
+    leaving 277232 bytes for local variables. 
+    Maximum is 327680 bytes.
+\end{verbatim}
+
+\paragraph{Considerazioni: }
+
+Analizzanto tale outputse ne deduce che il programma utilizza il 98\%
+dello spazio di memorizzazione disponibile. 
+
+Questo elevato utilizzo della memoria flash implica un margine limitato per l'aggiunta di nuove funzionalità o librerie.
+
+l'utilizzo delle variabili globali è pari al 15\% della memoria disponibile, lasciando un ampio margine per le variabili locali e altre strutture di dati dinamici.
+
+Questa situazione è favorevole, in quanto garantisce la flessibilità necessaria per gestire strutture dati complesse e consentire allocazioni dinamiche.
+
+ 
+
+Dunque , per garantire la stabilità e l'espandibilità del progetto, potrebbe essere utile considerare l'acquisto di una versione dell'ESP32 con una maggiore capacità di memoria flash disponibile in commercio. 
+
+Oppure in alternativa, si puo optare per la modifica  lo schema di partizionamento dell'ESP32 per allocare più memoria al codice del programma, riducendo lo spazio destinato alla memoria Dinamica. 
+
+Questa personalizzazione permette di adattare la memoria disponibile alle specifiche esigenze del progetto senza introdurre costi aggiuntivi.
+
+
+\paragraph{Monitor}
+Per un controllo più granulare delle metriche come stack e heap del dispositivo, è stata creata una pagina dedicata che permette il monitoraggio in tempo reale senza impattare sulle prestazioni.
+
+\section{WebServer}
+È stato sviluppato un framework estendendo la libreria \href{URL}{AsynkWebsrwerver} per la gestione delle pagine web e delle richieste HTTP.
+ tale framework consente di aggiungere dinamicamente componenti HTML alle pagine in base alle richieste del client. 
+ 
+ Questo approccio garantisce una struttura uniforme e un tema coerente che si adatta a tutti i dispositivi.
+
+Il framework è progettato per essere estensibile e modulare. Per aggiungere una nuova pagina, è sufficiente estendere la classe \texttt{ViewGeneric} e aggiungere i componenti desiderati. I nuovi componenti erediteranno automaticamente il tema dell'applicativo, assicurando un aspetto e una sensazione coerenti in tutto il sistema.
+
+\newpage
+
+\subsection{Componenti HTML Dinamici}
+Il framework consente di definire componenti HTML come stringhe e di aggiungerli dinamicamente alle pagine web. Questo approccio permette di creare interfacce utente flessibili e reattive.
+
+\subsubsection{Esempio di Aggiunta di una Pagina}
+Per aggiungere una nuova pagina al WebServer, è necessario seguire questi passaggi:
+\begin{enumerate}
+    \item Estendere la classe \texttt{ViewGeneric}.
+    \item Definire i componenti HTML desiderati come stringhe.
+    \item Aggiungere i componenti alla pagina utilizzando i metodi forniti dal framework.
+\end{enumerate}
+
+
+\begin{verbatim}
+    class ViewConfig : public ViewGeneric
+    {
+    public:
+        static String generateHTML(std::vector<std::string> ssidList);
+        static String generateHTML();
+    
+        static String generateComponents(std::vector<std::string> &networks); //Componente che vogliamo aggiungere alla pagina
+    };
+\end{verbatim}
+
+
+\begin{verbatim}
+    #include "viewConfig.h"
+
+    String viewConfig::html = "";
+    
+    String viewConfig::generateListComponents( std::vector<std::string> &networks)
+    {
+        /*Example of a component*/
+        String html = "<div class='form-container'>";
+        html += "<form action='/switch_wifi' method='get'>";
+        html += "<label for='network'>Select Network:</label>";
+        html += "<select id='ssid' name='ssid' required>";
+    
+        for (const std::string &network : networks)
+        {
+            html += "<option value='" + String(network.c_str()) + "'>" + String(network.c_str()) + "</option>";
+        }
+    
+        html += "</select>";
+        html += "<label for='password'>Password:</label>";
+        html += "<input type='password' id='password' name='password' required>";
+        html += "<button type='submit'>Connect</button>";
+        html += "</form>";
+        html += "</div>";
+    
+        return html;
+    }
+    
+    String viewConfig::generateHTML(std::vector<std::string> ssidList)
+    {
+        String html = viewGeneric::defaultCssHeader("Config Page");
+    
+        html += viewConfig::generateListComponents(ssidList);
+
+        html += viewComponent2::generate();
+
+        ...
+        html += viewComponentN::generate();
+    
+        html += viewGeneric::defaultFooter();
+    
+        return html;
+    }
+    
+
+\end{verbatim}
+
+
+\paragraph{Routes }
+Una volta definito il componente, è necessario aggiungerlo alle route desiderate per poterlo visualizzare.
+
+Questo può essere fatto in due modi:
+1. Estendendo il file `Routes.h` e aggiungendo la nuova route.
+2. Aggiungendo la route direttamente nel file `Routes.cpp` come segue:
+
+\begin{verbatim}
+    void Routes::addRoutes()
+    {
+        
+        server.on("/new_component_routes", HTTP_GET, [](AsyncWebServerRequest *request) {
+            String htmlContent = viewConfig::generateHTML(SystemState::getInstance()->wifiManager->scanNetworks());
+            const char *htmlContentPtr = htmlContent.c_str();
+            request->send(200, "text/html", htmlContentPtr);
+        });
+    
+        ...
+    }
+\end{verbatim}
+
+\subsection{Vantaggi del Framework}
+\begin{itemize}
+    \item \textbf{Uniformità}: Garantisce un aspetto e una sensazione coerenti in tutto il sistema.
+    \item \textbf{Modularità}: Facilita l'aggiunta di nuove pagine e componenti senza modificare il codice esistente.
+\end{itemize}
+
+\subsection{Conclusioni}
+Il framework per il WebServer rappresenta una soluzione robusta e flessibile per la gestione delle interfacce web. La sua architettura modulare e la capacità di aggiungere dinamicamente componenti HTML rendono il sistema facile da mantenere e espandere, garantendo al contempo un'esperienza utente coerente e reattiva.
+
+\section{Modbus}
+Questa funzionalita non riulta attualmente perfettamente funzionante quindi sara rivista nelle attivita future.
+Sono stati fatti diversitentatitivi ognuno di essi e consultabile al seguente link: \href{../src/SLAVE_EXAMPLE/}{Modbus}.
+
+
+\section{Sfide}
+Una delle attività più complesse è stata la gestione dell'accesso concorrente alle variabili da parte delle richieste HTTP asincrone.
+
+È stato necessario implementare una logica che garantisse un accesso atomico alle variabili e una sincronizzazione in tempo reale di tali variabili su più dispositivi.
+
 
 \chapter{Attività}
 
@@ -406,10 +602,22 @@ Il file utilizzato per testare lo slave è disponibile qui: \href{src/SLAVE\_EXA
 \end{longtable}
 
 \chapter{Conclusioni}
+\section{Demo}
 \section{Sviluppi futuri}
 \paragraph{persistenza e datalogging su scheda SD}
-\paragraph{backup dati su cloud} implementazione backend etc
-\section{Ringraziamenti}
+Si intende implementare un sistema che una volta salvata una configurazione wifi  e una board personalizzata e possibile garantirne la persistenza su scheda SD.
+
+\paragraph{backup dati su cloud} implementazione backend con adeguata scalabilita
+per garantire una migliore elaborazione ed estrapolazione dei dati poiche la board e limitata in termini di memoria e capacita di calcolo.
+
+\paragraph{personalizzazione}
+implementazione di un sistema di modifica e  dello stato dei pin e dei canali multiplexer direttamente da apposite web.
+
+\paragraph{Implementazione di un sistema di notifiche}
+Sviluppare un sistema di notifiche per avvisare l'utente quando i valori registrati sullo stack superano una soglia limite definita dall'utente. Inoltre, notificare la presenza o l'assenza di connessione internet.
+
+\paragraph{Modbus}
+implementazione corretta di SLAVE RTU e TCP/IP attraverso dispositivo Winzet W5500.
 
 
 \end{document}
