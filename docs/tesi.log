@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  17 FEB 2025 09:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  17 FEB 2025 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,14 +286,14 @@ Capitolo 1.
 [2
 
 ]
-<../image/Library.png, id=147, 315.1775pt x 558.085pt>
+<../image/Library.png, id=152, 315.1775pt x 558.085pt>
 File: ../image/Library.png Graphic file (type png)
 <use ../image/Library.png>
 Package pdftex.def Info: ../image/Library.png  used on input line 55.
 (pdftex.def)             Requested size: 117.00119pt x 207.16948pt.
  [3 <../image/Library.png>]
 Capitolo 2.
-<../image/psu.png, id=160, 767.86874pt x 255.95625pt>
+<../image/psu.png, id=165, 767.86874pt x 255.95625pt>
 File: ../image/psu.png Graphic file (type png)
 <use ../image/psu.png>
 Package pdftex.def Info: ../image/psu.png  used on input line 72.
@@ -301,81 +301,93 @@ Package pdftex.def Info: ../image/psu.png  used on input line 72.
 [4
 
  <../image/psu.png>] [5]
-<../image/IngressiDigitali.png, id=178, 555.07375pt x 414.54875pt>
+<../image/IngressiDigitali.png, id=183, 555.07375pt x 414.54875pt>
 File: ../image/IngressiDigitali.png Graphic file (type png)
 <use ../image/IngressiDigitali.png>
 Package pdftex.def Info: ../image/IngressiDigitali.png  used on input line 121.
 (pdftex.def)             Requested size: 390.0pt x 291.27013pt.
  [6 <../image/IngressiDigitali.png>] [7]
-<../image/CD405xB.png, id=193, 694.595pt x 601.24625pt>
+<../image/CD405xB.png, id=198, 694.595pt x 601.24625pt>
 File: ../image/CD405xB.png Graphic file (type png)
 <use ../image/CD405xB.png>
 Package pdftex.def Info: ../image/CD405xB.png  used on input line 156.
 (pdftex.def)             Requested size: 195.0pt x 168.78816pt.
-<../image/channelMultiplex.png, id=194, 1731.46875pt x 2312.64pt>
+<../image/channelMultiplex.png, id=199, 1731.46875pt x 2312.64pt>
 File: ../image/channelMultiplex.png Graphic file (type png)
 <use ../image/channelMultiplex.png>
 Package pdftex.def Info: ../image/channelMultiplex.png  used on input line 186.
 (pdftex.def)             Requested size: 390.0pt x 520.88617pt.
  [8 <../image/CD405xB.png>] [9] [10 <../image/channelMultiplex.png>]
-<../image/SD_and_W5500.png, id=216, 418.56375pt x 610.28pt>
+<../image/SD_and_W5500.png, id=221, 418.56375pt x 610.28pt>
 File: ../image/SD_and_W5500.png Graphic file (type png)
 <use ../image/SD_and_W5500.png>
 Package pdftex.def Info: ../image/SD_and_W5500.png  used on input line 243.
 (pdftex.def)             Requested size: 272.99881pt x 398.03687pt.
  [11] [12 <../image/SD_and_W5500.png>] [13{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<../image/ESP-38Pin-pinout.jpg, id=250, 832.5504pt x 473.6094pt>
+<../image/ModbusWiring.png, id=255, 710.655pt x 803.0pt>
+File: ../image/ModbusWiring.png Graphic file (type png)
+<use ../image/ModbusWiring.png>
+Package pdftex.def Info: ../image/ModbusWiring.png  used on input line 288.
+(pdftex.def)             Requested size: 350.99762pt x 396.6224pt.
+ [14 <../image/ModbusWiring.png>] [15]
+<../image/ADC.png, id=267, 1151.30125pt x 434.62375pt>
+File: ../image/ADC.png Graphic file (type png)
+<use ../image/ADC.png>
+Package pdftex.def Info: ../image/ADC.png  used on input line 324.
+(pdftex.def)             Requested size: 390.0pt x 147.2263pt.
+ [16 <../image/ADC.png>]
+<../image/ESP-38Pin-pinout.jpg, id=275, 832.5504pt x 473.6094pt>
 File: ../image/ESP-38Pin-pinout.jpg Graphic file (type jpg)
 <use ../image/ESP-38Pin-pinout.jpg>
-Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 312.
+Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 353.
 (pdftex.def)             Requested size: 390.0pt x 221.85933pt.
- [14] [15 <../image/ESP-38Pin-pinout.jpg>]
+ [17 <../image/ESP-38Pin-pinout.jpg>]
 Capitolo 3.
-<../image/uml.png, id=261, 1803.73875pt x 948.54375pt>
+<../image/uml.png, id=282, 1803.73875pt x 948.54375pt>
 File: ../image/uml.png Graphic file (type png)
 <use ../image/uml.png>
-Package pdftex.def Info: ../image/uml.png  used on input line 320.
+Package pdftex.def Info: ../image/uml.png  used on input line 361.
 (pdftex.def)             Requested size: 390.0pt x 205.09082pt.
-[16
+[18
 
  <../image/uml.png>]
-<../image/SlavePinout.png, id=271, 330.48468pt x 210.7875pt>
+<../image/SlavePinout.png, id=294, 330.48468pt x 210.7875pt>
 File: ../image/SlavePinout.png Graphic file (type png)
 <use ../image/SlavePinout.png>
-Package pdftex.def Info: ../image/SlavePinout.png  used on input line 343.
+Package pdftex.def Info: ../image/SlavePinout.png  used on input line 384.
 (pdftex.def)             Requested size: 390.0pt x 248.75604pt.
- [17] [18 <../image/SlavePinout.png>]
+ [19] [20 <../image/SlavePinout.png>]
 Capitolo 4.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 349--352
+Overfull \hbox (24.0pt too wide) in alignment at lines 390--393
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 352--355
+Overfull \hbox (24.0pt too wide) in alignment at lines 393--396
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 355--357
+Overfull \hbox (24.0pt too wide) in alignment at lines 396--398
  [] [] 
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 361--361
+Underfull \hbox (badness 1331) in paragraph at lines 402--402
 []|\OT1/cmr/bx/n/12 Comunicazione RS485
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 357--365
+Overfull \hbox (24.0pt too wide) in alignment at lines 398--406
  [] [] 
  []
 
-[19
+[21
 
 ]
 Capitolo 5.
-[20
+[22
 
 ] (./tesi.aux)
  ***********
@@ -383,21 +395,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: CF4837784DA1D7E8248D42F1E1C1D07F;2688.
+(rerunfilecheck)             Checksum: 51F42A72B60BA7A62D52339D80C8DDF5;2808.
  ) 
 Here is how much of TeX's memory you used:
- 9867 strings out of 474116
- 157055 string characters out of 5743683
+ 9888 strings out of 474116
+ 157517 string characters out of 5743683
  1935187 words of memory out of 5000000
- 32031 multiletter control sequences out of 15000+600000
+ 32046 multiletter control sequences out of 15000+600000
  565003 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,413b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,444b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (21 pages, 1801049 bytes).
+Output written on tesi.pdf (23 pages, 2032331 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 387 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 

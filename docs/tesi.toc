@@ -40,22 +40,24 @@
 \contentsline {subsubsection}{funzionamento modbus TCP/IP }{13}{section*.29}%
 \contentsline {subsubsection}{Vantaggi W5500}{13}{section*.30}%
 \contentsline {subsection}{\numberline {2.2.2}MAX485 Modbus RTU}{14}{subsection.2.2.2}%
-\contentsline {subsubsection}{Descrizione Protocollo Modbus RTU}{14}{section*.31}%
-\contentsline {subsection}{\numberline {2.2.3}ESP32 38 Pin}{15}{subsection.2.2.3}%
-\contentsline {chapter}{\numberline {3}Software}{16}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diagramma UML}{16}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Pattern}{16}{subsection.3.1.1}%
-\contentsline {subsubsection}{Model-View-Controller (MVC)}{16}{section*.32}%
-\contentsline {paragraph}{Model}{16}{section*.33}%
-\contentsline {paragraph}{View}{17}{section*.34}%
-\contentsline {paragraph}{Controller}{17}{section*.35}%
-\contentsline {subsubsection}{Singleton}{17}{section*.36}%
-\contentsline {section}{\numberline {3.2}performace}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}WebServer}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Modbus}{17}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Attività}{19}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusioni}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Sviluppi futuri}{20}{section.5.1}%
-\contentsline {paragraph}{persistenza e datalogging su scheda SD}{20}{section*.37}%
-\contentsline {paragraph}{backup dati su cloud}{20}{section*.38}%
-\contentsline {section}{\numberline {5.2}Ringraziamenti}{20}{section.5.2}%
+\contentsline {subsubsection}{Descrizione Protocollo Modbus RTU}{15}{section*.31}%
+\contentsline {subsection}{\numberline {2.2.3}ADS1115 ADC}{16}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}ESP32 38 Pin}{17}{subsection.2.2.4}%
+\contentsline {subsubsection}{Descrizione}{17}{section*.32}%
+\contentsline {chapter}{\numberline {3}Software}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagramma UML}{18}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Pattern}{18}{subsection.3.1.1}%
+\contentsline {subsubsection}{Model-View-Controller (MVC)}{18}{section*.33}%
+\contentsline {paragraph}{Model}{18}{section*.34}%
+\contentsline {paragraph}{View}{19}{section*.35}%
+\contentsline {paragraph}{Controller}{19}{section*.36}%
+\contentsline {subsubsection}{Singleton}{19}{section*.37}%
+\contentsline {section}{\numberline {3.2}performace}{19}{section.3.2}%
+\contentsline {section}{\numberline {3.3}WebServer}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Modbus}{19}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Attività}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{22}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sviluppi futuri}{22}{section.5.1}%
+\contentsline {paragraph}{persistenza e datalogging su scheda SD}{22}{section*.38}%
+\contentsline {paragraph}{backup dati su cloud}{22}{section*.39}%
+\contentsline {section}{\numberline {5.2}Ringraziamenti}{22}{section.5.2}%

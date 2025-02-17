@@ -282,8 +282,19 @@ Tale moduli sono utilizzati per la comunicazione seriale tra ESP32 e altri dispo
 il dispositivo deve essere alimentato con 5V e collegato ai pin RX e TX dell'ESP32.
 per far si che la comunicazione funzioni correttamente collegare cavo trasporto dati dell usb e collegare al dispositivo Master o slave.
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../image/ModbusWiring.png}
+    \caption{MAX485 Modbus RTU}
+\end{figure}
+
 \subsubsection{Descrizione Protocollo Modbus RTU}
 Modbus RTU è basato su una comunicazione seriale asincrona, che consente la trasmissione di dati su cavi.
+
+Per una corretta comunicazione il dispositivo MAX485 SLAVE deve essere collegato su P12 mentre il dispositivo MASTER su P13.
+
+i collegamenti ai pin dell esp sono rappresentati in figura 2.6.
 
 \begin{itemize}
     \item \textbf{Caratteristiche}
@@ -303,9 +314,39 @@ Modbus RTU è basato su una comunicazione seriale asincrona, che consente la tra
     \end{itemize}
 \end{itemize}
 
+\newpage
+
+\subsection{ADS1115 ADC}
+Il modulo ADS1115 è un convertitore analogico-digitale (ADC) a 16 bit con quattro canali di ingresso.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/ADC.png}
+    \caption{ADS1115 ADC}
+\end{figure}
+
+Il dispositivo utilizza un multiplexer descritto nella sezione  2.1.3  per selezionare uno dei canali di ingresso, amplifica il segnale tramite il PGA e poi lo converte in un valore digitale. 
+
+Il risultato della conversione viene inviato al microcontrollore tramite l'interfaccia I2C.
+
+il datasheet dettagliato di tale dispositivo e' disponibile al seguente link: \href{https://www.ti.com/lit/ds/symlink/ads1115.pdf}{ADS1115}.
 
 
+\newpage
 \subsection{ESP32 38 Pin}
+\subsubsection{Descrizione}
+L'ESP32 è un potente microcontrollore prodotto da Espressif Systems che integra funzionalità Wi-Fi e Bluetooth, rendendolo ideale per applicazioni IoT (Internet of Things), automazione domestica, sistemi indossabili, monitoraggio remoto e molti altri progetti. La versione a 38 pin offre una vasta gamma di GPIO (General Purpose Input/Output) utilizzabili per diversi scopi.
+
+Caratteristiche Principali
+Dual-core Tensilica LX6: Processore dual-core con velocità di clock fino a 240 MHz.
+
+Wi-Fi e Bluetooth: Supporto per Wi-Fi 802.11b/g/n e Bluetooth v4.2 BR/EDR e BLE (Bluetooth Low Energy).
+
+Interfacce Multiple: Include SPI, I2C, I2S, UART, ADC, DAC, PWM, e touch sensor.
+
+Basso Consumo Energetico: Modalità di basso consumo per applicazioni a batteria.
+
+Memoria Integrata: SRAM da 520 KB e supporto per memoria esterna.
 
 \begin{figure}[H]
     \centering
