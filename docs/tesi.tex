@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{longtable}
 \usepackage{needspace}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -190,8 +191,37 @@ Nella figura nella pagina seguente seguito vennogno riportati i collegamenti dei
 \paragraph{Ch0}
 Selezionando Ch0 dall apposita pagina dedicata segue il percorso evidenziato in arancione nella Figura 5.2.
 E' collegato a pin 8 della morsettiera CN2.
-Su tale morsetto ci aspettiamo in ingresso un segnale di corrente che il componente TL431 si occupera di regolare e stabilizzare la tensione in ingresso entro dei range indicati.
-a questo link potete trovare il datasheet di tale componente per maggiori info \href{https://www.ti.com/lit/ds/symlink/tl431.pdf}{TL431}.
+
+Il segnale in ingresso proviene da una resistenza esterna collegata al connettore (tra i morsetti 8 e 2 e 1). 
+
+Una corrente di circa 9 µA viene iniettata nel morsetto 8. 
+
+Questa corrente, attraversando la resistenza esterna, genera una caduta di tensione che viene selezionata tramite il canale Ch0 del multiplexer. 
+
+Successivamente, il segnale passa attraverso uno stadio amplificatore per essere portato a un livello adeguato per l'ADC dell'ESP32.
+
+Il componente TL431 funge da riferimento di tensione, ovvero un generatore di tensione costante e calibrata.
+
+\paragraph{Esempio } 
+\subparagraph{Dati}
+
+\begin{itemize}
+    \item R = 100 $\Omega$ resistenza che vogliamo misurare
+    \item I $\approx$ 9 $\mu$A corrente generata internamente sempre in questo range
+    \item Vref = 2.5V tensione di riferimento generata dal TL431
+\end{itemize}
+
+Si consideri la legge di Ohm:
+
+\[ V = R \cdot I \quad \text{e} \quad R = \frac{V}{I} \]
+
+seguendo KCL (kirchhoff current law) si ottiene che la corrente che passa per la resistenza R8 e pari alla resistenza collegata sul morsetto 8 + la corrente generata dal componente TL431.
+
+dunque la la tensone su ch0 (Vch0 letta da esp a seguito dello stadio di amplificazione) seguendo KVL (kirchhoff voltage law) e' data da: tensione su R8 + tensione su R
+
+svlogendo i calcoli si ottiene che:
+
+\[ R = \frac{Vch0}{Req}  \] 
 
 \paragraph{Ch1}
 percorso evidenziato in giallo nella Figura 5.2.
