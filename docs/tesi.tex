@@ -66,7 +66,6 @@ Per compilare i file nelle sottocartelle, è necessario aggiungerli come libreri
 
 E' possibile alimentare la board tramite un alimentatore esterno da 24V DC che fornisca almeno 0.5A.
 
-In particolare e'stato utilizzato \href{https://www.e-repair.com/products-catalogue/sitop/6ep1331-5ba00}{SIMENS SITOP PSU100C 24V 0.5A.}
 
 \begin{figure}[H]
     \centering
@@ -252,6 +251,81 @@ Leggeremo il segnale in ingresso al pin 1 della morsettiera CN2.
 
 tra il segnale sul pin 1 ed ESP e'presente un partitore di tensione composto da R11 = 1M e R12 = 270K dunque $Vesp = Vpin1 * \frac{R12}{R11+R12} = Vpin1 * \frac{270}{1270} = Vpin1 * 0.2126$.
 
+//correzione:
+Si necessita di montare una resistenza tra il pin 8 e il pin 1 della morsettiera CN2.
+Vine generata una corrente pari a 9 $\mu$A che passa attraverso la resistenza esterna paria 100 $\Omega$
+tale segnale finisce dunque su ch3 dopo essere passato attraverso ad un partitore di tensione.
+
+\paragraph{Esempio}
+\subparagraph{Dati}
+\begin{itemize}
+    \item R = 100 $\Omega$ resistenza collegata al pin 1,8
+    \item I $\approx$ 925 $\mu$A 
+\end{itemize}
+
+Vr = I * R = 925 $\mu$A * 100 $\Omega$ = 92,5 mV
+
+Successivamente e' presente un partitore resistivo per abbassare la tensione a valori accettabili per l'ESP32 (max 3V).
+in particolare: 
+
+\[ Vch3 = Vr12 = Vin * \frac{R12}{R11+R12} = 92,5 [mV] * \frac{1M}{270k} = 19,425 [mV] \]
+
+Dunque fattore di divisio ne del partitore e' 
+\[Vch3/Vin = 19,425/92,5 = 0,21 \]
+
+A valle del partitore il componente TL082 si occupa dello stadio di amplificazione.
+Questo stadio consente anche una traslazione del segnale nel caso in cui la tensione in ingresso sia negativa offettuando opportuni shift di tensione.
+
+Tale shift viene sempre effettuato in modo di portare il segnale a circa la meta della dinamica dell esp ovvero 1.25V.
+
+\paragraph{Recap sull elaborazione del segnale}
+\begin{itemize}
+    \item generazione corrente  I $\approx$ 925 $\mu$A che passa attraverso la resistenza esterna
+    \item tensione generata Vr = R *I viene ridimensionata da partitore con fattore pari a 0.21
+    \item shift dell segnale a 1.25V
+\end{itemize}
+
+Questo concetto verra applicato per utilizzare termoresistori (Pt100, Pt1000, Pt500, Ni500) e termocoppie che verranno attaccate e il valore di tensione misurato sara corrispondente a un certo valore di resistenza.
+
+Le sonde di temperatura di questa famiglia però non sono lineari quindi andrà implementata una opportuna tabella di linearizzazione
+
+
+\paragraph{Utilizzo ch3 per segnali in tensione continua}
+l’ingresso per tali segnali è dal pin 1 (positivo) e 2 (negativo ) della morsettiera CN2.
+
+\subparagraph{Esempio}
+
+\[  
+    Vin = 10V   
+       => 10V * 0.21 = 2.1V
+       => 2.1V + 1.25V = 3.35V
+\]
+
+Contrariamente al caso precedente, non e' necessario effettuare linearizzazione con tabella poiche il segnale e gia lineare.
+Dovro dare dunque un opzione lato SW per selezionare il tipo di segnale in ingresso su CH3. 
+
+Ovvero su ch3 leggero 1.25 quando saranno applicati 0V nella morsettiera CN2 e 3.3V quando ci sono 10V 
+
+\paragraph{Utilizzo ch3 per segnale di corrente}
+il generatore di corrente dovra essere inserito tra il pin 7(positivo) e 2(negativo) della morsettiera CN2.
+
+\subparagraph{Esempio}
+
+Consideriamo un generatore di corrente in ingresso di 20mA.
+
+La corrente cadrà sulla resistenza R7 generando una tensione che verrà poi shiftata di 1.25V
+
+0.02mA *110Ohm = 2.2V + 1.25 = 3.45V 
+
+Dunque su ch3 leggero 3.45V quando ci sono 20mA in ingresso.
+
+Ultimo caso è quello delle sonde termocoppie. In questo caso la sonda è inserita tra pin 6 e pin 2
+
+Il multiplexer sarà in posizione ch2
+
+Queste sonde forniscono in uscita al variare della temperatura una tensione di pochi millivolt per questo il segnale deve essere amplificato tramite op177 che è un operazionale a basso offset (ovvero non introduce rumore sul segnale misurato).
+
+Il gain dell’operazionale con queste resistenze è pari a 101 quindi il segnali in ingresso verrà amplificato per 101 volte e shiftato sempre di 1.25V
 
 \paragraph{Ch4}
 Connessione equivalente a CH0 
@@ -623,7 +697,10 @@ Una delle attività più complesse è stata la gestione dell'accesso concorrente
 \endhead
 \hline
 \endfoot
-\textbf{Configurazione sensori di temperatura} & Configurare e integrare sensori di temperatura \textbf{PT100}, \textbf{PT1000} e \textbf{termocoppie} utilizzando moduli come \textbf{MAX31865} e \textbf{MAX31855}. \\ \hline
+\textbf{Configurazione sensori di temperatura} & Configurare e integrare sensori di temperatura \textbf{PT100}, \textbf{PT1000} e \textbf{termocoppie} utilizzando moduli come \textbf{MAX31865} e \textbf{MAX31855}.
+
+ implementazione una opportuna tabella di linearizzazione per Le sonde di temperatura di questa famiglia (Vedi sezione 2.1.3 - Ch3 per maggiori dettagli)  \\ \hline
+
 \textbf{Lettura segnali analogici} & Implementare la lettura di segnali analogici tramite gli ingressi \textbf{ADC} dell'ESP32 e eventuali moduli esterni. \\ \hline
 \textbf{Gestione uscite digitali e analogiche} & Sviluppare la gestione delle uscite digitali e analogiche tramite l'ESP32. \\ \hline
 \textbf{Comunicazione RS485 (Modbus RTU)} & Integrare la comunicazione \textbf{RS485} utilizzando il protocollo \textbf{Modbus RTU} per interfacciarsi con altri dispositivi. \\ \hline
