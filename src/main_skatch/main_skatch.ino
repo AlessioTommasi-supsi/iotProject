@@ -8,6 +8,7 @@
 #include "WiFiManager.h"
 #include "PinoutData.h"
 #include "Esp32_38pinBoard.h"
+#include "Esp32_30pin.h"
 #include "Pin.h"
 
 const char *ssid = "HomeInternet";
@@ -30,10 +31,11 @@ void setup()
     systemState = SystemState::getInstance();
 
     
-    //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
-    WiFiManager *wifiManager = new WiFiManager();
+    WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
+    //WiFiManager *wifiManager = new WiFiManager();
     //pinoutData = new Esp32_38pin();
-    pinoutData = new Esp32_38pinBoard();
+    //pinoutData = new Esp32_38pinBoard();
+    pinoutData = new Esp32_30pin();
     
 
 
