@@ -46,9 +46,9 @@ void setup()
     
 
   }
-  catch (const std::exception &e)
+  catch (...)
   {
-    Serial.println("Errore durante la connessione alla rete Wi-Fi!");
+    Serial.println("Errore durante il setup delle funzionalita");
   }
 
   Serial.println("Inizializzazione completata!");
