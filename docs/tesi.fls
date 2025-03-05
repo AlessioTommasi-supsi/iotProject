@@ -98,6 +98,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+<<<<<<< Updated upstream
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -110,6 +111,12 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+=======
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+>>>>>>> Stashed changes
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./tesi.aux
@@ -185,6 +192,7 @@ INPUT ../image/CD405xB.png
 INPUT ../image/CD405xB.png
 INPUT ../image/CD405xB.png
 INPUT ../image/CD405xB.png
+<<<<<<< Updated upstream
 INPUT ../image/channelMultiplex.png
 INPUT ../image/channelMultiplex.png
 INPUT ../image/channelMultiplex.png
@@ -207,6 +215,13 @@ INPUT ../image/ADC.png
 INPUT ../image/ADC.png
 INPUT ../image/ADC.png
 INPUT ../image/ADC.png
+=======
+INPUT ../image/fromMutexToPeripheral.png
+INPUT ../image/fromMutexToPeripheral.png
+INPUT ../image/fromMutexToPeripheral.png
+INPUT ../image/fromMutexToPeripheral.png
+INPUT ../image/fromMutexToPeripheral.png
+>>>>>>> Stashed changes
 INPUT ../image/ESP-38Pin-pinout.jpg
 INPUT ../image/ESP-38Pin-pinout.jpg
 INPUT ../image/ESP-38Pin-pinout.jpg

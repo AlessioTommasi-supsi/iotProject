@@ -1,4 +1,5 @@
 # Fdb version 4
+<<<<<<< Updated upstream
 ["pdflatex"] 1740770045.6958 "/Users/none/Documents/iotProject/docs/tesi.tex" "tesi.pdf" "tesi" 1740770047.67812 0
   "../image/ADC.png" 1739788734.02062 108033 bed224c5dfc65c421b9ee67c1be6084b ""
   "../image/CD405xB.png" 1739360122.19113 54717 f756b3de60b44eb18f821abc5e8deda3 ""
@@ -12,6 +13,16 @@
   "../image/uml.png" 1739394758.00673 195290 9d970c64ec792382517b2968d23bbb25 ""
   "/Users/none/Documents/iotProject/docs/tesi.tex" 1740770045.6583 33787 e3e64aaec89cadf5b5456c9a7b933ca1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
+=======
+["pdflatex"] 1738929151.31393 "/Volumes/backupTB/WiniotProject/iotProject/docs/tesi.tex" "tesi.pdf" "tesi" 1738929161.25854 0
+  "../image/CD405xB.png" 1738870786 54717 f756b3de60b44eb18f821abc5e8deda3 ""
+  "../image/ESP-38Pin-pinout.jpg" 1734869860 415600 3edd7d5854ff41cf1def02963a828118 ""
+  "../image/Library.png" 1728675076 49093 30520dba5bf49f9aac78160c6f19dabc ""
+  "../image/SlavePinout.png" 1733490022 25671 a7363424c1c3e2fa245113c250242e9d ""
+  "../image/fromMutexToPeripheral.png" 1738928338.01 5008520 ab737802e3a05b6c304420ff66466832 ""
+  "../image/uml.png" 1728675076 129239 656185c11c240761d4569e96f266fb58 ""
+  "/Volumes/backupTB/WiniotProject/iotProject/docs/tesi.tex" 1738929118.89 5907 2608aa248a60f7c853dab5f5b495d6dc ""
+>>>>>>> Stashed changes
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -51,6 +62,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty" 1576625223 8371 9d55b8bd010bc717624922fb3477d92e ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1575499628 8356 7bbb2c2373aa810be568c29e333da8ed ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty" 1576625065 31769 002a487f55041f8e805cfbf6385ffd97 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty" 1576878844 5412 d5a2436094cd7be85769db90f29250a6 ""
@@ -73,6 +85,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty" 1654720880 18387 8f900a490197ebaf93c02ae9476d4b09 ""
@@ -99,10 +112,17 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1738703340.29499 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1738703226 8221442 89a2fbb3f8d2e9e5a29a5bc2ad65afb8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+<<<<<<< Updated upstream
   "tesi.aux" 1740770047.55558 11153 d70b8d3cd86dea9b58629354342bf87b "pdflatex"
   "tesi.out" 1740770047.55825 3321 ae74f82d6cb4b0d6f1f2958bc87b51bf "pdflatex"
   "tesi.tex" 1740770045.6583 33787 e3e64aaec89cadf5b5456c9a7b933ca1 ""
   "tesi.toc" 1740770047.55869 5365 faebd63579d852474351de5237f4d62b "pdflatex"
+=======
+  "tesi.aux" 1738929161.13 4356 a7efb11f4680f0bdb534f43d67dac131 "pdflatex"
+  "tesi.out" 1738929161.13 1473 8f27296c8c1396254d4d3c3ed0f7e176 "pdflatex"
+  "tesi.tex" 1738929118.89 5907 2608aa248a60f7c853dab5f5b495d6dc ""
+  "tesi.toc" 1738929161.13 1502 803f8ce2627fa10fac3f70b97f6bc83d "pdflatex"
+>>>>>>> Stashed changes
   (generated)
   "tesi.aux"
   "tesi.log"
