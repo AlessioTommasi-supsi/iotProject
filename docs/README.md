@@ -152,6 +152,14 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Multiplex    | risolto errore initializepin  con certi pin da errore perche provo a leggere da risorse che sono utilizzatte per wifi!   | 6.30h |   9.00->11.00 AND <br> 13.30->17.00;  of 29/12/2024 <br> 
 |  Multiplex    | DEBUG errore ADC3 - SENSOGuru Meditation Error: Core  1 panic'ed   accade quando compilo ma ho aperto http://192.168.178.144/pinout  perche prova a leggere quando in effetti non ho ancora finito di costruire oggetto!   | 2h |   9.00->11.00  of 28/12/2024  ANCORA DA APPROFONDIRE BENE COME GESTIRE pero siccome e errore che puo accadere solo in fase di boot non e approfondito per ora<br> 
 |  Monitor    | GRAFICO stack per ogni singolo thread di registrazione nella pagina monitor!     |  3.15 + 3.30 + 5.30 = 12.15h  |   8.00->11.15 AND <br> 13.30->17.00;  of 26/12/2024 <br>  <br> 13.30->19.00  of 30/12/2024 <br>
+|  docs tesi    | creazione documento tesi.tex     |  24h  |      8.00->11.30 AND <br> 13.30->17.300;  of 14/02/2025 <br>  <br> 8.00->11.30 AND <br> 13.30->17.300;  of 15/02/2025 <br>  <br> 8.00->11.30 AND <br> 13.30->17.300;  of 16/02/2025 <br>  <br>8.00->11.30 AND <br> 13.30->17.300;  of 17/02/2025 <br>  <br>
+|  docs tesi    | correzione con le modifiche sugerite da Fabio    |  12h  | <br> 13.30->17.30;  of 18/02/2025 <br>  <br> 8.00->11.30 AND <br> 13.30->17.300;  of 19/02/2025 <br>
+|  docs tesi    | correzione con le modifiche sugerite da Mirco [link](./Mail_Correzioni_Mirko.pdf) ancora da completare    |  2h  | <br> 8.30->10.30;  of 24/02/2025 <br>  <br> 
+|  bugFix presentazione    | debug degli errori che si sono verificati durante la presentazione e fix della maggior parte di essi    |  8h  | <br> 8.30->10.30; AND <br> 13.30->17.30;  of 25/02/2025 <br>  <br> 
+|  Edit Pin    | creazione     |  12  | <br> 8.30->11.30; AND <br> 13.30->17.30;  of 26/02/2025 <br>  <br> <br> 10.30->11.30; AND <br> 13.30->16.30;  of 27/02/2025 <br>  <br>
+|  Edit Pin    | testing -sono statirilevati bug dovuti ad accesso concorrente delle risorse quando piu pagine attive su /pinout    |  2h  | <br> 8.30->10.30;  of 28/02/2025 <br>  <br> 
+|  Edit Pin    | correzione bug accesso concorrente: non acora del tutto fixato ma si pensa di risolvere mettendo mutex in SystemState     |  16h  |  <br> 13.30->17.30;  of 28/02/2025 <br>  <br> <br> 8.30->11.30; AND <br> 13.30->16.30;  of 01/03/2025 <br>  <br> 8.30->11.30; of 02/03/2025
+
 
 <br> 
 <br> 
