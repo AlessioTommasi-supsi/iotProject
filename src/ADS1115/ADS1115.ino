@@ -8,10 +8,10 @@
  * https://github.com/adafruit/Adafruit_ADS1X15
  *
  *
- * IDEA ALLA BASE:
- * all inizio leggo da tutti i canali con un delay,
- * se scrivo da seriale leggo solo sul canale selezionato ,
- * e posso sempre scrivere da seriale per cambiare canale
+ * FUNZIONAMENTO
+ * scrivendo da 1 a 7 su seriale si seleziona il canale del multiplexer e si legge da ADS1115
+ * titti i canali  AIN0 - AIN3
+ * 8 per tornare alla modalità default (tutti i canali) lettura di AIN0 - AIN3
  *******************************************************/
 
 #include <Adafruit_ADS1X15.h>
