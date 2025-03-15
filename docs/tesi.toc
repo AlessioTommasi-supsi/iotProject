@@ -55,31 +55,31 @@
 \contentsline {subsection}{\numberline {2.2.3}ADS1115 ADC}{22}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}ESP32 38 Pin}{23}{subsection.2.2.4}%
 \contentsline {subsubsection}{Descrizione}{23}{section*.42}%
-\contentsline {chapter}{\numberline {3}Software}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diagramma UML}{26}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Pattern}{26}{subsection.3.1.1}%
-\contentsline {subsubsection}{Model-View-Controller (MVC)}{26}{section*.43}%
-\contentsline {paragraph}{Model}{26}{section*.44}%
-\contentsline {paragraph}{View}{27}{section*.45}%
-\contentsline {paragraph}{Controller}{27}{section*.46}%
-\contentsline {subsubsection}{Singleton}{27}{section*.47}%
-\contentsline {section}{\numberline {3.2}Performace}{27}{section.3.2}%
-\contentsline {paragraph}{Considerazioni: }{27}{section*.48}%
-\contentsline {paragraph}{Monitor}{28}{section*.49}%
-\contentsline {section}{\numberline {3.3}WebServer}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Componenti HTML Dinamici}{29}{subsection.3.3.1}%
-\contentsline {subsubsection}{Esempio di Aggiunta di una Pagina}{29}{section*.50}%
-\contentsline {paragraph}{Routes }{30}{section*.51}%
-\contentsline {subsection}{\numberline {3.3.2}Vantaggi del Framework}{31}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{31}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Modbus}{31}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Sfide}{31}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Attività}{32}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusioni}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Demo}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Sviluppi futuri}{33}{section.5.2}%
-\contentsline {paragraph}{persistenza e datalogging su scheda SD}{33}{section*.52}%
-\contentsline {paragraph}{backup dati su cloud}{33}{section*.53}%
-\contentsline {paragraph}{personalizzazione}{33}{section*.54}%
-\contentsline {paragraph}{Implementazione di un sistema di notifiche}{33}{section*.55}%
-\contentsline {paragraph}{Modbus}{33}{section*.56}%
+\contentsline {chapter}{\numberline {3}Software}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagramma UML}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Pattern}{27}{subsection.3.1.1}%
+\contentsline {subsubsection}{Model-View-Controller (MVC)}{27}{section*.43}%
+\contentsline {paragraph}{Model}{27}{section*.44}%
+\contentsline {paragraph}{View}{28}{section*.45}%
+\contentsline {paragraph}{Controller}{28}{section*.46}%
+\contentsline {subsubsection}{Singleton}{28}{section*.47}%
+\contentsline {section}{\numberline {3.2}Performace}{28}{section.3.2}%
+\contentsline {paragraph}{Considerazioni: }{28}{section*.48}%
+\contentsline {paragraph}{Monitor}{29}{section*.49}%
+\contentsline {section}{\numberline {3.3}WebServer}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Componenti HTML Dinamici}{30}{subsection.3.3.1}%
+\contentsline {subsubsection}{Esempio di Aggiunta di una Pagina}{30}{section*.50}%
+\contentsline {paragraph}{Routes }{31}{section*.51}%
+\contentsline {subsection}{\numberline {3.3.2}Vantaggi del Framework}{32}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{32}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Modbus}{32}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sfide}{32}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Attività}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Demo}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sviluppi futuri}{34}{section.5.2}%
+\contentsline {paragraph}{persistenza e datalogging su scheda SD}{34}{section*.52}%
+\contentsline {paragraph}{backup dati su cloud}{34}{section*.53}%
+\contentsline {paragraph}{personalizzazione}{34}{section*.54}%
+\contentsline {paragraph}{Implementazione di un sistema di notifiche}{34}{section*.55}%
+\contentsline {paragraph}{Modbus}{34}{section*.56}%

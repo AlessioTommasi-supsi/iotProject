@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  15 MAR 2025 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.4)  15 MAR 2025 12:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,99 +409,105 @@ Package pdftex.def Info: ../image/ADC.png  used on input line 441.
 <../image/ESP-38Pin-pinout.jpg, id=338, 832.5504pt x 473.6094pt>
 File: ../image/ESP-38Pin-pinout.jpg Graphic file (type jpg)
 <use ../image/ESP-38Pin-pinout.jpg>
-Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 472.
+Package pdftex.def Info: ../image/ESP-38Pin-pinout.jpg  used on input line 477.
 (pdftex.def)             Requested size: 390.0pt x 221.85933pt.
  [23]
-Overfull \hbox (12.066pt too wide) in paragraph at lines 480--516
+<../image/collegamenti_daESP.png, id=344, 6323.625pt x 8943.4125pt>
+File: ../image/collegamenti_daESP.png Graphic file (type png)
+<use ../image/collegamenti_daESP.png>
+Package pdftex.def Info: ../image/collegamenti_daESP.png  used on input line 484.
+(pdftex.def)             Requested size: 390.0pt x 551.45633pt.
+ [24 <../image/ESP-38Pin-pinout.jpg>]
+Overfull \hbox (12.066pt too wide) in paragraph at lines 492--528
  [][] 
  []
 
-[24 <../image/ESP-38Pin-pinout.jpg>] [25]
+[25 <../image/collegamenti_daESP.png>] [26]
 Capitolo 3.
-<../image/uml.png, id=355, 1803.73875pt x 948.54375pt>
+<../image/uml.png, id=362, 1803.73875pt x 948.54375pt>
 File: ../image/uml.png Graphic file (type png)
 <use ../image/uml.png>
-Package pdftex.def Info: ../image/uml.png  used on input line 524.
+Package pdftex.def Info: ../image/uml.png  used on input line 536.
 (pdftex.def)             Requested size: 390.0pt x 205.09082pt.
-[26
+[27
 
- <../image/uml.png>] [27] [28]
-Overfull \hbox (42.25021pt too wide) in paragraph at lines 609--609
+ <../image/uml.png>] [28] [29]
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 621--621
 []        \OT1/cmtt/m/n/12 static String generateHTML(std::vector<std::string> ssidList);[] 
  []
 
 
-Overfull \hbox (388.05038pt too wide) in paragraph at lines 609--609
+Overfull \hbox (388.05038pt too wide) in paragraph at lines 621--621
 []        \OT1/cmtt/m/n/12 static String generateComponents(std::vector<std::string> &networks); //Componente che vogliamo aggiungere alla pagina[] 
  []
 
 
-Overfull \hbox (116.35025pt too wide) in paragraph at lines 657--657
+Overfull \hbox (116.35025pt too wide) in paragraph at lines 669--669
 []    \OT1/cmtt/m/n/12 String viewConfig::generateListComponents( std::vector<std::string> &networks)[] 
  []
 
 
-Overfull \hbox (295.42534pt too wide) in paragraph at lines 657--657
+Overfull \hbox (295.42534pt too wide) in paragraph at lines 669--669
 []            \OT1/cmtt/m/n/12 html += "<option value='" + String(network.c_str()) + "'>" + String(network.c_str()) + "</option>";[] 
  []
 
-[29]
-Overfull \hbox (110.17525pt too wide) in paragraph at lines 657--657
+[30]
+Overfull \hbox (110.17525pt too wide) in paragraph at lines 669--669
 []        \OT1/cmtt/m/n/12 html += "<input type='password' id='password' name='password' required>";[] 
  []
 
 
-Overfull \hbox (42.25021pt too wide) in paragraph at lines 657--657
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 669--669
 []    \OT1/cmtt/m/n/12 String viewConfig::generateHTML(std::vector<std::string> ssidList)[] 
  []
 
 
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 657--657
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 669--669
 []        \OT1/cmtt/m/n/12 String html = viewGeneric::defaultCssHeader("Config Page");[] 
  []
 
 
-Overfull \hbox (159.57527pt too wide) in paragraph at lines 679--679
+Overfull \hbox (159.57527pt too wide) in paragraph at lines 691--691
 []        \OT1/cmtt/m/n/12 server.on("/new_component_routes", HTTP_GET, [](AsyncWebServerRequest *request) {[] 
  []
 
 
-Overfull \hbox (320.12535pt too wide) in paragraph at lines 679--679
+Overfull \hbox (320.12535pt too wide) in paragraph at lines 691--691
 []            \OT1/cmtt/m/n/12 String htmlContent = viewConfig::generateHTML(SystemState::getInstance()->wifiManager->scanNetworks());[] 
  []
 
-[30] [31]
+[31] [32]
 Capitolo 4.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 704--707
+Overfull \hbox (24.0pt too wide) in alignment at lines 716--719
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 707--710
+Overfull \hbox (24.0pt too wide) in alignment at lines 719--722
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 710--712
+Overfull \hbox (24.0pt too wide) in alignment at lines 722--724
  [] [] 
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 719--719
+Underfull \hbox (badness 1331) in paragraph at lines 731--731
 []|\OT1/cmr/bx/n/12 Comunicazione RS485
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 712--723
+Overfull \hbox (24.0pt too wide) in alignment at lines 724--735
  [] [] 
  []
 
-[32
+[33
 
 ]
 Capitolo 5.
-[33
+[34
 
 ] (./tesi.aux)
  ***********
@@ -516,18 +522,18 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 1C4DD61528DC44C3E2352D434907FD69;3613.
  ) 
 Here is how much of TeX's memory you used:
- 10671 strings out of 474116
- 168221 string characters out of 5743683
+ 10680 strings out of 474116
+ 168504 string characters out of 5743683
  1950187 words of memory out of 5000000
- 32770 multiletter control sequences out of 15000+600000
+ 32777 multiletter control sequences out of 15000+600000
  566128 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,423b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (34 pages, 4395926 bytes).
+Output written on tesi.pdf (35 pages, 6106249 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 406 compressed objects within 5 object streams
- 135 named destinations out of 1000 (max. 500000)
- 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

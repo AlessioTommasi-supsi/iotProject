@@ -448,6 +448,11 @@ Il risultato della conversione viene inviato al microcontrollore tramite l'inter
 
 il datasheet dettagliato di tale dispositivo e' disponibile al seguente link: \href{https://www.ti.com/lit/ds/symlink/ads1115.pdf}{ADS1115}.
 
+\textbf{Pin per tresferimento dati}:
+
+Il collegamento SCL dell ADS una volta collegato il jumper J39 si collega a PIN39 ovvero GPIO 22 
+
+Il collegamento SDA dell ADS una volta collegati il jumper J40 si collega al pin GPIO 21
 
 \newpage
 \subsection{ESP32 38 Pin}
@@ -471,6 +476,13 @@ Link alla documentazione ufficiale: \href{https://www.espressif.com/sites/defaul
     \centering
     \includegraphics[width=\linewidth]{../image/ESP-38Pin-pinout.jpg}
     \caption{Pinout dell'ESP32-DOIT-DEV-KIT v1}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../image/collegamenti_daESP.png}
+    \caption{collegamenti all'ESP32-DOIT-DEV-KIT v1}
 \end{figure}
 
 \begin{table}[H]
@@ -741,5 +753,4 @@ Sviluppare un sistema di notifiche per avvisare l'utente quando i valori registr
 \paragraph{Modbus}
 implementazione corretta di SLAVE RTU e TCP/IP attraverso dispositivo Winzet W5500.
 
-aaaaaaaa
 \end{document}
