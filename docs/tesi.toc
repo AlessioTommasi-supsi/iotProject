@@ -1,0 +1,85 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Dipendenze}{3}{section.1.1}%
+\contentsline {paragraph}{Driver}{3}{section*.2}%
+\contentsline {paragraph}{Compiler}{3}{section*.3}%
+\contentsline {paragraph}{Pubblic library}{3}{section*.4}%
+\contentsline {subparagraph}{short}{3}{section*.5}%
+\contentsline {subparagraph}{short}{3}{section*.6}%
+\contentsline {subparagraph}{short}{3}{section*.7}%
+\contentsline {subparagraph}{short}{3}{section*.8}%
+\contentsline {paragraph}{Modbus}{3}{section*.9}%
+\contentsline {section}{\numberline {1.2}Configurazione dell'Arduino IDE}{4}{section.1.2}%
+\contentsline {paragraph}{}{4}{section*.10}%
+\contentsline {paragraph}{}{4}{section*.11}%
+\contentsline {chapter}{\numberline {2}Hardware}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Funzionamento}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Alimentazione}{5}{subsection.2.1.1}%
+\contentsline {paragraph}{Descrizione }{5}{section*.12}%
+\contentsline {paragraph}{Conversione DC-DC }{5}{section*.13}%
+\contentsline {paragraph}{Regolazione di tensione}{6}{section*.14}%
+\contentsline {paragraph}{Regolatore Switching LM7660}{6}{section*.15}%
+\contentsline {paragraph}{Uscite}{6}{section*.16}%
+\contentsline {subsection}{\numberline {2.1.2}Ingressi Digitali}{7}{subsection.2.1.2}%
+\contentsline {paragraph}{Descrizione}{7}{section*.17}%
+\contentsline {paragraph}{Conclusioni}{8}{section*.18}%
+\contentsline {subsection}{\numberline {2.1.3}Multiplex}{9}{subsection.2.1.3}%
+\contentsline {paragraph}{ }{9}{section*.19}%
+\contentsline {subsubsection}{Collegamenti Multiplexer}{9}{section*.20}%
+\contentsline {paragraph}{Dettaglio canali multiplexer}{10}{section*.21}%
+\contentsline {subsection}{\numberline {2.1.4} hardware esterno posizionabile sulla board}{12}{subsection.2.1.4}%
+\contentsline {subsubsection}{MAX31865}{12}{section*.22}%
+\contentsline {paragraph}{Ch0}{14}{section*.23}%
+\contentsline {paragraph}{Esempio }{14}{section*.24}%
+\contentsline {subparagraph}{Dati}{14}{section*.25}%
+\contentsline {paragraph}{Ch1}{15}{section*.26}%
+\contentsline {paragraph}{Ch2}{15}{section*.27}%
+\contentsline {paragraph}{Ch3}{15}{section*.28}%
+\contentsline {paragraph}{Esempio}{15}{section*.29}%
+\contentsline {subparagraph}{Dati}{15}{section*.30}%
+\contentsline {paragraph}{Recap sull elaborazione del segnale}{16}{section*.31}%
+\contentsline {paragraph}{Utilizzo ch3 per segnali in tensione continua}{16}{section*.32}%
+\contentsline {subparagraph}{Esempio}{16}{section*.33}%
+\contentsline {paragraph}{Utilizzo ch3 per segnale di corrente}{16}{section*.34}%
+\contentsline {subparagraph}{Esempio}{17}{section*.35}%
+\contentsline {paragraph}{Ch4}{17}{section*.36}%
+\contentsline {paragraph}{Ch5}{17}{section*.37}%
+\contentsline {paragraph}{Ch6}{17}{section*.38}%
+\contentsline {section}{\numberline {2.2} Hardware esterno }{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Winzet W5500 Ethernet module}{17}{subsection.2.2.1}%
+\contentsline {subsubsection}{funzionamento modbus TCP/IP }{19}{section*.39}%
+\contentsline {subsubsection}{Vantaggi W5500}{19}{section*.40}%
+\contentsline {subsection}{\numberline {2.2.2}MAX485 Modbus RTU}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Descrizione Protocollo Modbus RTU}{20}{section*.41}%
+\contentsline {subsection}{\numberline {2.2.3}ADS1115 ADC}{22}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}ESP32 38 Pin}{23}{subsection.2.2.4}%
+\contentsline {subsubsection}{Descrizione}{23}{section*.42}%
+\contentsline {chapter}{\numberline {3}Software}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagramma UML}{26}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Pattern}{26}{subsection.3.1.1}%
+\contentsline {subsubsection}{Model-View-Controller (MVC)}{26}{section*.43}%
+\contentsline {paragraph}{Model}{26}{section*.44}%
+\contentsline {paragraph}{View}{27}{section*.45}%
+\contentsline {paragraph}{Controller}{27}{section*.46}%
+\contentsline {subsubsection}{Singleton}{27}{section*.47}%
+\contentsline {section}{\numberline {3.2}Performace}{27}{section.3.2}%
+\contentsline {paragraph}{Considerazioni: }{27}{section*.48}%
+\contentsline {paragraph}{Monitor}{28}{section*.49}%
+\contentsline {section}{\numberline {3.3}WebServer}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Componenti HTML Dinamici}{29}{subsection.3.3.1}%
+\contentsline {subsubsection}{Esempio di Aggiunta di una Pagina}{29}{section*.50}%
+\contentsline {paragraph}{Routes }{30}{section*.51}%
+\contentsline {subsection}{\numberline {3.3.2}Vantaggi del Framework}{31}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Conclusioni}{31}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Modbus}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sfide}{31}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Attività}{32}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusioni}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Demo}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sviluppi futuri}{33}{section.5.2}%
+\contentsline {paragraph}{persistenza e datalogging su scheda SD}{33}{section*.52}%
+\contentsline {paragraph}{backup dati su cloud}{33}{section*.53}%
+\contentsline {paragraph}{personalizzazione}{33}{section*.54}%
+\contentsline {paragraph}{Implementazione di un sistema di notifiche}{33}{section*.55}%
+\contentsline {paragraph}{Modbus}{33}{section*.56}%
