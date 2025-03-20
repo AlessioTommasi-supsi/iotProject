@@ -122,9 +122,10 @@ void printReadFromADS1115(int channel)
 {
   int16_t adc;
   float volts;
-
+  //65563/2 = 32668
   adc = ads.readADC_SingleEnded(channel);
   volts = ads.computeVolts(adc);
+  volts = volts; // Aggiungi un offset della scheda
   Serial.println("");
   Serial.print("AIN");Serial.print(channel);Serial.print(": ");  Serial.print(adc);  Serial.print("  "); Serial.print(volts); Serial.println("V");
   

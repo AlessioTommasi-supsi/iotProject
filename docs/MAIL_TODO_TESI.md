@@ -78,3 +78,50 @@ Di seguito l'elenco delle funzionalità che il sistema deve implementare:
 
 - **Gestione delle uscite Digitali**:
 o piu probabile: attiva nel senzo che ci collegereo un led o un buzzer cosi vedo se il segnale è arrivto a esp o lancio erroriin base a quelli definiti da utente.
+
+
+
+Tutti i canali selezionati.
+Canale: 
+0 
+-------------------------------------------------
+
+AIN0: -16  -0.00V
+
+AIN1: 5700  1.07V
+
+AIN2: 5712  1.07V
+
+AIN3: 5710  1.07V
+-------------------------------------------------
+Canale: 
+1 
+-------------------------------------------------
+
+AIN0: 13358  2.50V
+
+AIN1: 5712  1.07V
+
+AIN2: 5692  1.07V
+
+AIN3: 5697  1.07V
+-------------------------------------------------
+Canale: 
+2 
+-------------------------------------------------
+
+AIN0: -2946  -0.55V
+
+AIN1: -2846  -0.53V
+
+AIN2: -2645  -0.50V
+
+AIN3: -2645  -0.50V
+-------------------------------------------------
+Canale: 
+3 
+-------------------------------------------------
+
+AIN0: 7840  1.47V
+
+AIN1: 5666  1.06V
