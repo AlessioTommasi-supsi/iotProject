@@ -81,6 +81,36 @@ o piu probabile: attiva nel senzo che ci collegereo un led o un buzzer cosi vedo
 
 
 
+
+    /*
+    TEST AD 
+    3.3V  su cn2  dal pin 1.2 
+    macchina a stati e leggere valore che restituisce AD
+    prima con macchina a stati staccata.
+
+    -Multipl
+
+    MACCHINA A STATI
+
+    interroga con un dalay ogni canale dopo delay secondi
+
+    ONLINE
+    */
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 Tutti i canali selezionati.
 Canale: 
 0 

@@ -33,7 +33,7 @@ void setup()
     pinoutData = new Esp32_30pin();
     systemState->setPinoutData(pinoutData);
     //pinoutData = new Esp32_38pin();
-    //pinoutData = new Esp32_38pinBoard();
+    //pinoutData = new Esp32_38pinBoard();asd
     
 
     WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
