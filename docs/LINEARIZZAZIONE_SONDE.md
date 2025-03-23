@@ -10,11 +10,11 @@
 Soprattutto seconda e utile!
 # Domande prof:
 
-![alt text](image.png)
+![alt text](../image/image.png)
 
 - Davvero necessaria Linearizzazione?
     - se necessaria mi serve datasheet come quello sopra e tipo di linearizzazione che si intende effettuare
 
     vedi qui seconda guida:
 
-![alt text](image-1.png)
+![alt text](../image/image-1.png)

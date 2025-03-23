@@ -187,8 +187,13 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Edit Pin    | creazione     |  12  | <br> 8.30->11.30; AND <br> 13.30->17.30;  of 26/02/2025 <br>  <br> <br> 10.30->11.30; AND <br> 13.30->16.30;  of 27/02/2025 <br>  <br>
 |  Edit Pin    | testing -sono statirilevati bug dovuti ad accesso concorrente delle risorse quando piu pagine attive su /pinout    |  2h  | <br> 8.30->10.30;  of 28/02/2025 <br>  <br> 
 |  Edit Pin    | correzione bug accesso concorrente: non acora del tutto fixato ma si pensa di risolvere mettendo mutex in SystemState     |  16h  |  <br> 13.30->17.30;  of 28/02/2025 <br>  <br> <br> 8.30->11.30; AND <br> 13.30->16.30;  of 01/03/2025 <br>  <br> 8.30->11.30; of 02/03/2025<br>  <br> 
-|  ADS1115    | creazione sketch ../src/ADS1115     |  6h 30min |  8.30->11.30; AND <br> 13.30->18.30;  of 14/03/2025 
-
+|  ADS1115    | creazione sketch ../src/ADS1115     |  6h 30min |  8.30->11.30; AND <br> 13.30->18.30;  of 14/03/2025 <br> 
+|  Modbus master view    | fix errore concorrenza che causava crash dispositivo quando piu client connessi     |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 21/03/2025 
+|  Multiser functionality    | organizzazione delle routes tramite pattern decorator per aggiunta e rimozione a run time in base del tipo di utente connesso ancora da comletare tutta la parte relativa alla greazione e gestione dell utente    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 21/03/2025 
+|  Impostazioni utente    | creazione form per mettere tipo di entrate e uscite da parte dell utente, come richiesto da prof, per ora solo creato html necessito di implementarlo nel progetto    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 22/03/2025 
+|  Ottimizzazione    | modifica del partizionamento dell esp per dar piu spazio all applicazione, rimozione della funzionalita OTA ora si ha a disposizione 3M per applicativo al posto di 1    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 23/03/2025 
+|  Ricerca    | linearizzazione delle sonde rtd e delle sonde termo coppie  maggiori info [Qui!](./LINEARIZZAZIONE_SONDE.md)    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 24/03/2025 
+|  fix errore compatibilita board     |   maggiori info [Qui!](./issues/arduino_espaasynkwebsrv_error.md  )    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025 
 
 <br> 
 <br> 
