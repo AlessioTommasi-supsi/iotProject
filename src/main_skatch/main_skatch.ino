@@ -21,11 +21,7 @@ PinoutData *pinoutData;
 void setup()
 {
   Serial.begin(9600);
-  while (!Serial)
-  {
-    ; // Attendi finché la porta seriale non è pronta
-  }
-  Serial.println("Inizializzazione porta seriale effettuata!");
+  
   try
   {
     systemState = SystemState::getInstance();
