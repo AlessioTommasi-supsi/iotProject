@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../../../../Volumes/backupTB/WiniotProject"
+		},
+		{
+			"path": "../../../../../../home/none/Arduino/libraries"
 		}
 	],
 	"settings": {
