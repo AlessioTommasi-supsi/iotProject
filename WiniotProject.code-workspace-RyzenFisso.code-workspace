@@ -40,7 +40,8 @@
 			"unordered_set": "cpp",
 			"iterator": "cpp",
 			"format": "cpp",
-			"cstring": "cpp"
+			"cstring": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }

@@ -26,9 +26,9 @@ void setup()
   {
     systemState = SystemState::getInstance();
 
-    //pinoutData = new Esp32_30pin();
+    pinoutData = new Esp32_30pin();
     //pinoutData = new Esp32_38pin();
-    pinoutData = new Esp32_38pinBoard();
+    //pinoutData = new Esp32_38pinBoard();
     
     systemState->setPinoutData(pinoutData);
     
