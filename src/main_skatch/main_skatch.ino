@@ -7,7 +7,8 @@
 #include <string>
 #include "WiFiManager.h"
 #include "PinoutData.h"
-#include "Esp32_38pinBoard.h"
+//#include "Esp32_38pinBoard.h"
+#include "SmartHomeBoard.h"
 #include "Esp32_30pin.h"
 #include "Pin.h"
 
@@ -18,6 +19,7 @@ SystemState *systemState;
 
 PinoutData *pinoutData;
 
+
 void setup()
 {
   Serial.begin(9600);
@@ -26,15 +28,16 @@ void setup()
   {
     systemState = SystemState::getInstance();
 
-    pinoutData = new Esp32_30pin();
+    //pinoutData = new Esp32_30pin();
     //pinoutData = new Esp32_38pin();
     //pinoutData = new Esp32_38pinBoard();
-    
+    pinoutData = new  SmartHomeBoard();
     systemState->setPinoutData(pinoutData);
     
 
-    WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
-    //WiFiManager *wifiManager = new WiFiManager();
+
+    //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
+    WiFiManager *wifiManager = new WiFiManager();
     
     
 

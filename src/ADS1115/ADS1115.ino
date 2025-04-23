@@ -19,9 +19,9 @@ Adafruit_ADS1115 ads; /* Use this for the 16-bit version */
 // Adafruit_ADS1015 ads;     /* Use this for the 12-bit version */
 
 // Definizione dei pin del multiplexer (collegati all'ESP32)
-#define PIN_A 12
-#define PIN_B 13
-#define PIN_C 14
+#define PIN_A 12  // S0 MUX
+#define PIN_B 13  // S1 MUX
+#define PIN_C 14  // S2 MUX
 
 // Variabile per tenere traccia del canale multiplexer selezionato
 // -1 indica lo stato default (modalità "tutti" / default)
@@ -97,11 +97,13 @@ void setup(void)
   // ads.setGain(GAIN_FOUR);       // 4x gain   +/- 1.024V  1 bit = 0.5mV    0.03125mV
   // ads.setGain(GAIN_EIGHT);      // 8x gain   +/- 0.512V  1 bit = 0.25mV   0.015625mV
   // ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
+initialize_ads:
   if (!ads.begin())
   {
     Serial.println("Failed to initialize ADS.");
-    while (1)
-      ;
+    delay(1000);
+    Serial.println(" ADS new initilalising in progress");
+    goto initialize_ads;
   }
 
   // Configura i pin del multiplexer come output
