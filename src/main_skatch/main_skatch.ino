@@ -7,9 +7,7 @@
 #include <string>
 #include "WiFiManager.h"
 #include "PinoutData.h"
-//#include "Esp32_38pinBoard.h"
-#include "SmartHomeBoard.h"
-#include "Esp32_30pin.h"
+#include "Esp32_38pinBoard.h"
 #include "Pin.h"
 
 const char *ssid = "HomeInternet";
@@ -28,10 +26,9 @@ void setup()
   {
     systemState = SystemState::getInstance();
 
-    //pinoutData = new Esp32_30pin();
-    //pinoutData = new Esp32_38pin();
-    //pinoutData = new Esp32_38pinBoard();
-    pinoutData = new  SmartHomeBoard();
+    //pinoutData = new Esp32_38pin(); //pinout esp scollegato dalla board
+    
+    pinoutData = new Esp32_38pinBoard();
     systemState->setPinoutData(pinoutData);
     
 

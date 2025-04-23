@@ -10,6 +10,13 @@ To compile the files in the subfolders, you need to add them as libraries (i.e.,
 I have specifically created a library folder to place/replace the zip files;
 For proper compilation, you need to import all the zip folders in /Library:
 
+
+Da bpard manager assicuratu di avere installato la seguente versione delle board: esp32 by Espressif Systems 3.0.7 le versioni successive danno problemi con libreria webserver vedi dettagli nella cartella issues!
+
+versione di arduino ide da utilizzare: 2.3.4
+
+
+
 ![alt text](image/Library.png)
 
 ### Electrical Schematic:

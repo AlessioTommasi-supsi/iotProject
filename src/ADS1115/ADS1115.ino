@@ -80,7 +80,7 @@ void setMultiplexerChannel(int channel)
 
 void setup(void)
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   Serial.println("Getting single-ended readings from AIN0..3");
   Serial.println("ADC Range: +/- 6.144V (1 bit = 3mV/ADS1015, 0.1875mV/ADS1115)");
