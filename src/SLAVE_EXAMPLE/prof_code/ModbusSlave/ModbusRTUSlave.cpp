@@ -1,6 +1,9 @@
 #include "ModbusRTUSlave.h"
 #include "Utils.h"
 
+#define MAX_HOLDING_REGISTERS_QUANTITY 20
+#define TOTAL_REGISTERS 1000
+
 ModbusRTUSlave::ModbusRTUSlave(HardwareSerial& serial, uint8_t dePin) {
   _hardwareSerial = &serial;
   _serial = &serial;
@@ -81,19 +84,26 @@ void ModbusRTUSlave::_processReadHoldingRegisters() {
   uint16_t startAddress = _bytesToWord(_buf[2], _buf[3]);
   uint16_t quantity = _bytesToWord(_buf[4], _buf[5]);
   
-  if (quantity < 1 || quantity > 20) {
-        _exceptionResponse(3); // Quantità non valida
-  }else {
-    Serial.print("start address:");
-    Serial.println(startAddress);
-    _fillHoldingRegistersCallback(startAddress, quantity);
-    _buf[2] = quantity * 2;
-    for (uint16_t i = 0; i < quantity; i++) {
-      _buf[3 + (i * 2)] = highByte(_holdingRegistersSlave[i]);
-      _buf[4 + (i * 2)] = lowByte(_holdingRegistersSlave[i]);
-    }
-    _writeResponse(3 + _buf[2]);
+  // Controlla che la richiesta sia valida: la quantità deve essere >=1 e lo startAddress
+  // più la quantità non devono superare il totale dei registri disponibili.
+  if (quantity < 1 || (startAddress + quantity) > TOTAL_REGISTERS) {
+    _exceptionResponse(3); // Quantità o indirizzo non valido
+    return;
   }
+  
+  // In questo esempio, puoi chiamare la callback per aggiornare i registri del blocco se necessario.
+  // La callback potrebbe popolare _holdingRegistersSlave in base allo startAddress.
+  _fillHoldingRegistersCallback(startAddress, quantity);
+
+  // Prepara il messaggio di risposta copiando direttamente dall'array dei registri,
+  // usando lo startAddress come offset!
+  _buf[2] = quantity * 2;
+  for (uint16_t i = 0; i < quantity; i++) {
+    uint16_t regIndex = startAddress + i;
+    _buf[3 + (i * 2)] = highByte(_holdingRegistersSlave[regIndex]);
+    _buf[4 + (i * 2)] = lowByte(_holdingRegistersSlave[regIndex]);
+  }
+  _writeResponse(3 + _buf[2]);
 }
 
 bool ModbusRTUSlave::_readRequest() {

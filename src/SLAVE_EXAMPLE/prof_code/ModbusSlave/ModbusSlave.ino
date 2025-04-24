@@ -28,33 +28,21 @@ const long intervalRead = 750;
 ModbusRTUMaster modbus(Serial2, DE_PIN_MASTER);
 ModbusRTUSlave modbusSlave(SerialPort, DE_PIN_SLAVE);
 
+/**
+ * Al massimo si possono selezionare 20 registri!
+ * 
+ * come funziona: 
+ * 
+ * vede che registro di partenza sta richedendo modscan
+ * e invia in base all indirizzo di partenza che e stato selezionato!
+ * 
+ * tutto questo e fatto nella funzione _processReadHoldingRegisters
+ */
+
 
 void fillHoldingRegisters(uint16_t startAddress, uint16_t quantity) {    
     
-    //uint16_t holdingRegistersSlave[20];
-    
-    /*
-    // Inizializza i registri da 1 a 10 con il valore 100
-    for (uint16_t i = 0; i < 20; i++) {
-        if (i >= 1 && i <= 10) {
-            holdingRegistersSlave[i] = 100.0;
-        } else {
-            holdingRegistersSlave[i] = 5;
-        }
-    }*/
-    /*holdingRegistersSlave[1] = 5;
-
-    success = modbus.readHoldingRegisters(SLAVE_ID, startAddress, holdingRegistersSlave, quantity);
-    if (success) {
-        if (swap) {
-            for (int i = 0; i < quantity; i += 2) {
-                int temp = holdingRegistersSlave[i];
-                holdingRegistersSlave[i] = holdingRegistersSlave[i + 1];
-                holdingRegistersSlave[i + 1] = temp;
-            }
-        }
-        modbusSlave.updateHoldingRegistersSlave(holdingRegistersSlave, quantity);
-    }*/
+   Serial.print("callbak eseguita");
 }
 
 void setup() {
@@ -71,8 +59,11 @@ void loop() {
    
     modbusSlave.poll();
 
-    /////////////////////////////////////////////////////////////////// PER ALESSIO IN QUESTO PUNTO VIENE ESEGUITA LA FUNZIONE CHE RESTITUISCE A MODSCAN I VALORI 3.2 FLOAT E 1 INTEGER
-  
+    /**
+     * PER ALESSIO IN QUESTO PUNTO VIENE ESEGUITA LA FUNZIONE CHE RESTITUISCE A 
+     * MODSCAN I VALORI 3.2 FLOAT E 1 INTEGER
+     *  
+     * */ 
   modbusSlave.insertIntoHoldingRegistersSlave(3, 3.2, swap);
   modbusSlave.insertIntoHoldingRegistersSlave(5, 1, false);
     
