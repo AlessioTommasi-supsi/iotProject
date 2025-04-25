@@ -60,9 +60,29 @@ void loop() {
     modbusSlave.poll();
 
     /**
+     * TODO 
+     * -fix multiplexer
+     * -associare ad ohni lettura un indirizzo modbus da 100 a 200
+     * - associare equivalente da 200 a 300-> linearizzazione!
+     * - scrittura modbus slave
+     * - uscite analogiche digitali
+     * - prendere da master e replicare sullo slave
+     * 
      * PER ALESSIO IN QUESTO PUNTO VIENE ESEGUITA LA FUNZIONE CHE RESTITUISCE A 
      * MODSCAN I VALORI 3.2 FLOAT E 1 INTEGER
      *  
+     * 
+     * mappa ad 
+     * 100 -> 200 grandezze misurate   -> come da 200 a 300  ma valori reali letti
+     * 200 -> 300 grandezze modificate -> elaborate in base a scale etc  
+     * 
+     * 200 - 201 - inizio e fine scala  -> 5bar   100bar ->implementa la lettura dallo slave!! comando di openModscan-> 
+     * 
+     * writeHoldingRegister
+     * 
+     * 300 -400  VALORI LETTI DA MODSCAN MASTER REPLICATI QUI! SEMPRE REPLICATI 
+     * 
+     *   REGISTER  address di mastermodbas diventa startaffress e length diventa quantity da mettere -> leggo sempre o 50 int o 50 float!
      * */ 
   modbusSlave.insertIntoHoldingRegistersSlave(3, 3.2, swap);
   modbusSlave.insertIntoHoldingRegistersSlave(5, 1, false);
