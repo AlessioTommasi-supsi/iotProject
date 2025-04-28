@@ -61,7 +61,7 @@ void loop() {
 
     /**
      * TODO 
-     * -fix multiplexer
+     * -fix multiplexer -> per i canali fatto manca vedere effettivamente conversione resistenza etc!
      * -associare ad ohni lettura un indirizzo modbus da 100 a 200
      * - associare equivalente da 200 a 300-> linearizzazione!
      * - scrittura modbus slave
