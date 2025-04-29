@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  13 APR 2025 06:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  29 APR 2025 01:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,34 +326,108 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
+(/home/none/.miktex/texmfs/install/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-04-19 v3.4.9 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count306
+\l__siunitx_number_exponent_fixed_int=\count307
+\l__siunitx_number_min_decimal_int=\count308
+\l__siunitx_number_min_integer_int=\count309
+\l__siunitx_number_round_precision_int=\count310
+\l__siunitx_number_lower_threshold_int=\count311
+\l__siunitx_number_upper_threshold_int=\count312
+\l__siunitx_number_group_first_int=\count313
+\l__siunitx_number_group_size_int=\count314
+\l__siunitx_number_group_minimum_int=\count315
+\l__siunitx_angle_tmp_dim=\dimen159
+\l__siunitx_angle_marker_box=\box61
+\l__siunitx_angle_unit_box=\box62
+\l__siunitx_compound_count_int=\count316
+
+(/home/none/.miktex/texmfs/install/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box63
+\l__siunitx_table_tmp_dim=\dimen160
+\l__siunitx_table_column_width_dim=\dimen161
+\l__siunitx_table_integer_box=\box64
+\l__siunitx_table_decimal_box=\box65
+\l__siunitx_table_uncert_box=\box66
+\l__siunitx_table_before_box=\box67
+\l__siunitx_table_after_box=\box68
+\l__siunitx_table_before_dim=\dimen162
+\l__siunitx_table_carry_dim=\dimen163
+\l__siunitx_unit_tmp_int=\count317
+\l__siunitx_unit_position_int=\count318
+\l__siunitx_unit_total_int=\count319
+
+(/home/none/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen164
+\ar@mcellbox=\box69
+\extrarowheight=\dimen165
+\NC@list=\toks28
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box70
+))
+(/home/none/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen166
+\lightrulewidth=\dimen167
+\cmidrulewidth=\dimen168
+\belowrulesep=\dimen169
+\belowbottomsep=\dimen170
+\aboverulesep=\dimen171
+\abovetopsep=\dimen172
+\cmidrulesep=\dimen173
+\cmidrulekern=\dimen174
+\defaultaddspace=\dimen175
+\@cmidla=\count320
+\@cmidlb=\count321
+\@aboverulesep=\dimen176
+\@belowrulesep=\dimen177
+\@thisruleclass=\count322
+\@lastruleclass=\count323
+\@thisrulewidth=\dimen178
+)
+(/home/none/.miktex/texmfs/install/tex/latex/graphics/color.sty
+Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+
+(/home/none/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(/home/none/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx))
 (/home/none/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box61
+\l__color_backend_stack_int=\count324
+\l__pdf_internal_box=\box71
 )
 (tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \it@ocap on input line 11.
-LaTeX Info: Redefining \it@ccap on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Info: Redefining \it@ocap on input line 13.
+LaTeX Info: Redefining \it@ccap on input line 13.
 
 
 File italian.ldf warning: 
@@ -361,43 +435,37 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 11.
+italian.ldf    on input line 13.
 
 (/home/none/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen159
-\scratchbox=\box62
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen160
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count325
+\scratchdimen=\dimen179
+\scratchbox=\box72
+\nofMPsegments=\count326
+\nofMParguments=\count327
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count328
+\MPscratchDim=\dimen180
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
+\everyMPtoPDFconversion=\toks30
 ) (/home/none/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(/home/none/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/home/none/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 13.
 
 (tesi.out) (tesi.out)
 \@outlinefile=\write3
 \openout3 = `tesi.out'.
 
+Package translations Info: no dictionary file `translations-basic-dictionary-it
+alian.trsl' found. on input line 13.
 
 
 [1
@@ -413,7 +481,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 \chapter
+l.27 \chapter
              {Introduzione} [1
 
 ]
@@ -428,7 +496,7 @@ Capitolo 1.
 <../../image/Library.png, id=180, 315.1775pt x 558.085pt>
 File: ../../image/Library.png Graphic file (type png)
 <use ../../image/Library.png>
-Package pdftex.def Info: ../../image/Library.png  used on input line 56.
+Package pdftex.def Info: ../../image/Library.png  used on input line 58.
 (pdftex.def)             Requested size: 117.00119pt x 207.16948pt.
 
 
@@ -437,7 +505,7 @@ Capitolo 2.
 <../../image/psu.png, id=191, 767.86874pt x 255.95625pt>
 File: ../../image/psu.png Graphic file (type png)
 <use ../../image/psu.png>
-Package pdftex.def Info: ../../image/psu.png  used on input line 72.
+Package pdftex.def Info: ../../image/psu.png  used on input line 74.
 (pdftex.def)             Requested size: 390.0pt x 130.00089pt.
 
 
@@ -450,7 +518,7 @@ Package pdftex.def Info: ../../image/psu.png  used on input line 72.
 File: ../../image/IngressiDigitali.png Graphic file (type png)
 <use ../../image/IngressiDigitali.png>
 Package pdftex.def Info: ../../image/IngressiDigitali.png  used on input line 1
-21.
+23.
 (pdftex.def)             Requested size: 390.0pt x 291.27013pt.
 
 
@@ -460,13 +528,8 @@ Package pdftex.def Info: ../../image/IngressiDigitali.png  used on input line 1
 <../../image/CD405xB.png, id=224, 694.595pt x 601.24625pt>
 File: ../../image/CD405xB.png Graphic file (type png)
 <use ../../image/CD405xB.png>
-Package pdftex.def Info: ../../image/CD405xB.png  used on input line 156.
+Package pdftex.def Info: ../../image/CD405xB.png  used on input line 158.
 (pdftex.def)             Requested size: 195.0pt x 168.78816pt.
-
-
-LaTeX Warning: Hyper reference `lbl_webserver' on page 9 undefined on input lin
-e 182.
-
 
 
 [9 <../../image/CD405xB.png>]
@@ -474,7 +537,7 @@ e 182.
 File: ../../image/fromMutexToPeripheral.png Graphic file (type png)
 <use ../../image/fromMutexToPeripheral.png>
 Package pdftex.def Info: ../../image/fromMutexToPeripheral.png  used on input l
-ine 189.
+ine 191.
 (pdftex.def)             Requested size: 390.0pt x 551.5473pt.
 
 
@@ -482,14 +545,17 @@ ine 189.
 <../../image/channelMultiplex.png, id=240, 1731.46875pt x 2312.64pt>
 File: ../../image/channelMultiplex.png Graphic file (type png)
 <use ../../image/channelMultiplex.png>
-Package pdftex.def Info: ../../image/channelMultiplex.png  used on input line 1
-99.
+Package pdftex.def Info: ../../image/channelMultiplex.png  used on input line 2
+01.
 (pdftex.def)             Requested size: 390.0pt x 520.88617pt.
 
 
 [11 <../../image/fromMutexToPeripheral.png>]
 
 [12]
+Overfull \vbox (8.71948pt too high) has occurred while \output is active []
+
+
 
 [13 <../../image/channelMultiplex.png>]
 
@@ -501,62 +567,63 @@ Package pdftex.def Info: ../../image/channelMultiplex.png  used on input line 1
 <../../image/SD_and_W5500.png, id=288, 418.56375pt x 610.28pt>
 File: ../../image/SD_and_W5500.png Graphic file (type png)
 <use ../../image/SD_and_W5500.png>
-Package pdftex.def Info: ../../image/SD_and_W5500.png  used on input line 360.
+Package pdftex.def Info: ../../image/SD_and_W5500.png  used on input line 384.
 (pdftex.def)             Requested size: 272.99881pt x 398.03687pt.
 
 
 [17]
 
 [18 <../../image/SD_and_W5500.png>]
-Overfull \hbox (17.13803pt too wide) in paragraph at lines 388--389
+Overfull \hbox (17.13803pt too wide) in paragraph at lines 412--413
 []\OT1/cmr/bx/n/12 Stack TCP/IP hardware integrato\OT1/cmr/m/n/12 : Libera riso
 rse sul microcontrollore
  []
 
-<../../image/ModbusWiring.png, id=308, 710.655pt x 803.0pt>
-File: ../../image/ModbusWiring.png Graphic file (type png)
-<use ../../image/ModbusWiring.png>
-Package pdftex.def Info: ../../image/ModbusWiring.png  used on input line 405.
-(pdftex.def)             Requested size: 350.99762pt x 396.6224pt.
 
 
 [19]
+<../../image/ModbusWiring.png, id=316, 710.655pt x 803.0pt>
+File: ../../image/ModbusWiring.png Graphic file (type png)
+<use ../../image/ModbusWiring.png>
+Package pdftex.def Info: ../../image/ModbusWiring.png  used on input line 429.
+(pdftex.def)             Requested size: 350.99762pt x 396.6224pt.
+
 
 [20 <../../image/ModbusWiring.png>]
 
 [21]
-<../../image/ADC.png, id=326, 1151.30125pt x 434.62375pt>
+<../../image/ADC.png, id=328, 1151.30125pt x 434.62375pt>
 File: ../../image/ADC.png Graphic file (type png)
 <use ../../image/ADC.png>
-Package pdftex.def Info: ../../image/ADC.png  used on input line 441.
+Package pdftex.def Info: ../../image/ADC.png  used on input line 465.
 (pdftex.def)             Requested size: 390.0pt x 147.2263pt.
 
 
 [22 <../../image/ADC.png>]
-Overfull \hbox (22.83072pt too wide) in paragraph at lines 469--470
+Overfull \hbox (22.83072pt too wide) in paragraph at lines 493--494
 []\OT1/cmr/bx/n/12 Basso Consumo Energetico\OT1/cmr/m/n/12 : Modalit^^Ra di bas
 so consumo per applicazioni
  []
 
-<../../image/ESP-38Pin-pinout.jpg, id=335, 832.5504pt x 473.6094pt>
+<../../image/ESP-38Pin-pinout.jpg, id=337, 832.5504pt x 473.6094pt>
 File: ../../image/ESP-38Pin-pinout.jpg Graphic file (type jpg)
 <use ../../image/ESP-38Pin-pinout.jpg>
-Package pdftex.def Info: ../../image/ESP-38Pin-pinout.jpg  used on input line 4
-77.
+Package pdftex.def Info: ../../image/ESP-38Pin-pinout.jpg  used on input line 5
+01.
 (pdftex.def)             Requested size: 390.0pt x 221.85933pt.
 
 
 [23]
-<../../image/collegamenti_daESP.png, id=341, 6323.625pt x 8943.4125pt>
+<../../image/collegamenti_daESP.png, id=343, 6323.625pt x 8943.4125pt>
 File: ../../image/collegamenti_daESP.png Graphic file (type png)
 <use ../../image/collegamenti_daESP.png>
 Package pdftex.def Info: ../../image/collegamenti_daESP.png  used on input line
- 484.
+ 508.
 (pdftex.def)             Requested size: 390.0pt x 551.45633pt.
 
 
 [24 <../../image/ESP-38Pin-pinout.jpg>]
-Overfull \hbox (12.066pt too wide) in paragraph at lines 492--528
+Overfull \hbox (14.06596pt too wide) in paragraph at lines 516--552
  [][] 
  []
 
@@ -566,10 +633,10 @@ Overfull \hbox (12.066pt too wide) in paragraph at lines 492--528
 
 [26]
 Capitolo 3.
-<../../image/uml.png, id=359, 1803.73875pt x 948.54375pt>
+<../../image/uml.png, id=361, 1803.73875pt x 948.54375pt>
 File: ../../image/uml.png Graphic file (type png)
 <use ../../image/uml.png>
-Package pdftex.def Info: ../../image/uml.png  used on input line 536.
+Package pdftex.def Info: ../../image/uml.png  used on input line 560.
 (pdftex.def)             Requested size: 390.0pt x 205.09082pt.
 
 
@@ -580,25 +647,25 @@ Package pdftex.def Info: ../../image/uml.png  used on input line 536.
 [28]
 
 [29]
-Overfull \hbox (42.25021pt too wide) in paragraph at lines 621--621
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 645--645
 []        \OT1/cmtt/m/n/12 static String generateHTML(std::vector<std::string> 
 ssidList);[] 
  []
 
 
-Overfull \hbox (388.05038pt too wide) in paragraph at lines 621--621
+Overfull \hbox (388.05038pt too wide) in paragraph at lines 645--645
 []        \OT1/cmtt/m/n/12 static String generateComponents(std::vector<std::st
 ring> &networks); //Componente che vogliamo aggiungere alla pagina[] 
  []
 
 
-Overfull \hbox (116.35025pt too wide) in paragraph at lines 669--669
+Overfull \hbox (116.35025pt too wide) in paragraph at lines 693--693
 []    \OT1/cmtt/m/n/12 String viewConfig::generateListComponents( std::vector<s
 td::string> &networks)[] 
  []
 
 
-Overfull \hbox (295.42534pt too wide) in paragraph at lines 669--669
+Overfull \hbox (295.42534pt too wide) in paragraph at lines 693--693
 []            \OT1/cmtt/m/n/12 html += "<option value='" + String(network.c_str
 ()) + "'>" + String(network.c_str()) + "</option>";[] 
  []
@@ -606,31 +673,31 @@ Overfull \hbox (295.42534pt too wide) in paragraph at lines 669--669
 
 
 [30]
-Overfull \hbox (110.17525pt too wide) in paragraph at lines 669--669
+Overfull \hbox (110.17525pt too wide) in paragraph at lines 693--693
 []        \OT1/cmtt/m/n/12 html += "<input type='password' id='password' name='
 password' required>";[] 
  []
 
 
-Overfull \hbox (42.25021pt too wide) in paragraph at lines 669--669
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 693--693
 []    \OT1/cmtt/m/n/12 String viewConfig::generateHTML(std::vector<std::string>
  ssidList)[] 
  []
 
 
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 669--669
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 693--693
 []        \OT1/cmtt/m/n/12 String html = viewGeneric::defaultCssHeader("Config 
 Page");[] 
  []
 
 
-Overfull \hbox (159.57527pt too wide) in paragraph at lines 691--691
+Overfull \hbox (159.57527pt too wide) in paragraph at lines 715--715
 []        \OT1/cmtt/m/n/12 server.on("/new_component_routes", HTTP_GET, [](Asyn
 cWebServerRequest *request) {[] 
  []
 
 
-Overfull \hbox (320.12535pt too wide) in paragraph at lines 691--691
+Overfull \hbox (320.12535pt too wide) in paragraph at lines 715--715
 []            \OT1/cmtt/m/n/12 String htmlContent = viewConfig::generateHTML(Sy
 stemState::getInstance()->wifiManager->scanNetworks());[] 
  []
@@ -642,47 +709,47 @@ stemState::getInstance()->wifiManager->scanNetworks());[]
 [32]
 Capitolo 4.
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 716--719
+Overfull \hbox (25.19998pt too wide) in alignment at lines 740--743
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 719--722
+Overfull \hbox (25.19998pt too wide) in alignment at lines 743--746
  [] [] 
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 722--724
+Overfull \hbox (25.19998pt too wide) in alignment at lines 746--748
  [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--727
+Underfull \hbox (badness 10000) in paragraph at lines 751--751
 []\OT1/cmr/m/n/12 implementazione una opportuna tabella di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--729
+Underfull \hbox (badness 10000) in paragraph at lines 753--753
 []|\OT1/cmr/bx/n/12 Lettura segnali
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 729--729
+Underfull \hbox (badness 2922) in paragraph at lines 753--753
 []|\OT1/cmr/m/n/12 Implementare la lettura di segnali analogici
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 730--730
+Underfull \hbox (badness 1852) in paragraph at lines 754--754
 []|\OT1/cmr/m/n/12 Sviluppare la gestione delle uscite digitali e
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 731--731
+Underfull \hbox (badness 1331) in paragraph at lines 755--755
 []|\OT1/cmr/bx/n/12 Comunicazione RS485
  []
 
 
-Overfull \hbox (24.0pt too wide) in alignment at lines 724--735
+Overfull \hbox (25.19998pt too wide) in alignment at lines 748--759
  [] [] 
  []
 
@@ -701,21 +768,17 @@ Capitolo 5.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 1C4DD61528DC44C3E2352D434907FD69;3613.
  ) 
 Here is how much of TeX's memory you used:
- 10837 strings out of 475460
- 171747 string characters out of 5766735
- 595135 words of memory out of 5000000
- 33558 multiletter control sequences out of 15000+600000
- 566896 words of font info for 64 fonts, out of 8000000 for 9000
+ 14620 strings out of 475460
+ 283191 string characters out of 5766735
+ 671470 words of memory out of 5000000
+ 37320 multiletter control sequences out of 15000+600000
+ 567573 words of font info for 66 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 75i,10n,79p,435b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,435b,1185s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/none/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.
 pk></home/none/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></home/none/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -726,9 +789,9 @@ e/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/none/.m
 iktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/none/.mik
 tex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/none/.mikte
 x/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (35 pages, 6141041 bytes).
+Output written on tesi.pdf (35 pages, 6143739 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 137 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,12 +7,14 @@
 \usepackage{longtable}
 \usepackage{needspace}
 \usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{booktabs}
 
 \begin{document}
 
 \title{\textbf{ALPHA} 
 
-Acquisizione asd Locale di Parametri con Hardware Avanzato
+Acquisizione   Locale di Parametri con Hardware Avanzato
 }
 \author{Alessio Tommasi}
 \date{\today}
@@ -179,7 +181,7 @@ I pin di ingresso A, B, C del multiplexer \textbf{CD405xB} sono collegati rispet
 \end{table}
 
 i canali del multiplexer possono essere impostati nella apposita pagina web, la documentazione è disponibile piu avanti in questo documento. \\
-\hyperref[lbl_webserver]{link alla sezione apposita}
+
 
 \paragraph{Dettaglio canali multiplexer} 
 Di seguito sono riportati come i canali si connettono ai segnali esterni, le operazioni effettuate su tali segnali verranno spiegate piu nel dettaglio nella sezioni successive.
@@ -192,7 +194,7 @@ Di seguito sono riportati come i canali si connettono ai segnali esterni, le ope
 
 \subsection{ hardware esterno posizionabile sulla board}
 \subsubsection{MAX31865}
-asd
+ 
 
 \begin{figure}[H]
     \centering
@@ -231,9 +233,31 @@ seguendo KCL (kirchhoff current law) si ottiene che la corrente che passa per la
 
 dunque la la tensone su ch0 (Vch0 letta da esp a seguito dello stadio di amplificazione) seguendo KVL (kirchhoff voltage law) e' data da: tensione su R8 + tensione su R
 
-svlogendo i calcoli si ottiene che:
+\[ R = \frac{V_{\text{ch0}}}{9\,\si{\micro\ampere}} - 1\,\si{\kilo\ohm} \] 
 
-\[ R = \frac{Vch0}{Req}  \] 
+sfortunatamente i dati letti da esp con questa formula non hanno alcun senso!
+vedi la seguente tabella con le misure di tensione di resistenze note: 
+
+\paragraph{Valori Sperimentali}
+\begin{tabular}{|l|c|r|}
+    \hline
+    Resistenza [Ohm]  & Tensione [V] & Note\\
+    \hline
+    1k & 0.67 & bbb\\
+    \hline
+    100k & 2.43 & ccc\\
+    \hline
+    inf & 2.5 & nessuna resistenza collegata\\
+    \hline
+\end{tabular}
+
+\subparagraph{Conclusioni}
+La funzione razionale scelta per interpolare esattamente i tre punti e garantire l’asintoto \(V(\infty)=2.5\) è:
+
+Da Trovare per ora semplicemente tensione misurata/ 9uA
+
+Nota: per hora ho notato che tensione letta e esattamente quella sulla resistenza esterna. invece che essere una partizione! 
+
 
 \paragraph{Ch1}
 percorso evidenziato in giallo nella Figura 5.2.
