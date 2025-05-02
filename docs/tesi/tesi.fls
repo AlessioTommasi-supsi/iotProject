@@ -200,6 +200,13 @@ INPUT ../../image/IngressiDigitali.png
 INPUT ../../image/IngressiDigitali.png
 INPUT ../../image/IngressiDigitali.png
 INPUT ../../image/IngressiDigitali.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
+INPUT ./img/uscite.png
 INPUT ../../image/CD405xB.png
 INPUT ../../image/CD405xB.png
 INPUT ../../image/CD405xB.png
@@ -222,8 +229,6 @@ INPUT ../../image/channelMultiplex.png
 INPUT ../../image/channelMultiplex.png
 INPUT ../../image/channelMultiplex.png
 INPUT /home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm1200.tfm
-INPUT /home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm0800.tfm
-INPUT /home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT ../../image/SD_and_W5500.png
 INPUT ../../image/SD_and_W5500.png
 INPUT ../../image/SD_and_W5500.png

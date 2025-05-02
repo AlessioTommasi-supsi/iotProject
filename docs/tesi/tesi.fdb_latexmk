@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1745884069.51515 "/run/media/none/backupTB/WiniotProject/iotProject/docs/tesi/tesi.tex" "tesi.pdf" "tesi" 1745884083.75651 0
+["pdflatex"] 1746140071.80547 "/run/media/none/backupTB/WiniotProject/iotProject/docs/tesi/tesi.tex" "tesi.pdf" "tesi" 1746140085.5668 0
   "../../image/ADC.png" 1741189437.14 108033 bed224c5dfc65c421b9ee67c1be6084b ""
   "../../image/CD405xB.png" 1738870786 54717 12f53fd501baa3ab0210ee76b9afc76f ""
   "../../image/ESP-38Pin-pinout.jpg" 1734869860 415600 b22a588693a045ad5d469f3a83701b72 ""
@@ -15,8 +15,6 @@
   "/home/none/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1745882196.29215 28976 a668fbfa557ad281755924e73ca8348e ""
   "/home/none/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1744517122.17009 14064 01b41feaffada4a2e23116f821fdfa3c ""
   "/home/none/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1744517060.66877 8796831 85492768467bfe2f538500ddc3b845c0 ""
-  "/home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1744517115.34315 1456 d21918d95ca20f07aa266303b9a0a14c ""
-  "/home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm0800.tfm" 1744517115.34325 1444 e35ead393df86aae37b5564284d9aa05 ""
   "/home/none/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1744517115.34345 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "/home/none/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1744517105.59894 1004 54797486969f23fa377b128694d548df ""
   "/home/none/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1744517105.59904 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -105,11 +103,12 @@
   "/home/none/.miktex/texmfs/install/tex/latex/tools/longtable.sty" 1744517095.87155 15900 3cb191e576c7a313634d2813c55d4bf1 ""
   "/home/none/.miktex/texmfs/install/tex/latex/translations/translations.sty" 1745882194.12882 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "/home/none/.miktex/texmfs/install/tex/latex/url/url.sty" 1744517089.29734 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "/run/media/none/backupTB/WiniotProject/iotProject/docs/tesi/tesi.tex" 1745884069.03 35465 4550cdbe1da47628c2e47e8f059bba5a ""
-  "tesi.aux" 1745884083.53 11959 c88f05fbe92a4575d5b0cdbdba05cbf6 "pdflatex"
-  "tesi.out" 1745884083.53 3613 1c4dd61528dc44c3e2352d434907fd69 "pdflatex"
-  "tesi.tex" 1745884069.03 35465 4550cdbe1da47628c2e47e8f059bba5a ""
-  "tesi.toc" 1745884083.53 5669 660f0c1c27e2c7bc6207a0f89b475b72 "pdflatex"
+  "/run/media/none/backupTB/WiniotProject/iotProject/docs/tesi/tesi.tex" 1746140071.34 30189 0b628e0596e99c3120f5ae0fe84e5060 ""
+  "img/uscite.png" 1746140007.5 50023 5aa90ade173dc45626e5670a4ec23f14 ""
+  "tesi.aux" 1746140085.44 11141 5c26a70d7779ca15f8d1994d97528f5e "pdflatex"
+  "tesi.out" 1746140085.44 3705 72a90a76147e1fa65118d08b5bc23187 "pdflatex"
+  "tesi.tex" 1746140071.34 30189 0b628e0596e99c3120f5ae0fe84e5060 ""
+  "tesi.toc" 1746140085.44 5100 4a0901b7bb6fb8e199e7b1676e3c8755 "pdflatex"
   (generated)
   "tesi.aux"
   "tesi.log"

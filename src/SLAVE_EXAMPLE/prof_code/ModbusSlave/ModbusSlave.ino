@@ -8,9 +8,16 @@
 #define TX_PIN_MASTER 17
 #define DE_PIN_MASTER 15
 
-#define RX_PIN_SLAVE 23
-#define TX_PIN_SLAVE 22 //cambiato in origine era 32 da testare se 27 funziona
+#define RX_PIN_SLAVE 23 //in origine era 32
+#define TX_PIN_SLAVE 22 //cambiato in origine era 32 da testare se 33 funziona
 #define DE_PIN_SLAVE 18 // cambiato in origine era 27 da testare se 27 funziona
+
+/*
+// devi invertire dispetto a scheda! perche per ho di e
+#define RX_PIN_SLAVE 32 //DI
+#define TX_PIN_SLAVE 33 //RO
+#define DE_PIN_SLAVE 27 // DE RE
+*/
 
 const int analogInput_1 = 34;
 float mis = 0.0;
@@ -53,6 +60,8 @@ void setup() {
   modbusSlave.begin(SLAVE_ID, 9600, SERIAL_8N1, RX_PIN_SLAVE, TX_PIN_SLAVE);
   modbusSlave.setFillHoldingRegistersCallback(fillHoldingRegisters);
 
+  Serial.println("inizializzazione fatta!");
+
 }
 
 void loop() {
@@ -86,7 +95,6 @@ void loop() {
      * */ 
   modbusSlave.insertIntoHoldingRegistersSlave(3, 3.2, swap);
   modbusSlave.insertIntoHoldingRegistersSlave(5, 1, false);
-    
 
   unsigned long currentMillisMainLoop = millis();
   if (currentMillisMainLoop - previousMillisMainLoop >= intervalMainLoop) {

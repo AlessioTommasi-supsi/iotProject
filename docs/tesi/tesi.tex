@@ -10,7 +10,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 
-\begin{document}
+\begin{document} 
 
 \title{\textbf{ALPHA} 
 
@@ -60,6 +60,13 @@ Per compilare i file nelle sottocartelle, è necessario aggiungerli come libreri
 \end{figure}
 
 \paragraph{} Altrimenti clonare la versione Portable del progetto disponibile al seguente link: \href{https://github.com/AlessioTommasi-supsi/iotProject/tree/portable}{iotProject-portable}.
+
+\paragraph{Compilatore}
+per la compilazione utilizzare la board \textbf{ ESP32 DEV Module}. 
+
+\textbf{Board esprexiff}  
+per una corretta compilazione si necessita dell utilizzo della versione 3.0.7 delle board fornite da Espressif.
+Maggiori dettagli a questo \href{../issues/arduino_espaasynkwebsrv_error.md}{link}.
 
 
 \chapter{Hardware}
@@ -121,6 +128,17 @@ Questo sezione descrive l'implementazione degli ingressi digitali nel circuito, 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{../../image/IngressiDigitali.png}
+    \caption{ }
+\end{figure}
+
+
+\subsection{Uscite}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{./img/uscite.png}
     \caption{ }
 \end{figure}
 
@@ -188,7 +206,7 @@ Di seguito sono riportati come i canali si connettono ai segnali esterni, le ope
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{../../image/fromMutexToPeripheral.png}
+    \includegraphics[width=0.75\linewidth]{../../image/fromMutexToPeripheral.png}
     \caption{Dettaglio canali multiplexer}
 \end{figure}
 
@@ -198,9 +216,11 @@ Di seguito sono riportati come i canali si connettono ai segnali esterni, le ope
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{../../image/channelMultiplex.png}
+    \includegraphics[width=0.8\linewidth]{../../image/channelMultiplex.png}
     \caption{Collegamenti dei canali del multiplexer}
 \end{figure}
+
+\newpage
 
 \paragraph{Ch0}
 Selezionando Ch0 dall apposita pagina dedicata segue il percorso evidenziato in arancione nella Figura 5.2.
@@ -216,48 +236,6 @@ Successivamente, il segnale passa attraverso uno stadio amplificatore per essere
 
 Il componente TL431 funge da riferimento di tensione, ovvero un generatore di tensione costante e calibrata.
 
-\paragraph{Esempio } 
-\subparagraph{Dati}
-
-\begin{itemize}
-    \item R = 100 $\Omega$ resistenza che vogliamo misurare
-    \item I $\approx$ 9 $\mu$A corrente generata internamente sempre in questo range
-    \item Vref = 2.5V tensione di riferimento generata dal TL431
-\end{itemize}
-
-Si consideri la legge di Ohm:
-
-\[ V = R \cdot I \quad \text{e} \quad R = \frac{V}{I} \]
-
-seguendo KCL (kirchhoff current law) si ottiene che la corrente che passa per la resistenza R8 e pari alla resistenza collegata sul morsetto 8 + la corrente generata dal componente TL431.
-
-dunque la la tensone su ch0 (Vch0 letta da esp a seguito dello stadio di amplificazione) seguendo KVL (kirchhoff voltage law) e' data da: tensione su R8 + tensione su R
-
-\[ R = \frac{V_{\text{ch0}}}{9\,\si{\micro\ampere}} - 1\,\si{\kilo\ohm} \] 
-
-sfortunatamente i dati letti da esp con questa formula non hanno alcun senso!
-vedi la seguente tabella con le misure di tensione di resistenze note: 
-
-\paragraph{Valori Sperimentali}
-\begin{tabular}{|l|c|r|}
-    \hline
-    Resistenza [Ohm]  & Tensione [V] & Note\\
-    \hline
-    1k & 0.67 & bbb\\
-    \hline
-    100k & 2.43 & ccc\\
-    \hline
-    inf & 2.5 & nessuna resistenza collegata\\
-    \hline
-\end{tabular}
-
-\subparagraph{Conclusioni}
-La funzione razionale scelta per interpolare esattamente i tre punti e garantire l’asintoto \(V(\infty)=2.5\) è:
-
-Da Trovare per ora semplicemente tensione misurata/ 9uA
-
-Nota: per hora ho notato che tensione letta e esattamente quella sulla resistenza esterna. invece che essere una partizione! 
-
 
 \paragraph{Ch1}
 percorso evidenziato in giallo nella Figura 5.2.
@@ -265,21 +243,13 @@ percorso evidenziato in giallo nella Figura 5.2.
 Possibili funzioni del segnale sul segnale in ingreso al pin 7 della morsettiera CN2.
 
 - \textbf{Filtro Passa Basso}
-Se il segnale applicato su R7 è una tensione alternata (AC), il circuito potrebbe attenuare le alte frequenze, lasciando passare solo le frequenze più basse
+Se il segnale applicato su R7 è una tensione alternata (AC), il circuito attenua le alte frequenze, lasciando passare solo le frequenze più basse
 
 - \textbf{Stabilizzazione del segnale}
 
-\paragraph{Ch2}
-percorso evidenziato in viola nella Figura 5.2.
+\paragraph{Ch2} NON giusto Chiedi !!!!
 
-Leggeremo il segnale in ingresso al pin 6 della morsettiera CN2.
-
-Il segnale verra amplificato dall operazionale U4 che e collegato come amplificatore non invertente (maggiori info al link \href{https://elettronicasemplice.weebly.com/amplificatore-operazionale-non-invertente.html}{LM358}).
-
-Il guadagno di U4 e' dato dalla formula $G = 1 + \frac{R9}{R10}= 1+330 = 331 $.
-
-inoltre tali alimentatore e alimentato tra 0 e +5v quindi clampera il segnale in ingresso tra 0 e +5v.
-Il condensatore C31 si occupa di stabilizzare il segnale in uscita.
+TODO
 
 \paragraph{Ch3}
 percorso evidenziato in azzurro nella Figura 5.2.
@@ -288,81 +258,11 @@ Leggeremo il segnale in ingresso al pin 1 della morsettiera CN2.
 
 tra il segnale sul pin 1 ed ESP e'presente un partitore di tensione composto da R11 = 1M e R12 = 270K dunque $Vesp = Vpin1 * \frac{R12}{R11+R12} = Vpin1 * \frac{270}{1270} = Vpin1 * 0.2126$.
 
-//correzione:
-Si necessita di montare una resistenza tra il pin 8 e il pin 1 della morsettiera CN2.
-Vine generata una corrente pari a 9 $\mu$A che passa attraverso la resistenza esterna paria 100 $\Omega$
-tale segnale finisce dunque su ch3 dopo essere passato attraverso ad un partitore di tensione.
+Il segnale viene utilizzato internamente per il calcolo della resistenza collegata sul pin 8 della morsettiera CN2.
 
-\paragraph{Esempio}
-\subparagraph{Dati}
-\begin{itemize}
-    \item R = 100 $\Omega$ resistenza collegata al pin 1,8
-    \item I $\approx$ 925 $\mu$A 
-\end{itemize}
+tramite la seguente formula:
 
-Vr = I * R = 925 $\mu$A * 100 $\Omega$ = 92,5 mV
-
-Successivamente e' presente un partitore resistivo per abbassare la tensione a valori accettabili per l'ESP32 (max 3V).
-in particolare: 
-
-\[ Vch3 = Vr12 = Vin * \frac{R12}{R11+R12} = 92,5 [mV] * \frac{1M}{270k} = 19,425 [mV] \]
-
-Dunque fattore di divisio ne del partitore e' 
-\[Vch3/Vin = 19,425/92,5 = 0,21 \]
-
-A valle del partitore il componente TL082 si occupa dello stadio di amplificazione.
-Questo stadio consente anche una traslazione del segnale nel caso in cui la tensione in ingresso sia negativa offettuando opportuni shift di tensione.
-
-Tale shift viene sempre effettuato in modo di portare il segnale a circa la meta della dinamica dell esp ovvero 1.25V.
-
-\paragraph{Recap sull elaborazione del segnale}
-\begin{itemize}
-    \item generazione corrente  I $\approx$ 925 $\mu$A che passa attraverso la resistenza esterna
-    \item tensione generata Vr = R *I viene ridimensionata da partitore con fattore pari a 0.21
-    \item shift dell segnale a 1.25V
-\end{itemize}
-
-Questo concetto verra applicato per utilizzare termoresistori (Pt100, Pt1000, Pt500, Ni500) e termocoppie che verranno attaccate e il valore di tensione misurato sara corrispondente a un certo valore di resistenza.
-
-Le sonde di temperatura di questa famiglia però non sono lineari quindi andrà implementata una opportuna tabella di linearizzazione
-
-
-\paragraph{Utilizzo ch3 per segnali in tensione continua}
-l’ingresso per tali segnali è dal pin 1 (positivo) e 2 (negativo ) della morsettiera CN2.
-
-\subparagraph{Esempio}
-
-\[  
-    Vin = 10V   
-       => 10V * 0.21 = 2.1V
-       => 2.1V + 1.25V = 3.35V
-\]
-
-Contrariamente al caso precedente, non e' necessario effettuare linearizzazione con tabella poiche il segnale e gia lineare.
-Dovro dare dunque un opzione lato SW per selezionare il tipo di segnale in ingresso su CH3. 
-
-Ovvero su ch3 leggero 1.25 quando saranno applicati 0V nella morsettiera CN2 e 3.3V quando ci sono 10V 
-
-\paragraph{Utilizzo ch3 per segnale di corrente}
-il generatore di corrente dovra essere inserito tra il pin 7(positivo) e 2(negativo) della morsettiera CN2.
-
-\subparagraph{Esempio}
-
-Consideriamo un generatore di corrente in ingresso di 20mA.
-
-La corrente cadrà sulla resistenza R7 generando una tensione che verrà poi shiftata di 1.25V
-
-0.02mA *110Ohm = 2.2V + 1.25 = 3.45V 
-
-Dunque su ch3 leggero 3.45V quando ci sono 20mA in ingresso.
-
-Ultimo caso è quello delle sonde termocoppie. In questo caso la sonda è inserita tra pin 6 e pin 2
-
-Il multiplexer sarà in posizione ch2
-
-Queste sonde forniscono in uscita al variare della temperatura una tensione di pochi millivolt per questo il segnale deve essere amplificato tramite op177 che è un operazionale a basso offset (ovvero non introduce rumore sul segnale misurato).
-
-Il gain dell’operazionale con queste resistenze è pari a 101 quindi il segnali in ingresso verrà amplificato per 101 volte e shiftato sempre di 1.25V
+\[ R = \frac{V_{\text{ch0}  } * 4.7 * 1000}{V_{\text{ch2}}}  \]
 
 \paragraph{Ch4}
 Connessione equivalente a CH0 
@@ -746,15 +646,11 @@ Una delle attività più complesse è stata la gestione dell'accesso concorrente
 \endhead
 \hline
 \endfoot
-\textbf{Configurazione sensori di temperatura} & Configurare e integrare sensori di temperatura \textbf{PT100}, \textbf{PT1000} e \textbf{termocoppie} utilizzando moduli come \textbf{MAX31865} e \textbf{MAX31855}.
-
- implementazione una opportuna tabella di linearizzazione per Le sonde di temperatura di questa famiglia (Vedi sezione 2.1.3 - Ch3 per maggiori dettagli)  \\ \hline
-
-\textbf{Lettura segnali analogici} & Implementare la lettura di segnali analogici tramite gli ingressi \textbf{ADC} dell'ESP32 e eventuali moduli esterni. \\ \hline
-\textbf{Gestione uscite digitali e analogiche} & Sviluppare la gestione delle uscite digitali e analogiche tramite l'ESP32. \\ \hline
+\textbf{Monitor} & creazione di una pagina web dedicata al monitoraggio delle prestazioni e dello stato del sistema. \\ \hline
+\textbf{Lettura segnali analogici} & Implementare la lettura di segnali analogici tramite gli ingressi \textbf{ADC} dell'ESP32\\ \hline
+\textbf{Gestione uscite digitali e analogiche} & Sviluppare la gestione delle uscite digitali e analogiche tramite l'ESP32.  \\ \hline
 \textbf{Comunicazione RS485 (Modbus RTU)} & Integrare la comunicazione \textbf{RS485} utilizzando il protocollo \textbf{Modbus RTU} per interfacciarsi con altri dispositivi. \\ \hline
 \textbf{Server Web (Ethernet TCP/IP)} & Sviluppare un server \textbf{Web} basato su \textbf{Ethernet TCP/IP} per il monitoraggio e controllo remoto dei dati acquisiti. \\ \hline
-\textbf{Datalogging} & Implementare un sistema di \textbf{datalogging} per salvare e storicizzare i dati raccolti dai sensori. \\ \hline
 \textbf{Test e validazione} & Testare e validare il sistema attraverso simulazioni e test su hardware reale. \\ \hline
 \end{longtable}
 
@@ -775,6 +671,6 @@ implementazione di un sistema di modifica e  dello stato dei pin e dei canali mu
 Sviluppare un sistema di notifiche per avvisare l'utente quando i valori registrati sullo stack superano una soglia limite definita dall'utente. Inoltre, notificare la presenza o l'assenza di connessione internet.
 
 \paragraph{Modbus}
-implementazione corretta di SLAVE RTU e TCP/IP attraverso dispositivo Winzet W5500.
+implementazione corretta Modbus TCP/IP attraverso dispositivo Winzet W5500.
 
 \end{document}
