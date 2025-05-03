@@ -4,35 +4,29 @@
 #include <HardwareSerial.h>
 
 #define SLAVE_ID 1 
-#define RX_PIN_MASTER 16  
-#define TX_PIN_MASTER 17
-#define DE_PIN_MASTER 15
 
+#define RX_PIN_SLAVE 1 //DI = rx
+#define TX_PIN_SLAVE 3 //RO = tx
+#define DE_PIN_SLAVE 18 // DE RE
+
+/*
 #define RX_PIN_SLAVE 23 //in origine era 32
 #define TX_PIN_SLAVE 22 //cambiato in origine era 32 da testare se 33 funziona
 #define DE_PIN_SLAVE 18 // cambiato in origine era 27 da testare se 27 funziona
 
-/*
 // devi invertire dispetto a scheda! perche per ho di e
-#define RX_PIN_SLAVE 32 //DI
-#define TX_PIN_SLAVE 33 //RO
+#define RX_PIN_SLAVE 32 //DI = rx
+#define TX_PIN_SLAVE 33 //RO = tx
 #define DE_PIN_SLAVE 27 // DE RE
 */
 
-const int analogInput_1 = 34;
-float mis = 0.0;
 
-HardwareSerial SerialPort(1); 
-bool master = false;
+HardwareSerial SerialPort(1);   //utilizza UART1
 bool swap = true;
-bool success = 0;
-int indexValuesArray = 0;
-unsigned long previousMillisMainLoop = 0; 
-unsigned long previousMillisRead = 0;      
+unsigned long previousMillisMainLoop = 0;       
 const long intervalMainLoop = 1000;        
 const long intervalRead = 750; 
 
-ModbusRTUMaster modbus(Serial2, DE_PIN_MASTER);
 ModbusRTUSlave modbusSlave(SerialPort, DE_PIN_SLAVE);
 
 /**
@@ -53,10 +47,7 @@ void fillHoldingRegisters(uint16_t startAddress, uint16_t quantity) {
 }
 
 void setup() {
-  Serial.begin(9600);
-  modbus.setTimeout(2);//(2000);
-  modbus.begin(9600, SERIAL_8N1, RX_PIN_MASTER, TX_PIN_MASTER); 
-
+  Serial.begin(9600); //utilizza UART0
   modbusSlave.begin(SLAVE_ID, 9600, SERIAL_8N1, RX_PIN_SLAVE, TX_PIN_SLAVE);
   modbusSlave.setFillHoldingRegistersCallback(fillHoldingRegisters);
 
@@ -76,7 +67,7 @@ void loop() {
      * - scrittura modbus slave
      * - uscite analogiche digitali
      * - prendere da master e replicare sullo slave
-     * 
+     * export XDG_RUNTIME_DIR=/run/user/$(id -u)
      * PER ALESSIO IN QUESTO PUNTO VIENE ESEGUITA LA FUNZIONE CHE RESTITUISCE A 
      * MODSCAN I VALORI 3.2 FLOAT E 1 INTEGER
      *  
@@ -95,6 +86,7 @@ void loop() {
      * */ 
   modbusSlave.insertIntoHoldingRegistersSlave(3, 3.2, swap);
   modbusSlave.insertIntoHoldingRegistersSlave(5, 1, false);
+  Serial.print("Pool");
 
   unsigned long currentMillisMainLoop = millis();
   if (currentMillisMainLoop - previousMillisMainLoop >= intervalMainLoop) {
