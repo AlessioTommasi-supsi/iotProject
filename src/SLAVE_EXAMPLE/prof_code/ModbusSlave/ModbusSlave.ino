@@ -5,23 +5,36 @@
 
 #define SLAVE_ID 1 
 
-#define RX_PIN_SLAVE 1 //DI = rx
-#define TX_PIN_SLAVE 3 //RO = tx
-#define DE_PIN_SLAVE 18 // DE RE
 
 /*
-#define RX_PIN_SLAVE 23 //in origine era 32
-#define TX_PIN_SLAVE 22 //cambiato in origine era 32 da testare se 33 funziona
-#define DE_PIN_SLAVE 18 // cambiato in origine era 27 da testare se 27 funziona
+ESP32
+              +--------+
+              |        |
+    TX (GPIO22) --------> [DI] RS485 Module
+              |        | 
+    RX (GPIO23) <-------- [RO] RS485 Module
+              |        |
+   DE (GPIO18) --------> [DE] (e [RE] se collegati insieme)
+              |        |
+             GND ------> GND del RS485 Module
+              |        |
+              +--------+
+                
+[RS485 Module]    --->   Bus RS485: Terminali A e B <--- (Terminazione e biasing se necessari
+*/
 
-// devi invertire dispetto a scheda! perche per ho di e
+#define RX_PIN_SLAVE 22 //DI = tx
+#define TX_PIN_SLAVE 23 //RO = rx
+#define DE_PIN_SLAVE 18 // DE RE
+/*
+// scheda!
 #define RX_PIN_SLAVE 32 //DI = rx
 #define TX_PIN_SLAVE 33 //RO = tx
 #define DE_PIN_SLAVE 27 // DE RE
 */
 
 
-HardwareSerial SerialPort(1);   //utilizza UART1
+HardwareSerial SerialPort(2);   //utilizza UART1
 bool swap = true;
 unsigned long previousMillisMainLoop = 0;       
 const long intervalMainLoop = 1000;        
@@ -86,7 +99,7 @@ void loop() {
      * */ 
   modbusSlave.insertIntoHoldingRegistersSlave(3, 3.2, swap);
   modbusSlave.insertIntoHoldingRegistersSlave(5, 1, false);
-  Serial.print("Pool");
+  //Serial.print("Pool");
 
   unsigned long currentMillisMainLoop = millis();
   if (currentMillisMainLoop - previousMillisMainLoop >= intervalMainLoop) {
