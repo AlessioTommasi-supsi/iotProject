@@ -94,26 +94,27 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 
 # Compiti Tesi
 
-| **Attività**                                  | **Descrizione**                                                                                                                                |
-|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |
-| Impostazioni utente                           | Possibilità di impostare:                                                                                                                     |
-|                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |
-|                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |
-|                                               | - **Ingresso termocoppia:** tipo di termocoppia                                                                                                |
-|                                               | - **Ingresso RTD (es. Pt100):** tipo di termo resistenza                                                                                       |
-| Lettura via Modbus RTU                        | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU.                                                                   |
-| Interfaccia web e Modbus RTU slave            | Possibilità di interrogare, tramite Modbus RTU master, altri dispositivi e rileggere i parametri tramite interfaccia web e seriale Modbus RTU. |
-| Gestione uscite analogiche                    | Ogni uscita analogica può essere associata a uno degli ingressi analogici.                                                                    |
-|                                               | - Configurazione esempio: Lettura di una tensione ingresso 0-10V e associazione a un'uscita analogica 0-10V.                                   |
-|                                               | - Prevedere opzioni configurabili dall’utente.                                                                                                |
-| Gestione uscite digitali                      | Ogni uscita digitale può essere associata a ingressi analogici o digitali.                                                                    |
-|                                               | - **Ingresso digitale:** Se attivo, attiva l'uscita.                                                                                          |
-|                                               | - **Ingresso analogico:** Configurazione soglie di allarme (minima o massima).                                                                |
-|                                               | - Esempio: Soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva.                                           |
-| Documentazione software                       | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato.                                                         |
-| Verifica funzionalità                         | Step di verifica con spiegazione dettagliata del software prima della sessione d’esame.                                                      |
-| Plus: Ethernet con Modbus TCP/IP              | Implementazione del protocollo Ethernet Modbus TCP/IP.                                                                                        |
+| **Attività**                                  | **Descrizione**                                                                                                                                | **Note** |
+|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |    Implementato come da specifica ma da test con resistenza non passati      |
+| Impostazioni utente                           | Possibilità di impostare:                                                                                                                     |    Fatto e testato  Tutta la sezione      |
+|                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |          |
+|                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |          |
+|                                               | - **Ingresso termocoppia:** tipo di termocoppia                                                                                                |          |
+|                                               | - **Ingresso RTD (es. Pt100):** tipo di termo resistenza                                                                                       |          |
+| Lettura via Modbus RTU                        | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU.                                                                   |     Fatto e da testare Master: mentre slave testato, non funzionante se collegato su scheda ma funzionante una volta distaccato da essa collegamenti scheda testati e risultano corretti      |
+| Interfaccia web e Modbus RTU slave            | Possibilità di interrogare, tramite Modbus RTU master, altri dispositivi e rileggere i parametri tramite interfaccia web e seriale Modbus RTU. |      interfaccia veb master disponibile mentre slave da implementare (attesa completo funzionamento parte precedente)    |
+| Gestione uscite analogiche                    | Ogni uscita analogica può essere associata a uno degli ingressi analogici.                                                                    |    TODO      |
+|                                               | - Configurazione esempio: Lettura di una tensione ingresso 0-10V e associazione a un'uscita analogica 0-10V.                                   |          |
+|                                               | - Prevedere opzioni configurabili dall’utente.                                                                                                |          |
+| Gestione uscite digitali                      | Ogni uscita digitale può essere associata a ingressi analogici o digitali.                                                                    |    TODO      |
+|                                               | - **Ingresso digitale:** Se attivo, attiva l'uscita.                                                                                          |          |
+|                                               | - **Ingresso analogico:** Configurazione soglie di allarme (minima o massima).                                                                |    TODO      |
+|                                               | - Esempio: Soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva.                                           |     TODO     |
+| Documentazione software                       | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato.                                                         |     Done da chiedere se per tesi si necessita ppt e durata presentazione     |
+| Verifica funzionalità                         | Step di verifica con spiegazione dettagliata del software prima della sessione d’esame.                                                      |          |
+| Plus: Ethernet con Modbus TCP/IP              | Implementazione del protocollo Ethernet Modbus TCP/IP.                                                                                        |          |
+
 
 ## Recap Obiettivi
 
