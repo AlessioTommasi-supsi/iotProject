@@ -21,16 +21,28 @@ ESP32
               +--------+
                 
 [RS485 Module]    --->   Bus RS485: Terminali A e B <--- (Terminazione e biasing se necessari
+
+impostazioni prof
+versione board  3.1.1
+*/
+/*
+#define RX_PIN_SLAVE 23 //R0
+#define TX_PIN_SLAVE 22 //DI
+#define DE_PIN_SLAVE 18 // DE RE
+
 */
 
-#define RX_PIN_SLAVE 22 //DI = tx
-#define TX_PIN_SLAVE 23 //RO = rx
-#define DE_PIN_SLAVE 18 // DE RE
-/*
-// scheda!
-#define RX_PIN_SLAVE 32 //DI = rx
-#define TX_PIN_SLAVE 33 //RO = tx
+// testati funzionanti
+#define RX_PIN_SLAVE 33 //R0
+#define TX_PIN_SLAVE 32 //DI = tx
 #define DE_PIN_SLAVE 27 // DE RE
+
+/*NON FUNZIONANTE e come e scheda originale!!
+#define RX_PIN_SLAVE 32 //R0
+#define TX_PIN_SLAVE 33 //DI = tx
+#define DE_PIN_SLAVE 27 // DE RE
+
+Che rispetto a schematico i pin devono essere invertiti!!!!!
 */
 
 
