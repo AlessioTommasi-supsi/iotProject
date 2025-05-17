@@ -96,7 +96,7 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 
 | **Attività**                                  | **Descrizione**                                                                                                                                | **Note** |
 |-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |    Implementato come da specifica ma da test con resistenza non passati      |
+| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                            🏠                               |    Implementato come da specifica ma da test con resistenza non passati      |
 | Impostazioni utente                           | Possibilità di impostare:                                                                                                                     |    Fatto e testato  Tutta la sezione      |
 |                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |          |
 |                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |          |
