@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacchetti base
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% Imposta margini della pagina
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Documento di Test LaTeX}
+\author{Utente}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduzione}
+Questo è un documento di test per verificare il funzionamento del sistema LaTeX.
+
+\section{Formattazione del testo}
+Il testo può essere \textbf{in grassetto}, \textit{in corsivo} o \underline{sottolineato}.
+Possiamo anche usare combinazioni come \textit{\textbf{grassetto e corsivo}}.
+
+\section{Formule matematiche}
+Ecco alcune formule matematiche di esempio:
+
+Inline: $E=mc^2$ è la famosa equazione di Einstein.
+
+A display:
+\begin{equation}
+    \int_{a}^{b} f(x) \, dx = F(b) - F(a)
+\end{equation}
+
+\section{Elenchi}
+
+\subsection{Elenco puntato}
+\begin{itemize}
+    \item Primo elemento
+    \item Secondo elemento
+    \item Terzo elemento
+\end{itemize}
+
+\subsection{Elenco numerato}
+\begin{enumerate}
+    \item Primo passo
+    \item Secondo passo
+    \item Terzo passo
+\end{enumerate}
+
+\section{Tabella}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Colonna 1} & \textbf{Colonna 2} & \textbf{Colonna 3} \\
+        \hline
+        A & 1 & Alpha \\
+        B & 2 & Beta \\
+        C & 3 & Gamma \\
+        \hline
+    \end{tabular}
+    \caption{Una semplice tabella.}
+    \label{tab:esempio}
+\end{table}
+
+\section{Conclusione}
+Se questo documento viene compilato correttamente, il sistema LaTeX è funzionante.
+
+\end{document}

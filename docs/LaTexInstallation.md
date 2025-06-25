@@ -77,3 +77,18 @@ si trova in questa cartella: /home/none/.config/Code/User/settings.json
 nota: se hai problemi la cartella di installazione latexmk la trovi qui nella console miktex:
 
 ![alt text](image.png)
+
+
+oppure compila manualmente da terminale con un terminale nella stessa cartella del file .tex:
+
+```bash
+    latexmk -pdf nomefile.tex
+```bash
+    latexmk -pdf documento.tex
+```
+
+se necessario esegui anche:
+
+```bash
+    source ~/.bashrc
+```
