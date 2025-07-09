@@ -1,6 +1,3 @@
-
-
-
 | Studente        | Tutor           |
 | ----------------- | ----------------- |
 | Alessio Tommasi | Mirko Gelsomini |
@@ -34,38 +31,36 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 
 | **Attività**                                  | **Descrizione**                                                                                                                                | **Stato** |
 |-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| ESP32 - Modbus Master  - RS485      | The ESP32's ability to send Modbus Master requests  and accurately receive various data types converting them correctly from holding registers.                                         | COMPLETATO     |
-| ESP32 - Modbus Slave - RS485     | The ESP32's ability to send Modbus Slave requests and holding register value correctly from holding registers.                                         | COMPLETATO     |
-| Local Data Storage | The ESP32's capability to save different data types from holding registers into local storage efficiently.                                                                                        | IN CORSO - Creazione Xls per estrapolare dati registrati     |
-| ESP32 - Modbus Slave                       | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers.                                                         | COMPLETATO - da testare     |
-| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                                                    | COMPLETATO     |
-| IP Address Communication                   | Accurate communication of the new IP address to the user after connecting to the new WiFi network.                                                                                                | COMPLETATO     |
-| Configuration Page                         | The completeness and usability of the configuration page including the ability to create, edit, and delete measurements.                                                                          | COMPLETATO PER MODBUS, IN CORSO per ADS     |
-| Analytics Page                             | The accuracy and clarity of real-time data display on the analytics page in textual format.                                                                                                       | COMPLETATO     |
-| System Stability                           | The stability and reliability of the system during normal operation including error handling and recovery processes.                                                                              | IN CORSO     |
-| Documentation Quality and Completeness     | The quality and thoroughness of the documentation providing step-by-step instructions, images, and relevant information for users to replicate or understand the product.                         | IN CORSO     |
-| Presentation Quality and Completeness      | The quality of the presentation including well-structured content, clear visuals, and comprehensive coverage of all relevant aspects of the product such as functionality and architecture.       | TODO     |
-| Demo Quality                               | The effectiveness of the product demonstration in showcasing its features, capabilities, and value proposition, being engaging, well-prepared, and leaving a positive impression on the audience. | TODO     |
-| User Interface Design - BONUS              | The overall design and user experience of the web interface including both the configuration and analytics pages.                                                                                 | COMPLETATO - possibili ulteriori modifiche se richieste     |
-| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                            | COMPLETATO     |
-| Configuration Page                         | The completeness and usability of the configuration                                                  | COMPLETATO see /pinout and /editPin Routes     |
-| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |    COMPLETATO      |
-| Impostazioni utente                           | Possibilità di impostare:                                                                                                                     |    Fatto e testato  Tutta la sezione      |
-|                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |  COMPLETATO        |
-|                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |    COMPLETATO      |
-|                                               | - **Ingresso termocoppia:** tipo di termocoppia                                                                                                |  COMPLETATO      |
-|                                               | - **Ingresso RTD (es. Pt100, PT100):** tipo di termo resistenza con relative linearizzazioni applicate                                                                                       |     COMLETATO     |
-| Lettura via Modbus RTU                        | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU.                                                                   |     COMPLETATO      |
-| Gestione        uscite           | Ogni uscita analogica/digitale può essere associata a uno degli ingressi, e possibile impostare un segnale di allarme, oppure replicare un segnale letto da un determinato ingresso su un uscita selezionata.                                                                    |     COMPLETATO
-|      ESEMPI                                         | - **Ingresso digitale:** Se attivo, attiva l'uscita.                                                                                          |    COMPLETATO      |
-|                                               | - **Ingresso analogico:** Configurazione soglie di allarme (minima o massima).                                                                |    COMPLETATO      |
-|                                               | - Esempio: Soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva.                                           |     COMPLETATO     |
-| Documentazione software                       | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato.                                                         |     TODO completare report e creare  ppt,  durata presentazione ~15 min     |
-| Verifica funzionalità                         | test in presenza con esam                                                      |   Da completare con le nuove funzionalita richieste nell ultimo incontro.       |
-| Plus: Ethernet con Modbus TCP/IP              | Implementazione del protocollo Ethernet Modbus TCP/IP.  - Funzionalita rimossa in accordo con Esam.                                                                                      |          |
-| integrazione con modulo ADS 1115              | Implementazione del modulo ADS 1115 per la lettura di segnali analogici.                                                                                      |    COMPLETATO      |
-| wep page ADS              | creazione pagina web per la gestione dei segnali letti da ADS  compresa Linearizzazione delle sonde PT100 e PT1000                                                                              |    COMPLETATO      |
-| Resource Monitor              | creazione pagina web per la visualizzazione real time delle risorse utilizzate.                                                                              |    COMPLETATO      |
+| ESP32 - Modbus Master - RS485 | Verifica della capacità dell’ESP32 di inviare richieste come Master Modbus e ricevere correttamente vari tipi di dati, convertendoli dai registri holding. | COMPLETATO |
+| ESP32 - Modbus Slave - RS485 | Verifica della capacità dell’ESP32 di rispondere come Slave Modbus e gestire correttamente i valori dei registri holding. | COMPLETATO |
+| Memorizzazione Locale dei Dati | Capacità dell’ESP32 di salvare in modo efficiente diversi tipi di dati provenienti dai registri holding nella memoria locale. | IN CORSO - Creazione file Xls per estrazione dati registrati |
+| ESP32 - Modbus Slave | Capacità dell’ESP32 di rispondere alle richieste Modbus da software come ModScan, restituendo dati riconvertiti dai registri holding. | COMPLETATO - da testare |
+| Configurazione WiFi | Facilità e successo della configurazione iniziale WiFi tramite captive portal, inclusa la transizione a una nuova rete. | COMPLETATO |
+| Comunicazione Indirizzo IP | Comunicazione corretta del nuovo indirizzo IP all’utente dopo la connessione alla nuova rete WiFi. | COMPLETATO |
+| Pagina di Configurazione | Completezza e usabilità della pagina di configurazione, inclusa la possibilità di creare, modificare ed eliminare misure. | COMPLETATO PER MODBUS, IN CORSO per ADS |
+| Pagina Analytics | Precisione e chiarezza della visualizzazione dati in tempo reale nella pagina analytics in formato testuale. | COMPLETATO |
+| Stabilità del Sistema | Stabilità e affidabilità del sistema durante il funzionamento, inclusa la gestione degli errori e dei processi di recupero. | IN CORSO |
+| Qualità e Completezza della Documentazione | Qualità e completezza della documentazione, con istruzioni dettagliate, immagini e informazioni utili per la replica o comprensione del prodotto. | IN CORSO |
+| Qualità e Completezza della Presentazione | Qualità della presentazione, con contenuti ben strutturati, visual chiari e copertura esaustiva di tutte le funzionalità e l’architettura del prodotto. | DA FARE |
+| Qualità della Demo | Efficacia della dimostrazione del prodotto nel mostrare funzionalità, capacità e valore aggiunto, risultando coinvolgente e ben preparata. | DA FARE |
+| Design Interfaccia Utente - BONUS | Qualità complessiva del design e dell’esperienza utente dell’interfaccia web, incluse le pagine di configurazione e analytics. | COMPLETATO - possibili ulteriori modifiche se richieste |
+| Acquisizione segnali analogici | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100. | COMPLETATO |
+| Impostazioni utente | Possibilità di impostare: | FATTO E TESTATO tutta la sezione |
+| | - Ingresso in tensione: inizio scala, fondo scala | COMPLETATO |
+| | - Ingresso in corrente: inizio scala, fondo scala | COMPLETATO |
+| | - Ingresso termocoppia: tipo di termocoppia | COMPLETATO |
+| | - Ingresso RTD (es. Pt100, PT1000): tipo di termoresistenza con relative linearizzazioni applicate | COMPLETATO |
+| Lettura via Modbus RTU | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU. | COMPLETATO |
+| Gestione uscite | Ogni uscita analogica/digitale può essere associata a uno degli ingressi, impostare un segnale di allarme o replicare un segnale letto da un ingresso su un’uscita selezionata. | COMPLETATO |
+| ESEMPI | - Ingresso digitale: se attivo, attiva l’uscita. | COMPLETATO |
+| | - Ingresso analogico: configurazione soglie di allarme (minima o massima). | COMPLETATO |
+| | - Esempio: soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva. | COMPLETATO |
+| Documentazione software | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato. | DA FARE: completare report e creare presentazione, durata ~15 min |
+| Verifica funzionalità | Test in presenza con esaminatore | Da completare con le nuove funzionalità richieste nell’ultimo incontro. |
+| Plus: Ethernet con Modbus TCP/IP | Implementazione del protocollo Ethernet Modbus TCP/IP. (Funzionalità rimossa in accordo con l’esaminatore) |  |
+| Integrazione con modulo ADS1115 | Implementazione del modulo ADS1115 per la lettura di segnali analogici. | COMPLETATO |
+| Pagina web ADS | Creazione pagina web per la gestione dei segnali letti da ADS, compresa la linearizzazione delle sonde PT100 e PT1000. | COMPLETATO |
+| Resource Monitor | Creazione pagina web per la visualizzazione in tempo reale delle risorse utilizzate. | COMPLETATO |
 
 
 ## Recap Obiettivi
@@ -136,4 +131,4 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Ricerca    | linearizzazione delle sonde rtd e delle sonde termo coppie  maggiori info [Qui!](./LINEARIZZAZIONE_SONDE.md)    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 24/03/2025 
 |  fix errore compatibilita board     |   maggiori info [Qui!](./issues/arduino_espaasynkwebsrv_error.md  )    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025 
 |  Creazione pagina equivalente a history modbus e pin per ads     |   ha richiesto tempo aggiuntivo a causa di errori legati alla limitata dimensione dei dati trasmissibili dall esp su protocollo http, per aumentare al massimo il numero di dati si e deciso di rimuovere molte parti di css e js dopo estensivi test.    |  16h |   <br> 13.30->18.30;  of 20/06/2025 <br> 13.30->18.30;  of 22/06/2025  <br> 9.30->13.30;  of 22/06/2025  <br> 13.30->18.30;  of 25/06/2025
-|  creazione stuttura dati per linearizzazione delle sonde PT100 e PT1000  e integrazione nel progetto   |   tabelle utilizzate [Qui!](./tabelleSonde.pdf  )    |  15h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025  
+|  creazione stuttura dati per linearizzazione delle sonde PT100 e PT1000  e integrazione nel progetto   |   tabelle utilizzate [Qui!](./tabelleSonde.pdf  )    |  15h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025
