@@ -1,4 +1,4 @@
-# TSM_IoT - Internet of Things 2024
+
 
 
 | Studente        | Tutor           |
@@ -9,53 +9,14 @@
 
 2024 – 2025
 
-## Data
-
-14-10-2024
 
 ---
 
-# REPORT:
 
-
-
-### Old Evaluation Criteria
-
-
-| Criteria Name                              | Criteria Description                                                                                                                                                                              | tempo |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| ESP32 - Modbus Master - Data Reception     | The ESP32's ability to send Modbus requests to the ESAM E2002 and accurately receive various data types converting them correctly from holding registers.                                         | .     |
-| ESP32 - Modbus Master - Local Data Storage | The ESP32's capability to save different data types from holding registers into local storage efficiently.                                                                                        | .     |
-| ESP32 - Modbus Slave                       | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers.                                                         | .     |
-| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                                                    | .     |
-| IP Address Communication                   | Accurate communication of the new IP address to the user after connecting to the new WiFi network.                                                                                                | .     |
-| Configuration Page                         | The completeness and usability of the configuration page including the ability to create, edit, and delete measurements.                                                                          | .     |
-| Analytics Page                             | The accuracy and clarity of real-time data display on the analytics page in textual format.                                                                                                       | .     |
-| System Stability                           | The stability and reliability of the system during normal operation including error handling and recovery processes.                                                                              | .     |
-| Documentation Quality and Completeness     | The quality and thoroughness of the documentation providing step-by-step instructions, images, and relevant information for users to replicate or understand the product.                         | .     |
-| Presentation Quality and Completeness      | The quality of the presentation including well-structured content, clear visuals, and comprehensive coverage of all relevant aspects of the product such as functionality and architecture.       | .     |
-| Demo Quality                               | The effectiveness of the product demonstration in showcasing its features, capabilities, and value proposition, being engaging, well-prepared, and leaving a positive impression on the audience. | .     |
-| User Interface Design - BONUS              | The overall design and user experience of the web interface including both the configuration and analytics pages.                                                                                 | .     |
 
 <br>
 <br>
 
-## Attività svolte nel precedente corso:
-
-
-| Criteria Name                              | Criteria Description                                                                                                                                                      | tempo |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| ESP32 - Modbus Master -                    | Data Reception	The ESP32's ability to send Modbus requests to the ESAM E2002 and accurately receive various data types converting them correctly from holding registers.  | .     |
-| ESP32 - Modbus Master - Local Data Storage | The ESP32's capability to save different data types from holding registers into local storage efficiently.                                                                | .     |
-| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                            | .     |
-| Configuration Page                         | The completeness and usability of the configuration page including the ability to create, edit, and delete measurements.                                                  | .     |
-| System Stability                           | The stability and reliability of the system during normal operation including error handling and recovery processes.                                                      | .     |
-| Documentation Quality and Completeness     | The quality and thoroughness of the documentation providing step-by-step instructions, images, and relevant information for users to replicate or understand the product. | .     |
-
-<br>
-<br>
-
-## Nuove attivita di progetto:
 
 # ALPHA: Acquisizione Locale di Parametri con Hardware Avanzato
 
@@ -64,29 +25,6 @@
 Il progetto consiste nella realizzazione di un sistema di acquisizione misure basato su un microcontrollore ESP32, con lo scopo di raccogliere dati da sonde di temperatura, segnali analogici e gestire uscite digitali e analogiche. Il sistema dovrà inoltre comunicare con dispositivi esterni tramite il protocollo **Modbus RTU** (RS485) e **Ethernet TCP/IP**, includendo la funzionalità di **datalogging** per la storicizzazione dei dati. Il candidato lavorerà con hardware fornito da un'azienda collaborante e utilizzerà la piattaforma di sviluppo **Arduino IDE**.
 
 
-## Elettrical schematization of semester project:
-![alt text](EsamElettric.jpg)
-
-## Microcontrollore utilizzato:
- 
- ESP32 38 pin 
-
-### pinout: 
-![alt text](../image/ESP-38Pin-pinout.jpg)
-
-# Compiti progetto semestre
-
-
-| Attività                                 | Descrizione                                                                                                                                |
-| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Configurazione sensori di temperatura** | Configurare e integrare sensori di temperatura**PT100**, **PT1000** e **termocoppie** utilizzando moduli come **MAX31865** e **MAX31855**. |
-| **Lettura segnali analogici**             | Implementare la lettura di segnali analogici tramite gli ingressi**ADC** dell'ESP32 e eventuali moduli esterni.                            |
-| **Gestione uscite digitali e analogiche** | Sviluppare la gestione delle uscite digitali e analogiche tramite l'ESP32.                                                                 |
-| **Comunicazione RS485 (Modbus RTU)**      | Integrare la comunicazione**RS485** utilizzando il protocollo **Modbus RTU** per interfacciarsi con altri dispositivi.                     |
-| **Server Web (Ethernet TCP/IP)**          | Sviluppare un server**Web** basato su **Ethernet TCP/IP** per il monitoraggio e controllo remoto dei dati acquisiti.                       |
-| **Datalogging**                           | Implementare un sistema di**datalogging** per salvare e storicizzare i dati raccolti dai sensori.                                          |
-| **Test e validazione**                    | Testare e validare il sistema attraverso simulazioni e test su hardware reale.                                                             |
-
 
 <br><br><br><br><br>
 
@@ -94,26 +32,40 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 
 # Compiti Tesi
 
-| **Attività**                                  | **Descrizione**                                                                                                                                | **Note** |
+| **Attività**                                  | **Descrizione**                                                                                                                                | **Stato** |
 |-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |    Implementato come da specifica ma da test con resistenza non passati      |
+| ESP32 - Modbus Master  - RS485      | The ESP32's ability to send Modbus Master requests  and accurately receive various data types converting them correctly from holding registers.                                         | COMPLETATO     |
+| ESP32 - Modbus Slave - RS485     | The ESP32's ability to send Modbus Slave requests and holding register value correctly from holding registers.                                         | COMPLETATO     |
+| Local Data Storage | The ESP32's capability to save different data types from holding registers into local storage efficiently.                                                                                        | IN CORSO - Creazione Xls per estrapolare dati registrati     |
+| ESP32 - Modbus Slave                       | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers.                                                         | COMPLETATO - da testare     |
+| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                                                    | COMPLETATO     |
+| IP Address Communication                   | Accurate communication of the new IP address to the user after connecting to the new WiFi network.                                                                                                | COMPLETATO     |
+| Configuration Page                         | The completeness and usability of the configuration page including the ability to create, edit, and delete measurements.                                                                          | COMPLETATO PER MODBUS, IN CORSO per ADS     |
+| Analytics Page                             | The accuracy and clarity of real-time data display on the analytics page in textual format.                                                                                                       | COMPLETATO     |
+| System Stability                           | The stability and reliability of the system during normal operation including error handling and recovery processes.                                                                              | IN CORSO     |
+| Documentation Quality and Completeness     | The quality and thoroughness of the documentation providing step-by-step instructions, images, and relevant information for users to replicate or understand the product.                         | IN CORSO     |
+| Presentation Quality and Completeness      | The quality of the presentation including well-structured content, clear visuals, and comprehensive coverage of all relevant aspects of the product such as functionality and architecture.       | TODO     |
+| Demo Quality                               | The effectiveness of the product demonstration in showcasing its features, capabilities, and value proposition, being engaging, well-prepared, and leaving a positive impression on the audience. | TODO     |
+| User Interface Design - BONUS              | The overall design and user experience of the web interface including both the configuration and analytics pages.                                                                                 | COMPLETATO - possibili ulteriori modifiche se richieste     |
+| WiFi Configuration                         | The ease and success of the initial WiFi setup via a captive portal including the transition to a new network.                                                            | COMPLETATO     |
+| Configuration Page                         | The completeness and usability of the configuration                                                  | COMPLETATO see /pinout and /editPin Routes     |
+| Acquisizione segnali analogici                | Acquisizione di tensione, corrente, resistenza, termocoppia e Pt100.                                                                           |    COMPLETATO      |
 | Impostazioni utente                           | Possibilità di impostare:                                                                                                                     |    Fatto e testato  Tutta la sezione      |
-|                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |          |
-|                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |          |
-|                                               | - **Ingresso termocoppia:** tipo di termocoppia                                                                                                |          |
-|                                               | - **Ingresso RTD (es. Pt100):** tipo di termo resistenza                                                                                       |          |
-| Lettura via Modbus RTU                        | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU.                                                                   |     Fatto e da testare Master: mentre slave testato, non funzionante se collegato su scheda ma funzionante una volta distaccato da essa collegamenti scheda testati e risultano corretti la parte di slave potrei implementarla in /currentregister      |
-| Interfaccia web e Modbus RTU slave            | Possibilità di interrogare, tramite Modbus RTU master, altri dispositivi e rileggere i parametri tramite interfaccia web e seriale Modbus RTU. |      interfaccia veb master disponibile mentre slave da implementare (attesa completo funzionamento parte precedente)    |
-| Gestione uscite analogiche                    | Ogni uscita analogica può essere associata a uno degli ingressi analogici.                                                                    |    Fatto vedi pagina /multiplex graph da vedere se e corretto      |
-|                                               | - Configurazione esempio: Lettura di una tensione ingresso 0-10V e associazione a un'uscita analogica 0-10V.                                   |          |
-|                                               | - Prevedere opzioni configurabili dall’utente.                                                                                                |          |
-| Gestione uscite digitali                      | Ogni uscita digitale può essere associata a ingressi analogici o digitali.                                                                    |    Fatto vedi pagina /multiplex graph da vedere se e corretto      |
-|                                               | - **Ingresso digitale:** Se attivo, attiva l'uscita.                                                                                          |          |
-|                                               | - **Ingresso analogico:** Configurazione soglie di allarme (minima o massima).                                                                |    TODO      |
-|                                               | - Esempio: Soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva.                                           |     TODO     |
-| Documentazione software                       | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato.                                                         |     Done da chiedere se per tesi si necessita ppt e durata presentazione     |
-| Verifica funzionalità                         | Step di verifica con spiegazione dettagliata del software prima della sessione d’esame.                                                      |          |
-| Plus: Ethernet con Modbus TCP/IP              | Implementazione del protocollo Ethernet Modbus TCP/IP.                                                                                        |          |
+|                                               | - **Ingresso in tensione:** inizio scala, fondo scala                                                                                          |  COMPLETATO        |
+|                                               | - **Ingresso in corrente:** inizio scala, fondo scala                                                                                          |    COMPLETATO      |
+|                                               | - **Ingresso termocoppia:** tipo di termocoppia                                                                                                |  COMPLETATO      |
+|                                               | - **Ingresso RTD (es. Pt100, PT100):** tipo di termo resistenza con relative linearizzazioni applicate                                                                                       |     COMLETATO     |
+| Lettura via Modbus RTU                        | Possibilità di leggere ogni grandezza utilizzando il protocollo Modbus RTU.                                                                   |     COMPLETATO      |
+| Gestione        uscite           | Ogni uscita analogica/digitale può essere associata a uno degli ingressi, e possibile impostare un segnale di allarme, oppure replicare un segnale letto da un determinato ingresso su un uscita selezionata.                                                                    |     COMPLETATO
+|      ESEMPI                                         | - **Ingresso digitale:** Se attivo, attiva l'uscita.                                                                                          |    COMPLETATO      |
+|                                               | - **Ingresso analogico:** Configurazione soglie di allarme (minima o massima).                                                                |    COMPLETATO      |
+|                                               | - Esempio: Soglia massima 10mA per ingresso 0-20mA, se superata, l’uscita corrispondente si attiva.                                           |     COMPLETATO     |
+| Documentazione software                       | Creazione di un documento di sintesi con spiegazione dettagliata e codice commentato.                                                         |     TODO completare report e creare  ppt,  durata presentazione ~15 min     |
+| Verifica funzionalità                         | test in presenza con esam                                                      |   Da completare con le nuove funzionalita richieste nell ultimo incontro.       |
+| Plus: Ethernet con Modbus TCP/IP              | Implementazione del protocollo Ethernet Modbus TCP/IP.  - Funzionalita rimossa in accordo con Esam.                                                                                      |          |
+| integrazione con modulo ADS 1115              | Implementazione del modulo ADS 1115 per la lettura di segnali analogici.                                                                                      |    COMPLETATO      |
+| wep page ADS              | creazione pagina web per la gestione dei segnali letti da ADS  compresa Linearizzazione delle sonde PT100 e PT1000                                                                              |    COMPLETATO      |
+| Resource Monitor              | creazione pagina web per la visualizzazione real time delle risorse utilizzate.                                                                              |    COMPLETATO      |
 
 
 ## Recap Obiettivi
@@ -126,33 +78,21 @@ Il progetto consiste nella realizzazione di un sistema di acquisizione misure ba
 
 ## Tecnologie
 
-- **Microcontrollore**: ESP32
-- **Piattaforma di sviluppo**: Arduino IDE
-- **Comunicazione**: RS485 (Modbus RTU), Ethernet TCP/IP
-- **Web server**: Librerie per ESP32
+- **Microcontrollore**: ESP32 38 pin
+- **Piattaforma di sviluppo**: Arduino IDE, ESP Dev Module, Espressif 3.0.7 board for ESP32
+- **Comunicazione**: RS485 (Modbus RTU), Wifi 
 - **Sensori**: Moduli MAX31865 (PT100/PT1000), MAX31855 (Termocoppie)
-- **Datalogging**: Sistema di memorizzazione dati su SD card o altra memoria persistente
 - **Linguaggio di programmazione**: C/C++ (Arduino)
 
 Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/dettaglio.php?p=C10936)
 <br>
 <br>
-
-## Attivita che si intendono implementare prossimamente
-
-
-| Criteria Name            | Criteria Description                                                                               | tempo                                  |
-| -------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| ESP32 - Modbus Slave | The ESP32's proficiency in responding to Modbus requests from ModScan software with accurate and reconverted data from holding registers |  |
-| Gant chart         | requested by Fabio on mail        |    
-|  Modulo ENC28J60      | test if work with modbusrtu and modscan        |
-|  Modulo ENC28J60      | adapter for esp32        |      
-|  Multiplex      | creazione pagina web che stampa dedicata: tutti i valori letti in input sul pin gpio, e possibilita di registrarli e plotgtarli in un grafico come accade per modbus registry         |                                                                                                                                                        
+                                                                                                                                                     
 
 <br>
 <br>
 
-## Attivita Completate:
+## Attivita Svolte:
 
 | Attivita                 | Descrizione                                                                                        | Tempo impiegato | Note                                                                                                                                                                                                                                                                                             |
 | -------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -195,32 +135,5 @@ Link alla documentazione Ufficiale: [Link](https://progettistudio.supsi.ch/detta
 |  Ottimizzazione    | modifica del partizionamento dell esp per dar piu spazio all applicazione, rimozione della funzionalita OTA ora si ha a disposizione 3M per applicativo al posto di 1    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 23/03/2025 
 |  Ricerca    | linearizzazione delle sonde rtd e delle sonde termo coppie  maggiori info [Qui!](./LINEARIZZAZIONE_SONDE.md)    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 24/03/2025 
 |  fix errore compatibilita board     |   maggiori info [Qui!](./issues/arduino_espaasynkwebsrv_error.md  )    |  8h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025 
-
-<br> 
-<br> 
-<br> 
-
-```mermaid
-gantt
-    title Diagramma di Gantt per le Attività
-    dateFormat  DD/MM/YYYY
-    section Attività Completate
-    Starting Point            :done, s1, 29/10/2024, 2h
-    IP Address Communication  :done, s2, 29/10/2024, 4h
-    IP Address Fix 1          :done, s3, 30/10/2024, 5h
-    Analytics Page Fix        :done, s4, 30/10/2024, 4h
-    Analytics Page Fix 2      :done, s5, 30/10/2024, 4h
-    Graph Page                :done, s6, 30/10/2024, 1h
-    Ricerca Modbus            :done, s7, 30/10/2024, 3h
-    Wiznet Research           :done, s8, 30/10/2024, 4h
-    History Page              :done, s9, 31/10/2024, 2h
-    Watchdog Issue Fix        :done, s10, 01/11/2024, 24h
-    Graph and History Page    :done, s11, 06/11/2024, 1h
-    docx Fix               :done, s12, 06/11/2024, 1h
-    GanttDiagram               :done, s12, 06/11/2024, 1h
-    
-```
-
-    section Attività Future
-    ESP32 - Modbus Slave      :active, f1, 07/11/2024, 2d
-    Gantt Chart               :active, f2, 09/11/2024, 1d
+|  Creazione pagina equivalente a history modbus e pin per ads     |   ha richiesto tempo aggiuntivo a causa di errori legati alla limitata dimensione dei dati trasmissibili dall esp su protocollo http, per aumentare al massimo il numero di dati si e deciso di rimuovere molte parti di css e js dopo estensivi test.    |  16h |   <br> 13.30->18.30;  of 20/06/2025 <br> 13.30->18.30;  of 22/06/2025  <br> 9.30->13.30;  of 22/06/2025  <br> 13.30->18.30;  of 25/06/2025
+|  creazione stuttura dati per linearizzazione delle sonde PT100 e PT1000  e integrazione nel progetto   |   tabelle utilizzate [Qui!](./tabelleSonde.pdf  )    |  15h |  8.30->11.30; AND <br> 13.30->18.30;  of 25/03/2025  
