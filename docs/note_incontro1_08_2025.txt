@@ -1,0 +1,6 @@
+-spiega
+
+
+
+Esigenza:
+    Leggere piu segnali --> necessita di avere piu risorse hw -->

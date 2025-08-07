@@ -1,0 +1,757 @@
+ Allora che vogliamo leggere in ingresso sulla D, dopo di che, tramite i quadro C, andiamo a riprenderci
+ il dolore letto dalla D che potremmo utilizzare l'interno di SP32, ma per avere una migliore
+ precisione abbiamo avuto a mettere una di esterno, quindi ecco, giusto per, cioè se non so, il grado
+ come dire di informazione tecnica che ci sarà durante anche di preparazione tecnica dei professori,
+ giusto per, precisare, precisare medio perché sanno che dico insieme allora, cos'hai fatto?
+ Perfetto, sì, va bene, sì, perché messa così magari non è chiaro, perché è tutta questa...
+ Non è chiaro l'immagine, non è di giusto spiegare medio tu che l'esigenza era quella di leggere più
+ segnali, più segnali però vuol dire avere molte più risorse anche hardware come ha fatto per ottenere
+ una lettura di più segnali utilizzando meno hardware possibile, utilizzando multiplexer,
+ un multiplexer si dà la possibilità di avere più ingressi e ricuttarli a nostro piacino,
+ a nostra scelta, cioè quando ne scegliamo quale ingresso possiamo ricuttarlo sull'uscita.
+ Per fare ciò dobbiamo dare una codifica a questo multiplexer, l'abbiamo fatta con 3 pin,
+ una codifica bit con 3 pin, quindi ogni pin è un bit che va a dare l'informazione al multiplexer
+ per selezionare quello che è il canale l'ingresso che ne vogliamo dare a leggere, quindi c'è un
+ front-end hardware, multiplexer, multiplexer gestito la logica di SP32 e l'uscita al multiplexer va
+ al nostro AD. Poi dal AD tramite i quadruccili andiamo a riprenderci l'informazione del dato,
+ chiaramente non c'è dei RO, dei COUNTS, dell'AD che poi ci serviranno per fare la misura reale,
+ cioè per avere la misura reale. - Ok. A seguito della ricezione del segnale,
+ l'ISP lo elabra adeguatamente in base al segnale selezionato, ad esempio se sono delle sonde
+ applicerà una linearizzazione effettuata trante tabelle e poi interpolazione e poi invece se
+ è semplicemente un segnale di corrento, un segnale di tensione applicerà una formula che
+ dal valore letto verrà convertito al valore effettivo che viene mostrato sia dal grafico.
+ - Da il valore RO della DI tu devi applicare un fondo che ti rifuore che ti calcoli il valore di
+ tensione, se noi a fondo scala 4096 della DI abbiamo dieci volte in ingresso allora dobbiamo
+ avere una formula che ci riporti a questo valore qui. - Ok. Questa è la pagina finale che abbiamo,
+ che ho creato per poter plottare questo valore in cima, possiamo vedere il valore in tempo reale
+ che viene letto, mentre sotto se abbiamo una registrazione di tale dato, tale dato verrà
+ aggiunto ai dati precedenti e verrà plottato. Possiamo anche stoppare le registrazioni e
+ ovviamente possiamo vedere il formato testuale di queste registrazioni effettuate tramite la pagina
+ "Historie della DS". Queste sono le tecnologie implementate, principalmente è stato fatto in
+ C++ ci sono per le pagine web ovviamente HTML, CSS, JavaScript e questo è tutto per quanto riguarda
+ il lato di tecnologie. Questo è un diagramma alto parziale ad alto livello del funzionamento,
+ noi abbiamo uno stato interno dell'ESP, abbiamo la parte di controller del wifi, la parte di
+ controller di master e la parte del controller del web server. Il web server avrà come attributo
+ delle rotte che possono essere aggiunte e tolte dinamicamente e poi queste rotte andranno a
+ definire delle view che sono le nostre pagine che andiamo effettivamente a vedere quando ci
+ connettiamo all'ESP. Ok, ringrazio tutti per l'attenzione e questi sono i miei contatti,
+ se avete ulteriore domande sono disponibile. Ok, io diccio secondo me sarebbe molto più
+ impattante, molto più effetto, anche se tu riuscissi mentre spieghi questa cosa anche a far
+ vedere proprio realmente, ma anche perché è vero farsi in un discorso che vada l'inizio alla fine,
+ però se tu riesci a far vedere il live anche di quello che hai fatto riesci anche ad entrare
+ meglio forse nel dettaglio della cosa, perché tante cose magari poi rimangono superficiali,
+ che c'è stato fatto un lavoro più grosso dietro, per quello che dico sicuramente trovare il modo
+ di fare la spiegazione, cioè la tua presentazione va benissimo, però con degli approfondimenti live,
+ far vedere anche quello fisicamente, quello che hai carizzato, così se no a chi non ha visto la
+ realizzazione sembra un progetto bello corposo, però dopo non vede forse quello che è reale,
+ e solo questo secondo me aggiungeremo un po' questa parte qua. Ok, io ho un po' più di
+ informazioni te le mando poi su Teams, però quello che devo provarne con te, allora innanzitutto
+ provava a vedere la big pinch, questa è una buona presentazione come tutorial, cioè non è una
+ presentazione di tesi, perché ci è mostrato come funziona il sistema, che per qualità serve per
+ far capire che c'è esiste, ma non ho chiaro chi sono, che bisogna avevano, come hai trasformato
+ le loro necessità in un prodotto, dove precisamente poi tu hai lavorato su questo prodotto, sapendo
+ che l'azienda che ha fornito una certa cosa, come definito è certe, quindi tutto quello che è il
+ racconto, un racconto molto più grande rispetto a semplicemente il cosa. Sì anche per cui non c'è
+ non si vince quello che è stato fatto dietro, cioè metterei anche un po', che ne so, degli
+ schematici hardware, metterei anche delle pagine web per vedere la struttura come siete fatte,
+ non dico di piantare dentro tutto il codice, però cioè magari le parti anche quelle più
+ complicate, più salienti, quelle che ti hanno dato più da rognare, le cose un po' più grosse,
+ sicuramente li metterei anche dentro, effettivamente, cioè io che non so il lavoro che hai fatto,
+ lo capisco, ma uno che non so il lavoro che hai fatto, c'è sì come successivamente Mirko,
+ è una bella presentazione, è una bella demo di funzionamento, ma a livello di tesi, non so
+ cosa hai fatto, sostanzialmente. Ha immaginati una condizione che tra l'altro sarà molto più
+ orientata di informatica che all'elettronicherista in sostretto, quindi è molto probabile che un
+ modbus, un quadro C e così via non lo sappiano, cosa stia non è che non sono solo sentiti di parlare,
+ quindi in questo caso tu inizialmente devi partire molto alto livello, quindi adesso voi
+ ripetetono il video, però la prima cosa che dici è chi sei tu, seconda che cosa, che cosa c'è
+ bisogno di fare, con chi, quindi azienda, chi altro c'è che ha provato a fare questi sistemi,
+ perché dovresti anche rapportarti rispetto a cosa c'è oggi e per quale motivo tutti i
+ differenzi da quello che c'è oggi, quindi siccome tu hai già fatto un bel po' di lavoro,
+ forse il lavoro al contrario dovresti dire ok ma perché ho fatto un grafico che mi mostra
+ l'andamento, perché ho fatto un sistema che mi permette di modificare il pin out,
+ come diceva Fabio prima, perché in realtà all'inizio l'azienda ti ha richiesto che ci
+ possano una scarabilità, una possibilità di essere compatibili con diversi sensori ok,
+ tutto questo deve essere una lista delle necessità che dichiare all'inizio e spieghi
+ attraverso questa presentazione come si è andato ad adressare, come si è andato ad
+ invirrezzare quelle loro necessità, capito? Cioè è più un racconto rispetto a quello,
+ noi dobbiamo la commissione quello che deve capire, non è tanto ciò che hai fatto,
+ ma dato il problema, come l'ha risolto e la fine effettivamente cos'hai fatto. Allora
+ te lascia ci tutto il racconto. L'altro punto è a me non è un'interessa
+ di un modifinisca 192, 168, 4, chi se infrega, se mi dici che è il locale, il locale se
+ mi dici che è la remota, è la remota. E il proprio usare i termini corretti ma sembra
+ dato di verno, quindi in qualche modo se devi definire Asse's point, il chiamo l'Asse's
+ point, va bene, se chiami Modbus, magari la prima volta definisci che cos'è Modbus,
+ è un protocollo che cos'è, perché per esempio quando tu sei andato a una tecnologia
+ utilizzata, quello è un po mix, alcuni sono linguaggi, alcuni sono protocolli, in realtà
+ se devi parlare il protocollo allora c'è anche quello ci. In quella schema se vuoi
+ farlo vedere, linguaggi utilizzati, protocolli utilizzati, dove? L'altro punto, in realtà
+ per com'è impostato questa pagina? Prova a fare un passegno e guardare. Allora uno
+ che la segue, uno che segue è arrivare alla fine della presentazione e più o meno capisce
+ e che vuoi raccontare. Vuoi raccontare sicuramente quella è di Aline Alto che ha un Master of Science
+ in Engineering, si ci troviamo nella certa università, ci troviamo Student's Upsi che
+ ha un'altra gigantesca olio, però non è colpa tua, e abbiamo un formato che sarebbe
+ meglio vero in 16-19 così ti occupa tutto ok? Poi credo adesso provo ad andare per quello
+ che ho capito. In basso a sinistra tu vuoi raccontare all'interno di dove ti trovi, quindi è un qualche
+ modo un indice grafico, bello ma molto evidente, forse troppo. Cioè mi sta occupando il 30%
+ della pagina, poi abbiamo continuamente la scritta Agenda. Sì questo è un dettaglio che devo
+ cambiare. Lì in alto c'è sempre il titolo di quello che stai dicendo. Ok, quindi in realtà
+ il contenuto principale che ad oggi è quella piccola attituttura lì è quel grattico e l'altra
+ dovrà prendere molto più spazio perché è quello che devi fare il titolo, vedere in
+ alto. Ok, buona l'idea ma le auto di loro non attivino. Anche perché apparellamente
+ adesso siamo anche su un televisore che è ancora peggio chiaramente, perché non riesco
+ neanche a capire cosa mi stai dicendo lì nella DS history. Cioè posso immaginarmelo, fortunatamente
+ avrai un proiettore quindi in quel caso a tenuta. Però magari ingrandire anche proprio la pagina
+ lì. Sì, sì, proprio. Cioè teni conto che ad oggi ha messo in proprio un 50%. Cioè
+ se tu vai a prendere tutto lo spazio il contenuto principale è il 50%.
+ Diciamo che sono le immagini così di, come dire, di abbellimento. Riducili un po', quelle
+ che sono invece poi punti salienti di quello che hai sviluppato effettivamente metterlo
+ bene in evidenzo. Ok, più o meno è così, magari arricchire anche un attimino di scheme.
+ Ad esempio tu hai fatto vedere l'artitettura, cioè di come hai pensato se in una delle
+ ultime pagine, no? Ci sei stato su pochissimo e hai con uno schema che è gigantesco, da
+ quando non si vedece a leggere molto, no? Perché è bello complesso. Sarevano a entrare
+ un pochettino più nell'alto, ma c'è lì ok. Avevo necessità di avere delle pagine
+ web, perché c'era la necessità che un utente potesse accedere al dispositivo tramite un
+ telefonino che è una cosa che ad oggi all'industriale ancora non è per niente sviluppata, ok? Cioè
+ non è per niente implementata. Come ho fatto per fare questo? Che era vedere delle
+ pagine, lo dute appoggiare all'access point, quindi non avevo la possibilità di averlo
+ pronto, quindi quando ho fatto per fare questo, e fai degli schemi anche, no? Che spiegano
+ come hai fatto per fare ciò. Cioè vedi, per esempio, quando fa vedere
+ se ti stai raccontando anche prima, racconte dietro una storia, ok? Dove parte dalla necessità
+ che c'era e come tu la risolta, ok? Oggi avevo un punto, uno potrebbe sto partire
+ il mentre e dirti "ah beh, una pagina web, ma perché lei è messa indietro, crea vissuto
+ internet dall'azienda, l'azienda c'era da lì, no? Non potevo perché in realtà tutto
+ deve essere accessibile e direttamente pronto, lì, no? Quindi ci sono, rispetto alla necessità
+ dell'azienda, tu puoi dire, ok? Ci sono tozzi numeri di soluzioni, ma in realtà io scelto
+ questa perché le altre avevano questo qualsiasi criticità, qualsiasi criticità.
+ Quindi magari potrebbe essere più utile partire con la descrizione di quello che è stato fornito
+ delle necessità e così. Poi partire subito con l'UML, poi specializzare l'UML e magari
+ da queste pagine collegare a quello che avevo fatto con sia il hardware che altro. Perché
+ poi un altro problema che non ho fatto in tempo a mettere nella presentazione, ma che
+ è stata, che ci ho perso molto tempo negli ultimi giorni, è stato quello della suddivisione
+ delle pagine perché l'espino riusciva a inviarmi ad esempio della pagina Istorio, della pagina
+ dei grafici. Ho voluto far stare anche i grafici, mettere tutto CSS e JavaScript in locale,
+ non farlo andare con delle librerie via internet. Allora ho dovuto spezzettare al massimo e
+ mettere delle richieste assincrone in JavaScript con un toddi de lei che infatti nelle demo
+ si vedono. Il mio sogno è stato superato di fronte all'ingigenza dove è il fatto che, se io ti dico "Alessio, dobbiamo sviluppare questo prodotto, però deve essere fluibile dall'utente finale". Chi è l'utente finale? L'utente finale è un installatore, un sistema integrato, un qualcuno che deve entrare in un impianto e non ha accesso la rete di intera dell'azienda. Perché nessuna azienda vuol dar l'accesso alla propria rete interna. Quindi a quel punto che cosa si vuole?
+ Si può utilizzare l'access point interno di spi 32 per ovviare a questo problema. E qui inizia a dire le criticità e problemi che è riscontrato per fare questo come risolto il problema.
+ Altro punto, nel momento in cui io ho la possibilità di accedere a queste pagine web, come accedo? Allora, come fanno più o meno tutti tramite un PC, no, tu hai creato la possibilità tramite una pronazione wifi,
+ di accedere tramite uno smartphone? Questa cosa è un vantaggio competitivo per il prodotto che abbiamo creato, perché sono veramente pochissimi, forse quasi nessuno nel mercato industriale ad avere una configurazione tramite smartphone.
+ E quindi non obbligano l'utente ad accedere, a collegarsi, a avere cavi, a avere sistemi di interconnessione. E quindi già questo secondo me aumenta un po' il grado di specificità di quello che tu stai sponendo, che tu stai dicendo. Quindi sicuramente questo.
+ Il fatto è che fisicamente non so se è fattibile, per il fatto che mi ha detto che sono 20 minuti totali di presentazione, e già per far vedere a grandi linee le funzionalità qui, ho impiegato più che 10 minuti.
+ Però guarda, se non sarebbe quasi più bello che tu la demo, la facessi live. Vedere che tu abbia fatto con le pagine, hai fatto una bella presentazione con degli slide, con qualcosa di dinamico, tutto bello, però io accorcerai molto con la partita e la farei più live.
+ Per voi che dicevo, era una bellissima presentazione tutorial. Cioè se lo devi spiegare a qualcuno e non hai qui il sistema, quello lo pubblichi e vai già bene, perché già fa capire come funziona il sistema.
+ Quindi voi la tirarei come il backup, quella vuol cosa non funzionarsi, però fai una presentazione proprio chiara, che ti due le 10, 12 minuti, basta, quegli altri 8 minuti, tu ti riprendi bene.
+ Ok, così almeno è la cosa di dire, voglio anche far vedere alle persone come funziona? No, anche perché almeno fai vedere realmente il lavoro che hai svolto, perché sai, dotarli un'immagine, sì, ok, va bene, ma poi chi mi assicura che quello che hai fatto è effettivamente quello, mentre sturo fai vedere live,
+ ecco, il rischio quindi la cosa che ti devi accertare, se lo fai vedere live, deve funzionare tutto da Dio, cioè non ci deve essere niente che si pianti, perché se no, il rischio è che poi ti fai l'autoball, no, chiaramente, però è sicuramente, secondo me, di un impatto diverso, se lo fai vedere live.
+ Ok, ci sono altre osservazioni proprio sulla struttura generale, perché io ho fatto questa quasi, ma è ovviamente sbagliata, che doveva essere più dato da problema, andare a discendere…
+ Analyse delle quesiti, progettazioni, sviluppo, bravo, se tu lo hai dato un po' così, che poi è l'ordine cronologica di come si sono andate le cose, cioè non ti abbiamo chiesto di sviluppare senza aver fatto una progettazione e non hai progettato senza aver avuto un primo conto con Fabio dove ti diceva qual era il problema, come risolvere.
+ Quindi proprio un racconto, puro di com'è andata, iniziano in torno di essere, nei tecnici, nei nerd, poi dopo facciamo vedere con il nervismo speciale, cioè fargli vedere le tecnici che ci sono per carità, no?
+ Ma inizialmente se tu cominci così, uno dice "Espetta, perché questo cominci a parlare in mod basso?" di cosa stiamo parlando, noi siamo finiti, noi siamo fortunati perché conosciamo il progetto, eh?
+ Sì, non è vero, è vero, cioè sicuramente conoscendo, io ho capito tutto, però perché chiaramente so tutto quello di cui abbiamo parlato in questi mesi, uno che lo prendiamo, gli spieghiamo la cosa, sicuramente dice sì, è fatto un lavoro fighissimo, tanta bella roba, ma non è che ho capito bene cosa.
+ Quindi ci sta secondo me a fare un 15 minuto tutto, la cronostoria, ricordo, che è stato fatto, quindi partendo dalla esigenza, il problema, come risolvere il problema, e poi scendi in un piccolo dettaglio tecnico, che potrebbe essere la partenza questo qui, e dire come ho risolto i problemi tecnici, cioè quindi a livello informatico, di quello che devo andare a fare.
+ E poi, gli ultimi 5 minuti, 7 minuti, ti riprendi per farvi vedere la demo, tanto la demo comunque è una cosa abbastanza rapida, cioè ho creato queste pagine, da quale posso fare questo, questo, questo e questo, e fai vedere brevemente che cosa puoi fare, tanto senza che ti mette a taccare sonde, a taccare cose, un lì magari soltanto una resistenza, un potenziometro, che tu lo giri al volo, fai vedere il valore che cambia, e fai vedere che hai implementato tutta una serie di funzionalità.
+ Cioè, la parte carina, se vuoi, siccome non stai facendo vedere nel tempo reale, puoi farvi vedere un'immagine che vi dici, ok, oggi con questo prodotto posso connettermi a questi diversi, ci sono compatibili con, per farvi vedere che è un prodotto comunque.
+ Ah, quindi magari prendo diversi dispositivi Modbus, e faccio una slide che dico "tutti questi dispositivi possono essere compatibili".
+ Come risultato finale, cioè ad oggi, grazie a questo sistema, sono compatibili con tutti questi, io vi ho fatto vedere la demo sul registrario variabile, ma in realtà potranno essere così.
+ Quindi questo è come risultato finale, ci sta che mangiai lì presente.
+ Perchè ha perdirti anche un'altra funzionalità che fa molto parte dell'IoT, un eccitato che noi così facendo, cioè andando a utilizzare lui come master, questo è stato anche dato come master.
+ Possiamo interrogare tanti slave, e possiamo immagazzinare tutti i dati di questi slave e farci qualcosa.
+ Quindi che sia rendere furibile un falce sv che ha preso dati da 50.000 altri device, cioè slave master, slave MOC, scusa, o vedere già realtime, i dati di questi dispositivi e poter non fare un grafico, cioè questo è IoT.
+ Quindi già soltanto questa cosa qui deve essere comunque molto vocale con il discorso del capitolo.
+ Sono tutti i valori agenti che tu hai dato, ed è importante raccontarlo.
+ L'altro punto finale è, te lo pongo come domanda, dai fit, lasciamo stare che non hai sviluppato nulla di questo, tu hai sviluppato un sistema verbo, un bagno di controllo verbo.
+ Quando tu vai a far vedere che hai sviluppato un bagno di controllo verbo, secondo te cosa racconti maggiormente?
+ Racconti la registrazione dell'utente, il login dell'utente, alcune funzionalità specifiche, l'impatto del prodotto, quali sono le cose più importanti che racconti?
+ L'impatto del prodotto e magari l'integrazione con altri prodotti esistenti.
+ E le funzionalità, cioè la registrazione dell'utente e lo login dell'utente sono cose banali che tutti sanno e ti basta solo dirlo.
+ Quindi il fatto di spendere magari 3-4 minuti nel dire "Ah, tu ti puoi connettere a questa rete per poi fare questo, poi puoi fare questo".
+ Puoi dire "Molto, molto più velocemente, ti risparmi tanto tempo".
+ Sicuramente è una specifica che ci serviva, cioè la possibilità di essere, di creare una propria rete o di connettersi una rete esistente.
+ Però mi fai una slide, dici "L'ho imprimentato in questo modo? Quello l'ora sono scoprote pronte".
+ Sì, magari salta tutti i più passaggi, dice "Come faccio di entrare in autentico l'opcè".
+ Un giorno devi entrare in restruzione.
+ No, anche perché poi comunque penso che ci sia tutta gente che nel momento in cui gli dici "Ho creato l'access point per obbiare il problema di connettere nella rete aziendale in cui hai installato il spoiuto".
+ Io e tutti hanno capito cosa da fare per accedere all'access point.
+ Cioè, non penso che ci sia.
+ Non vuol dire che diminuiamo il tuo impegno rispetto a quello.
+ Cioè, noi ci basta che tu dici "L'hai fatto e ci fichiamo".
+ Cioè, ci interessa che più che ci siano altre specifici che molto più interessanti.
+ No, anche per dare spazio ad approfondimento, tipo questo, c'è tipo quello che tu hai proprio realmente sviluppato,
+ gli scogli che dovuto superare, come hai fatto per integrare tutto quello che ne abbiamo richiesto.
+ Cioè, tutta quella parte lì scolamente che va almeno c'è.
+ Comprimi un po' tutta la parte che è una superflua tra virgolette, perché poi la demo la farai live.
+ Quindi tutta la parte un po' superflua la zippi un po' di più e lasci spazio al come hai fatto per risolvere il problema.
+ Comunque, in generale va bene. Nel senso che si vede che ci sono tante cose che hai fatto e non essere solo raccontati più organizzati.
+ Ci vuole vedere qualcosa in reali?
+ Sì, comunque nei prossimi giorni sistemerò la...
+ Io la rifarei questa, reali che possiamo incontrarci solo in Italia.
+ Se possiamo... Prima che incontrarci, inviarti la bozza via melchie, dirti dei consigli...
+ Va bene.
+ Super.
+ Ma tutto qui, comunque, sarà settembre, ma...
+ Dal 8 al 12.
+ All'8 al 12.
+ Se poi potrai venire, chiaramente c'è un pariziamolo di giornale.
+ Allora, facciamo così.
+ Faccio piuttosto che estendi duplica.
+ Ok, adesso qua, semplicemente...
+ Ha connesso la retta...
+ Ma adesso, soprattutto con il fatto che l'hanno collegato un OJS, c'è il tuo connesso di linguaggio, come sempre, pari di tutto.
+ C'è un pazzesco.
+ Da Nietzsche ho creato uno software già lo scrive per leggere il modo.
+ Tre secondi, proprio.
+ Perché poi, cioè, non hai bisogno di compiare, non hai bisogno di nulla.
+ C'è bisogno di un bravo.
+ C'è bisogno di un vestiale.
+ Non so come fare gli applicativi, cioè, come fare gli eseguibili, diciamo così.
+ L'OJS è quello che è il proprio personale.
+ Cioè, se vuoi non eseguire, verrà proprio che hai un interfaccio.
+ Quindi io, sì.
+ Non girasse.
+ Prima dimente già ho scritto, però con la base a cui tu puoi vedere, naturalmente,
+ c'è veramente, tu, a quel punto, poi, gestire le finestre di windows o avere tutto.
+ Allora, io ho provito da un sistema gratis, un teletto.
+ Che è, magari, qua, a provo?
+ Ah, un'altra cosa, non chiamarlo SP32 constantemente.
+ Cioè, di anni, non mi si chiama sistema.
+ Dili sistema.
+ Perché, se no, cioè, tu non hai fatto un SP32.
+ Ok.
+ Perché, ho fatto...
+ Tipo, alpha, lo posso chiamare, alpha.
+ Alpha, se si chiama, sì.
+ A quel punto, però, definisce
+ Allora, magari, apro la pagina di monitor da tenere sempre sotto occhio.
+ Ok.
+ Come vediamo, già all'inizio, senza aver aperto niente, solamente due pagine.
+ Cioè, più che metà dell'occupazione del nostro IP e della nostra memoria di sistema.
+ E quindi, magari, questo, comunque, c'è, tu dillo, nel senso di come hai fatto per risolvere il problema.
+ Però non farai vedere che la memoria è sempre piantata al 100%, perché se non vuoi dire...
+ Cioè, se facciamo vedere una cosa, non tecnicamente...
+ Non è proprio sempre piantata e che...
+ No, no, no, però, dico, ecco, magari tu c'è, cerca di mostrarlo più verso il "ho avuto questo problema" e lo risolto in questo modo.
+ Ok.
+ Cioè, l'idea non è vedere il problema, l'idea è vedere la soluzione a quel punto.
+ Sì, no.
+ Però, comunque, questo problema, vorrei sottolineare che c'è questo problema.
+ Sì, sì, sì.
+ Mi sembra giusto essere anche realisti, no?
+ E chiarirlo.
+ Sicuramente, l'altra cosa che vedo è il totale che ha un problema.
+ Cioè, il 274K di totale potenzialmente usando qualche altro integrato, magari, potrebbe essere più alta.
+ Chiaramente, ripenda anche dei costi, no?
+ Certo, c'è anche delle risorse da quello che adesso c'è SPI, no?
+ Soltamente, no?
+ Cioè, mi immagino che entro tra quattro anni SPI e dicesi che era scritto "MB".
+ Esatto.
+ E poi c'è scritto "GB", oggi ho dovuto stare in continuo.
+ Dovresti più che altro, esatto.
+ Non avrei punteri di più a venderla così.
+ Cioè, abbiamo creato una cosa mastodontica con delle risorse vera utilità.
+ Molto molto, esatto.
+ E quello è stato il problema.
+ Perché ultimamente, negli ultimi giorni, per poter avere CSS fatto bene e tutte le pagine con i grafici e così,
+ andava spesso in Overflow e non riuscivo a capire perché, a un certo punto,
+ mi inviava la pagina troncata a metà perché aveva l'IP pieno e non riuscivo a capire come mai questo,
+ fino a che non ho dovuto ripare da zero la pagina di Monitor e sono riuscito a vedere che andavo sopra il 70%.
+ Lui provava a locare il nuovo spazio per le stringhe, che però mi troncava e mi dava errore per quello.
+ Cioè...
+ Dov'è?
+ Non so se.
+ Sì, è chiaro.
+ Niente, questa più o meno è la pagina di Monitor, questa è la pagina iniziale, la pagina di Pinout.
+ E questa, dove possiamo ovviamente modificare i PIN.
+ Ovviamente, la pagina di Pinout, vediamo subito, dovendo caricare 38 PIN.
+ Anche uno per volta, però, comunque 38 informazioni sotto forma di chari inviati sul Async Web Server.
+ Vediamo che appena appro la pagina da 127 è schizzato a 160 passi.
+ Non sa se adesso questo lo stai dicendo o noi?
+ Sì, lo sta dicendo un po' per farvi capire le problematiche che si sono sviluppate.
+ No, ne la conoscete.
+ No, ma in quel caso, quando parli della problematica, non c'è bisogno di mostrare la problematica.
+ Dici, memoria I, totale, limitata, ho fatto un lavoro di ottimizzazione da conti di come ho utilizzato.
+ Non di come si risolva, come si vede il problema nelle diverse forme.
+ No, perché il fatto è che, ad esempio, se io faccio così, adesso so che mi andrà in grazie.
+ Tipo, avvio una registrazione, due registrazioni, quattro-cinco registrazioni, apro quattro-cinco e pagine di Pinout,
+ che magari una di Stori, magari una di un Gratico, mi craccia il sistema,
+ ma non è una cosa che è legata a un errore di progettazione o un errore di codice.
+ È una cosa proprio legata.
+ Il giorno lì non arrivare a quel...
+ A quel livello di...
+ No, non devi vendere il problema.
+ No, ok, sì, sì.
+ Cioè, io capisco l'issimo che qui sia trasparente, sincero, vuoi essere chiaro.
+ Va bene, ma nessuno ci ha detto...
+ Cioè, nessuno ti ha fatto la domanda specifica.
+ Se apresti cinque tab, perché se te facessimo la domanda, li diresti, guarda.
+ Se apresti cinque tab, ad oggi,
+ se non la memoria è totale, il progettato è un sistema in cui si rende conto che ho aperto la stessa pagina,
+ da un'altra parte, e quindi non mi dà più le risorse.
+ Però la solo progettata, cioè, c'è o solo fatto la...
+ No, la contingersi, ma non ho sviluppato.
+ No, perché avevo anche progettato una cosa del dire più ESP in un sistema distribuito,
+ ognuno offre una funzionalità, cioè, con questo framework, si può benissimo fare questa cosa,
+ perché creando dinamicamente, in pratica come è successo,
+ hanno stato in termine del sistema, li aggiungo i miei componenti, il mio "pinout" che voglio,
+ e così si potrebbe benissimo fare prendere due ESP.
+ Uno, che ogni ESP facciamo una pagina che pubblica i propri servizi,
+ e un altro centrale, che si occupa di tutta la parte del wifi di configurazione,
+ va a prendere i dati dall'altro ESP e l'iestrapolo.
+ Cioè, con un sistema distribuito potremmo...
+ Allora, a meno che tu questa è questa cosa che mi stai dicendo adesso,
+ è un qualcosa che hai pensato, immagino,
+ e nel mentre stavi sviluppando hai già pensato di poter essere successo.
+ Esatto.
+ Quindi questa è una di quelle, qualunque volta che parliamo contingersi,
+ si funziona così.
+ Allora, potresti fare una strada dove ci sono rischi,
+ lista dei rischi, l'utente apre troppo più finestre,
+ mitigazione dei rischi è come tu hai pensato di sviluppare il progetto,
+ alcune cose per dire risolto,
+ cioè già in questa versione questo rischio non c'è più perché è risolto,
+ altri invece le sono progettate.
+ Ok.
+ Ci chiamo contingersi plan.
+ Ok, piano di contingersi.
+ Tipo, una slide finale metto con tutte queste rische.
+ Rischi possibili che l'hai visto e come li hai pensati risolti.
+ Ad esempio per dire anche nell'occhio sempre della partenza di quello che abbiamo fatto,
+ noi tutta questa parte anche per dire di configurazione in pin out,
+ non la rendiamo disponibile all'utente finale.
+ Quindi già quello è contingersi come decimiero c'è.
+ Il fatto è di ridurre il rischio perché non do tutte queste informazioni in pasto
+ a un cliente che le può utilizzare, che le può smalettare.
+ Quindi già questa è una situazione che non si crede mai.
+ Poi se prendo tre pagine grafiche invece lo increscio uguale,
+ allora come facciamo a risolverlo?
+ Ok.
+ Potremmo fare un sistema, c'è uno di due spi a cattelina, etc.
+ Però ecco, ci sta a spiegare la usi.
+ Ok.
+ Ok.
+ Quindi magari qua faccio vedere che questa è la parte di modificare i singoli pin,
+ che io posso selezionare il tipo di pin,
+ se è sconosciuto.
+ Questi sono i vari protocolli disponibili sul pin in base al pin out del DSP.
+ Cos'è il tipo di protocolli?
+ Del singolo pin.
+ Non sono tutti protocolli?
+ No.
+ No, no.
+ Quindi se hai tentato a chiamare, perché se no?
+ Esatto.
+ Cioè definisci bene.
+ Perché quello è un pin.
+ Certo, poi la definizione di un pin che può essere utilizzato o per l'implementazione di un protocollo,
+ o per un classico IO.
+ Come dicevo.
+ O con un classico IO.
+ Quindi che può essere un ingresso uscita digitale o pure un ingresso uscita analogica.
+ Quindi ingresso analogico oppure pvm, l'uscita.
+ Tutti le altre c'è, è sempre la functionalità del pin che è associata al tipo di protocollo.
+ Cioè tu dovresti qua dire che esplicitere una limitazione,
+ cioè che, come tutti i mitologori, sono stati studiati avendo tutta una serie di pin out
+ che possono essere utilizzati come IO.
+ E invece degli altri pin out che possono essere utilizzati solo per determinate funzionalità.
+ Tra cui l'utilizzo di protocolli come i quadro C, SPI, o utilizzati come DAC,
+ o utilizzati come pvm, eccetera, eccetera.
+ Perché non tutti hanno quelle funzionalità di no, cioè non tutti hanno tutte le funzionalità.
+ Esatto.
+ Ok, quindi questa cosa la devo magari segnare per quando faccio...
+ Non è quando lo racconti.
+ Si vuole un piccolo non lo racconti, questo è buonissimo.
+ Non stai troppo ottici, procedura per la configurazione dei pin.
+ Mi faccio vedere un esempio.
+ Andando avanti?
+ Andando avanti magari sulla pagina di Modbus,
+ che posso monitorare ad esempio tutti dispositivi compatibili,
+ facendo da master tutti i dispositivi slave compatibili,
+ che mi forniscono al tramite Holding Register, all'indirizzo 234, un intero oppure un float.
+ Io faccio monitor, qui mi dice se il valore correntemente letto.
+ Ok, il valore correntemente letto è questo valore che...
+ Perché questa vuol dire una simulazione perché non ci ha legato niente di io.
+ Non è probabilmente un valore casuale,
+ perché lui prova comunque a leggere il risultato della lettura.
+ Adesso è questo.
+ Io se faccio Store, andrò qua poi nella History,
+ proviamo a leggere anche un altro,
+ perché poi per plotare il grafico mi serve più di un valore.
+ 234 è quello che hai scriso prima?
+ Esatto.
+ Cioè proprio ha capito Store, all'indirizzo 234 leggo un altro valore.
+ Ah, però ha sempre uguale.
+ Esatto.
+ Perché io per plotare un grafico devo aver più di un punto per lo stesso, per lo stesso...
+ No, mi chiedevo semplicemente perché hai rischitto 234,
+ e se già ce l'avete imprimito?
+ Ah, no, è perché quando clicco "Salva", potrei ridire,
+ di rindirizzarmi la pagina di prima, si potrei modificarlo.
+ Qual è la curiosità semplicemente per te?
+ Qui, andando comunque dalla History, dovrei vedere i due valori.
+ Ad esempio, esatto, sono questi qua là.
+ Ad esempio adesso ne modifico uno per non avere due valori uguali,
+ metto 1, 500.
+ Ho capito cosa c'è, quello è lo stesso parametro,
+ ma è il login di due volte.
+ Esatto.
+ In effetti dicevo "Rebel Time".
+ In effetti dicevo "Rebel System" automatico di timing,
+ c'è che ogni TOT ti fa quell'interrogazione e ti prende il mandato.
+ Sì, in effetti c'è, perché il registro,
+ ad esempio, è sempre in 2, 3, 4 monitoratmaster.
+ Se io faccio record, stop record,
+ mi dice che la registrazione è partita.
+ Adesso io magari avrò un'altra pagina.
+ Modbus History vedrò anche che continua
+ a buttarmi dentro dati in più.
+ In graph non in history.
+ In graph abbiamo visto anche qua.
+ Questo si aggiorna, mi sembra ogni 10 secondi,
+ perché è pesante,
+ però sospettiamo 10 secondi,
+ vediamo che i dati continuano a essere aggiornati.
+ È molto meglio spiegarlo così,
+ che facciamo vedere che tu fai.
+ Poi sia una funzionalità che c'è, ok,
+ però lo star, lo stall singolo,
+ è sicuramente una cosa molto più levitante che fare un grafico.
+ C'è anche qua un thread,
+ soprattutto quello che è il...
+ Sì, però vado subito a stoppare,
+ perché lo farò vedere,
+ che già saremo al limite come prestazioni.
+ Se io adesso tornerò sulla pagina di monitor.
+ No, beh, siamo ancora...
+ Però siamo già in uno stato di warning,
+ quasi al 70%.
+ Quindi anche solamente,
+ con pochi dati registrati,
+ sale molto velocemente il limite.
+ Non si vede capire se c'era...
+ perché non vediamo tutto.
+ Penso che sia qua,
+ in ogni tanto...
+ Impostazioni scremovane, sape...
+ Cioè, ogni tanto c'è sulle televisioni,
+ l'over, come è che si chiama?
+ Quella cosa? Esatto.
+ Enfatti.
+ Sto cercando di andare, ma...
+ No, non sei che tu...
+ Perciò, ferovamo qua.
+ Comunque, l'hai fatto di nuovo.
+ L'hai fatto di nuovo.
+ Non...
+ a rispondare il problema.
+ Cioè, per esempio,
+ è perché è pesante il grafico,
+ ma nessuno che ha chiesto di dirci quanto è pesante.
+ Quindi non dircero.
+ Non devi venderti.
+ È un problema.
+ Tutti lasci, la tua schermata,
+ solo sul tuo monitor.
+ Quando vedi che inizia a saturare,
+ fa il clean, te lo fai più.
+ Ok.
+ Non lo fai vedere agli altri.
+ Quando n'è una volta a farci vedere il problema,
+ non continuare a raccontarci che c'è un problema.
+ Cioè, fai sentire come se noi dovevessimo acquistare il prodotto.
+ Cioè, lo venderasci così, non te lo compriamo, no?
+ Sai qui che non te lo compriamo.
+ Ok.
+ Ok, quindi la parte di stori che posso...
+ No, questo è di fine.
+ Modbus, stori che posso...
+ Ecco qua, si è già presentato il problema.
+ Che posso andare a...
+ Ok, attenta, attenta.
+ Questo problema si è presentato.
+ Adesso perché c'era il...
+ Saturo.
+ Tu hai già fatto il stop, giusto?
+ Sì.
+ Ok.
+ Come puoi risolvere il problema mentre stai presentando?
+ O andando sul monitor e facendo clean up.
+ Perfetto.
+ Ma da 207 siamo passati, più o meno,
+ sempre lo stesso.
+ Oppure facendo...
+ Perché questo attualmente fa solo...
+ Ricchiamo la...
+ Funzione di Garbage Collector degli ESP32.
+ I dati rimangono ancora salvati in locale,
+ quindi se ci sono tanti dati,
+ lui non può farci niente,
+ continua a sempre esserci questo problema.
+ Quindi, durante la demo,
+ sai bene che si è per quartiere la registrazione,
+ entro tre, quattro secondi...
+ Esatto, devo stoparla.
+ Non vogliamo...
+ Cioè, e se dovesse succedere un problema,
+ cerchi di risolverlo,
+ ma senza averlo raccontare.
+ Fai un po' di manovre e intanto continuare a raccontare.
+ Ok.
+ Cioè, non devi mostrare il problema.
+ Un'altra cosa che puoi fare
+ è aumentare quel tempo di scansione
+ tra una registrazione e l'altra.
+ Cioè, è inutile che tu acquisisci
+ ogni 20 mili di secondi il dato
+ e in tre secondi c'hai 10K di file.
+ Prendi dentro una volta ogni due secondi,
+ intanto poi vedremo che ci avremo
+ tre, quattro dati, buon fine.
+ Comunque poi ci interessa di aver pochi dati.
+ Ok.
+ In un momento, quindi prendi
+ tre, quattro, diciamo, campioni,
+ campionamenti, li tieni lì,
+ poi fai vedere il grafico e via.
+ Va bene.
+ Cioè, preparati per una demo
+ che sia fatta, che so che funziona.
+ Esatto.
+ Cioè, non sei dove mi hai guardato,
+ avevi guardato dei ballerini
+ e si fissi o qualcuno si fissi, diciamo,
+ nella arte, dal video.
+ Sì, più o meno.
+ Ok.
+ C'è mai stato qualcuno che,
+ pur sbagliando, stoppava il video
+ e diceva "ho sbagliato".
+ Cioè, non lo continuano.
+ Se poi te ne accorgi,
+ sei stato bravo, se non te ne accorgi.
+ Esatto.
+ Chi sei frega, cioè, vai avanti.
+ Esatto.
+ Oh, il 128, che bello.
+ Sì, perché, senza farmi vedere,
+ ho cliccato il tastinio.
+ Ah, magia, è quello che devi fare.
+ Ok.
+ Ok, capisci qual'è il punto.
+ Ok, sì, sì.
+ È quello che...
+ Cioè, poi qualcuno potrà anche dire
+ "Ma scusate, perché hai scelto
+ quello che hai scelto?"
+ Perché hai per risoio di questo problema
+ fatto così, ok?
+ Ma quanti si ne accorgono,
+ quanti ce ne sono quanti qua, no?
+ Ok.
+ Ok.
+ Questa è la parte di configurazione
+ del Wi-Fi, che farà uno scandele,
+ reti e poi ce ne mostra.
+ Ok.
+ Ci fa vedere tutte le reti disponibili
+ attualmente.
+ Se fossimo sul seriale,
+ ci fa vedere anche la potenza
+ di tali reti.
+ E, ok, cliccando su connetti,
+ poi la parte, finalmente,
+ di multiplexing con...
+ qua.
+ Se faccio vedere che c'è un errore a...
+ Cioè, questo, magari è utile farlo vedere,
+ che se c'è un errore hardware,
+ ci dovrebbe dire
+ "waiting for data", perché
+ non riesce a leggerla,
+ possiamo tornare alla configurazione.
+ Ok, quindi tu la vendi dicendo,
+ o in questa cosa ho impreventato
+ anche una funzionalità che riscontra
+ una problematica a livello hardware.
+ Cioè, se mancano degli ingressi,
+ ho coscienza del fatto
+ che questi ingressi non ci sono.
+ Esatto.
+ Quindi questa te la vendi più così.
+ E oppure quella di test,
+ che modalità di test.
+ Ok, adesso, però, c'è collegato un potenzione
+ tra quella scheda, no?
+ Su di ingresso, resistenza...
+ Ecco, ecco, perché non ha fatto
+ esattamente quello che dicevo io,
+ perché...
+ Perché in teoria, io, se stacco la DS
+ e provo a fare resistenza
+ in via configurazione, mi dice
+ "errore, non ho trovato la DS
+ con cui comunicare".
+ Mi rimanda sulla pagina di
+ Selezione dei segnali.
+ Ma questo perché?
+ Perché non trova, ovviamente...
+ Ma perché non trova la DS?
+ No, adesso non l'ha fatto.
+ Mi stavo chiedendo perché non l'ha fatto.
+ Ah, ok.
+ Però è vero, adesso ce l'ho connesso
+ e quindi l'ha fatto correttamente.
+ Quindi proviamo resistenza.
+ Sulla Morse Tiera CN2
+ in via la configurazione
+ e attualmente sto
+ vedendo questo...
+ quattro...
+ oma di resistenza, qualcosa del genere.
+ Dovrebbe essere, esatto.
+ Ci piace.
+ Che andando avanti, aumenta.
+ E io se faccio start recording,
+ vediamo...
+ Sto subito, perché sennò...
+ Questo cosa le fanno nella IP?
+ Esatto.
+ Volevo fare magari un po' che
+ modificavo, e quindi si vedeva
+ che...
+ col grafico che va su e in giù.
+ Esatto, e sto creando.
+ Mi uso ogni due secondi.
+ Mi sembra ogni secondo.
+ È per movere mi due, mi tre, tanto...
+ Ok, questo è buono.
+ Questo è quello che vogliamo vedere in temporeale.
+ È quello che ci manca nella presentazione, no?
+ Fare vedere in temporeale è chiaramente
+ il lì di far capire che la fine non è che
+ esitucato tutto il suo sistema per una resistenza variabile.
+ Esatto.
+ Cioè far capire questa resistenza variabile
+ ma potrebbe esserci il mondo attaccato.
+ Esatto.
+ Una sonda di temperature,
+ un trasduttore di processo,
+ un signore di processo, un po' si ricorda.
+ Quindi per la demo magari parto
+ dal fondo, da questa parte...
+ Fa bene far vedere la schermata in iniziale.
+ Ho sviluppato questo, questo, questo, questo.
+ Poi ti focaliti su alcune cose importanti.
+ Ok.
+ Che vadano a rispondere alla necessità
+ dell'azienda.
+ Ok.
+ C'è una direta ultereferenziale.
+ Ho fatto tutto quello perché era figo.
+ È bravo, però.
+ Però magari visto che c'è poco tempo,
+ parto da questo e dopo se c'è altro
+ passa la parte di Wi-Fi,
+ la parte di monitor, la parte di fin-out.
+ Esatto.
+ E' tutto resto.
+ Con la parte lì comunque già lo spiegherai
+ nella parte di...
+ Cioè nella presentazione stessa, no?
+ Cioè tu hai utilizzato l'access point,
+ il Wi-Fi, la connessione, come risolto quel problema.
+ Quindi c'è già tutta quella parte di tu l'hai spiegata.
+ Quindi si dà già per scontato che tu
+ sei in grado di accedere al Wi-Fi List 32.
+ Adesso fai vedere invece proprio l'applicazione
+ come utilizzarla, che vantaggi ti dà,
+ che cosa puoi fare.
+ Cioè tutte le funzionalità più salienti
+ poi di quello che era l'obiettivo
+ del prodotto finito, no?
+ Sì.
+ Io appunterei più quello che le diciamo.
+ Ok.
+ Bene, quindi a questo punto vi ha fatto un log,
+ possiamo fare un'esportazione excessive di dati, giusto?
+ Sì.
+ Ok.
+ Qua mi fa vedere il formato access.
+ Ti apri il tuo file.
+ Lo apri, poi non sta lì.
+ Cioè vuoi vedere che l'è aperto.
+ Buon, questo è un cessù.
+ Per impedirmi come importi i dati.
+ Ok.
+ Ok, buon perfetto, questo lo apri.
+ Tu vi diretti un speed?
+ Sì, questo devo tagliare,
+ perché io quando faccio l'esportazione
+ vado a prendermi...
+ La tabella?
+ Esatto, questa tabella.
+ E esporto tutto quello che c'è nella tabella.
+ Tu immagini il flusso perfetto,
+ all'interno di quel flusso non ci possono essere errori.
+ Perché se no,
+ ha una persona che fa inginere informatica,
+ vuoi vedere che nella tabella cessù c'è un delete.
+ Tu vuoi dire che stai taricando con il CSV
+ di almeno 30-40% in più di dati.
+ Sì.
+ Senza motivo.
+ Certo.
+ Ok.
+ Ok, quindi c'è fatto vedere lì grafico.
+ C'è fatto vedere la parte di multiplexing,
+ quindi il fatto che possiamo andare a selezionare,
+ il fatto che hai implementato le funzionalità
+ per essere compatibili con tutti,
+ i dispositivi che utilizzano un morba CRT-U,
+ c'è fatto vedere l'esportazione del grafico.
+ Ok.
+ Io direi che c'è.
+ Però ecco, mi dico,
+ ho fatto proprio un flusso di discorso.
+ C'è proprio come che schematizza però.
+ Fattelo a schemi.
+ Poi, in quello schema,
+ arricchisci quando sei lì di parole.
+ Però ho fatto proprio lo schema.
+ Faccio vedere prima questo, qui questo, qui questo, qui questo,
+ per avere un senso logico.
+ La cosa che dici,
+ sempre legata alla storia che stai raccontando.
+ Dopodiché,
+ sicurati, ripetito mille volte,
+ sicurati che in quel flusso non ci siano
+ mai problemi per il livello applicativo,
+ al massimo resetti, come hai fatto adesso.
+ Dopodiché,
+ sicurati che ci siamo.
+ Non dipendere da le redi wifi
+ dell'università.
+ No, infatti, qui siamo tutti in locale.
+ La demo va bene così,
+ gli dici, potenzialmente ci si può connetterla.
+ Una redia wifi di server,
+ una server di server.
+ Esatto.
+ Ma non era l'obiettivo di quello che divenchia essere,
+ l'obiettivo di quello che divenchia essere,
+ potrebbe configurare il device
+ con l'access point.
+ Non...
+ che poi lui si possa collegare in rete
+ che il cliente possa prendersi i dati,
+ quelli sono altri discorsi.
+ Ma diciamo che lo scoglio fondamentale
+ era stato quello,
+ quello principale era stato quello lì.
+ Diputtare tutto in access point.
+ Ok, dai bene.
+ Quindi io direi che...
+ si, concludere la parte più discorsiva
+ e rivedere un po' la presentazione
+ proprio l'altro, la tua presentazione.
+ Ok, il resto direi che ci siamo,
+ che tutto funziona, che tutto è avventato.
+ Va bene.
