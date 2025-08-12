@@ -1,0 +1,165 @@
+slide statiche tranne uml
+-scrivere sotto a ogni immagine per obbiettivi
+- rimangono fermi
+
+-------------------------------------Slide 1
+
+"Buongiorno a tutti, sono Alessio Tommasi, uno studente Master in Computer Science, e oggi ho il piacere di presentarvi il mio progetto di tesi: ALPHA."
+
+
+-------------------------------------Slide 2
+
+"Questo progetto è stato creato in collaborazione con ESAM, un'azienda italiana con oltre quarant'anni di esperienza nell'automazione industriale, nota per lo sviluppo di soluzioni su misura per aziende e professionisti del settore."
+
+
+-------------------------------------Slide 3
+
+"ESAM si concentra sullo sviluppo di hardware all'avanguardia per l'acquisizione di segnali di varia natura, come tensione, corrente e sensori analogici, garantendo sempre elevata precisione e affidabilità."
+
+
+-------------------------------------Slide 4
+
+"L'attenzione costante all'innovazione ha spinto l'azienda a porsi un ulteriore obiettivo: semplificare l'interazione uomo-macchina in contesti industriali, applicando le più moderne tecnologie. Da questa esigenza è nata l'idea di ALPHA."
+
+
+-------------------------------------Slide 5
+
+"Una delle caratteristiche principali del progetto è il suo approccio cross-platform, che consente di accedere alle sue funzionalità da qualsiasi dispositivo."
+
+
+-------------------------------------Slide 6
+
+"ALPHA è basato sul microcontrollore ESP32 che, grazie al modulo Wi-Fi integrato, può connettersi a reti esistenti oppure operare in modalità stand-alone, creando una propria rete. Questa flessibilità lo rende facilmente integrabile in contesti industriali privi di infrastrutture."
+
+
+-------------------------------------Slide 7
+
+"Una volta selezionata la connettività desiderata, ALPHA si comporta come un web server, generando pagine web a cui l'utente può collegarsi per accedere alle funzionalità offerte dal sistema."
+
+
+-------------------------------------Slide 8
+
+"È importante sottolineare che il sistema non richiede alcuna connessione a Internet per funzionare: l'accesso avviene completamente in locale, permettendo l'interazione con il dispositivo anche in ambienti isolati."
+
+
+-------------------------------------Slide 9
+
+"Questa caratteristica garantisce piena autonomia operativa ed è il punto di partenza per uno degli aspetti fondamentali del sistema: la sicurezza. In contesti industriali, dove la protezione delle informazioni è critica, la possibilità di operare in modo isolato offre un vantaggio significativo."
+
+
+-------------------------------------Slide 10
+
+"L'obiettivo è quello di offrire un comportamento stand-alone, indipendente e stabile, capace di resistere a eventuali interferenze esterne e di ridurre al minimo i malfunzionamenti."
+
+
+-------------------------------------Slide 11
+
+"Tale affidabilità si accompagna a un'elevata compatibilità, resa possibile dall'adozione di protocolli industriali leader del settore."
+
+
+-------------------------------------Slide 12
+
+"Come ad esempio Modbus, che consente un'integrazione fluida all'interno di ecosistemi già esistenti."
+
+
+-------------------------------------Slide 13
+
+"Modbus, sviluppato nel 1979 dalla società Modicon, nasce con l'obiettivo di semplificare e standardizzare la comunicazione tra PLC. Si basa su un'architettura master/slave in cui il master invia periodicamente richieste codificate, e ogni slave risponde restituendo i dati richiesti o confermando l'azione eseguita."
+
+
+-------------------------------------Slide 14
+
+"Con un singolo dispositivo ALPHA è dunque possibile interrogare non solo i dispositivi ESAM, ma anche apparati prodotti da aziende leader come i PLC Siemens e i sistemi di controllo remoto di ABB. I dati acquisiti possono essere esportati in un comodo formato CSV, permettendo un'analisi approfondita senza software proprietari o strumenti complessi."
+
+
+
+-------------------------------------Slide 15
+
+"Inoltre, ALPHA rimane fedele a uno dei principi cardine di ESAM: la precisione."
+
+
+-------------------------------------Slide 16
+
+"Per questo motivo, anziché utilizzare l'ADC interno dell'ESP32, abbiamo scelto di integrare un convertitore esterno ADS1115 a 16 bit."
+
+
+-------------------------------------Slide 17
+
+"Come mostrato in questo esempio, un solo bit di differenza incide enormemente sulla precisione. Nella slide si passa da 3 a 4 bit, raddoppiando i livelli da 8 a 16. Nel nostro progetto, passiamo dai 4096 livelli dell'ESP a oltre 65.000 dell'ADS, distribuiti sull'intera ampiezza del segnale."
+
+-aggiungi 3 bit 4 bit sotto
+- togli obbiettivo precisione
+aggiungi nel nostro caso da 4096 a oltre 6500
+-------------------------------------Slide 18
+
+"Un'ulteriore sfida è stata quella di acquisire un'ampia varietà di segnali con un solo ingresso disponibile per il convertitore."
+
+
+-------------------------------------Slide 19
+
+"Per limitare al minimo le risorse hardware necessarie, abbiamo utilizzato un multiplexer con una codifica a 3 bit. In questa slide, potete osservare il funzionamento e la relativa tabella di verità: con soli 3 pin dell'ESP32, possiamo selezionare il segnale desiderato e connetterlo all'ADC che si occuperà di processarlo in modo adeguato."
+
+
+-------------------------------------Slide 20
+
+"Passiamo ora alla definizione del punto di partenza del progetto."
+
+
+-------------------------------------Slide 21
+
+"L'azienda si è occupata della progettazione e della creazione dell'hardware, definendo gli obiettivi e stabilendo un piano di lavoro."
+
+
+-------------------------------------Slide 22
+
+"Questo mi ha permesso di concentrarmi sulla creazione di un software semplice e versatile, implementando le migliori tecniche di progettazione apprese durante il mio percorso accademico. In questa slide, è mostrato un diagramma ad alto livello dei componenti principali."
+
+
+-------------------------------------Slide 23
+
+"Come potete vedere, ho illustrato i tre moduli principali: il MasterModbus, responsabile della comunicazione; il WifiManager, che si occupa della connettività wireless; e il WebServer, che gestisce il protocollo HTTP."
+
+
+-------------------------------------Slide 24
+
+"SystemState è la classe che si occupa di mantenere uno stato consistente dei dati."
+
+
+
+-------------------------------------Slide 25
+
+"E per garantire un'interfaccia grafica consistente e coerente, vengono utilizzati i metodi forniti dalla classe ViewGeneric in ogni singola pagina web."
+
+
+-------------------------------------Slide 26
+
+"Considerando le limitate risorse del microcontrollore, l'architettura è stata progettata con un'ottica di scalabilità.
+
+Se in futuro fosse necessario aumentare le prestazioni, il sistema può essere adattato per lavorare in modo distribuito.
+
+Ad esempio, è possibile spostare alcune funzionalità su un altro dispositivo e implementare un controller che si occupi sia di pubblicare i propri servizi che di scoprire quelli offerti dagli altri dispositivi sulla rete.
+
+Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
+
+
+-------------------------------------Slide 27
+
+"Per migliorare ulteriormente la stabilità e facilitare il debug, è stata implementata una sezione dedicata al monitoraggio delle risorse, che ci permette di avere una diagnostica in tempo reale delle prestazioni del dispositivo."
+
+-aggiungi scritte frasi per monitoraggio delle risorse
+
+-------------------------------------Slide 28
+
+"Siamo giunti al termine di questa presentazione.
+Desidero ringraziare tutti per la vostra attenzione e, per qualsiasi domanda, sono a vostra completa disposizione."
+--------
+
+--------singola slide----
+-slide conclusioni
+- future work
+-----------
+
+- tecnologie utilizzate
+
+- magari slide backup
+
