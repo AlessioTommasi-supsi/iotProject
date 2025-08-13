@@ -149,17 +149,22 @@ Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che m
 -aggiungi scritte frasi per monitoraggio delle risorse
 
 -------------------------------------Slide 28
+ questa riassume le caratteristiche del progetto,
 
-"Siamo giunti al termine di questa presentazione.
+Tuttavia, questo non è un punto di arrivo, ma un solido punto di partenza.
+
+Per i futuri sviluppi  ci sono diverse direzioni che si possono esplorare, tra cui:
+
+-L'implementazione di Modbus TCP-IP, per estendere le opzioni di connettività.
+
+-Lo sviluppo di un sistema di logging su scheda SD,
+
+- e l'implementazione di un'architettura distribuita, che permetterà al sistema di scalare nel modo desiderato.
+
+
+-------------------------------------Slide 29
+
+Detto ciò, Siamo giunti al termine di questa presentazione.
 Desidero ringraziare tutti per la vostra attenzione e, per qualsiasi domanda, sono a vostra completa disposizione."
 --------
-
---------singola slide----
--slide conclusioni
-- future work
------------
-
-- tecnologie utilizzate
-
-- magari slide backup
 
