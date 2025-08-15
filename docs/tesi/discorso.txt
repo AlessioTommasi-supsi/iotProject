@@ -1,6 +1,3 @@
-slide statiche tranne uml
--scrivere sotto a ogni immagine per obbiettivi
-- rimangono fermi
 
 -------------------------------------Slide 1
 
@@ -24,52 +21,57 @@ slide statiche tranne uml
 
 -------------------------------------Slide 5
 
-"Una delle caratteristiche principali del progetto è il suo approccio cross-platform, che consente di accedere alle sue funzionalità da qualsiasi dispositivo."
-
+ una delle sue caratteristiche principali è la possibilità di accedere alle sue funzionalità da qualsiasi dispositivo
 
 -------------------------------------Slide 6
 
-"ALPHA è basato sul microcontrollore ESP32 che, grazie al modulo Wi-Fi integrato, può connettersi a reti esistenti oppure operare in modalità stand-alone, creando una propria rete. Questa flessibilità lo rende facilmente integrabile in contesti industriali privi di infrastrutture."
+ Alfa si basa sul microcontrollore ESP32 che, grazie al modulo Wi-Fi integrato, può connettersi a reti esistenti oppure operare in modalità stand-alone, creando una propria rete.
+
+ Questa flessibilità lo rende facilmente integrabile in contesti industriali privi di infrastrutture."
 
 
 -------------------------------------Slide 7
 
-"Una volta selezionata la connettività desiderata, ALPHA si comporta come un web server, generando pagine web a cui l'utente può collegarsi per accedere alle funzionalità offerte dal sistema."
+"Una volta selezionata la connettività desiderata, ALPHA si comporta come un web server, generando pagine web a cui l'utente può collegarsi per accedere alle sue funzionalità"
 
 
 -------------------------------------Slide 8
 
-"È importante sottolineare che il sistema non richiede alcuna connessione a Internet per funzionare: l'accesso avviene completamente in locale, permettendo l'interazione con il dispositivo anche in ambienti isolati."
+"È importante sottolineare che il sistema non richiede alcuna connessione a Internet ;
+l'accesso avviene completamente in locale, permettendo l'interazione con il dispositivo anche in ambienti isolati."
 
 
 -------------------------------------Slide 9
 
-"Questa caratteristica garantisce piena autonomia operativa ed è il punto di partenza per uno degli aspetti fondamentali del sistema: la sicurezza. In contesti industriali, dove la protezione delle informazioni è critica, la possibilità di operare in modo isolato offre un vantaggio significativo."
-
+"Questa caratteristica garantisce piena autonomia operativa ed è il punto di partenza per uno degli aspetti fondamentali del sistema: la SICUREZZA:
 
 -------------------------------------Slide 10
 
-"L'obiettivo è quello di offrire un comportamento stand-alone, indipendente e stabile, capace di resistere a eventuali interferenze esterne e di ridurre al minimo i malfunzionamenti."
+ In contesti industriali, dove la protezione delle informazioni è critica, la possibilità di operare in modo isolato offre un vantaggio significativo.
+
+ inoltre rende il sistema capace di resistere a eventuali interferenze esterne e di ridurre al minimo i malfunzionamenti.
+
 
 
 -------------------------------------Slide 11
 
-"Tale affidabilità si accompagna a un'elevata compatibilità, resa possibile dall'adozione di protocolli industriali leader del settore."
+"Tale affidabilità si accompagna a un'elevata compatibilità con dispositivi gia esistenti, resa possibile dall'utilizzo di protocolli industriali leader del settore."
 
 
 -------------------------------------Slide 12
 
-"Come ad esempio Modbus, che consente un'integrazione fluida all'interno di ecosistemi già esistenti."
-
+"Come ad esempio Modbus:
 
 -------------------------------------Slide 13
 
-"Modbus, sviluppato nel 1979 dalla società Modicon, nasce con l'obiettivo di semplificare e standardizzare la comunicazione tra PLC. Si basa su un'architettura master/slave in cui il master invia periodicamente richieste codificate, e ogni slave risponde restituendo i dati richiesti o confermando l'azione eseguita."
+"Modbus, sviluppato nel 1979 dalla società Modicon, nasce con l'obiettivo di semplificare e standardizzare la comunicazione tra PLC.
+Si basa su un'architettura master/slave in cui il master invia periodicamente richieste codificate, e ogni slave risponde restituendo i dati richiesti o confermando l'azione eseguita."
 
 
 -------------------------------------Slide 14
 
-"Con un singolo dispositivo ALPHA è dunque possibile interrogare non solo i dispositivi ESAM, ma anche apparati prodotti da aziende leader come i PLC Siemens e i sistemi di controllo remoto di ABB. I dati acquisiti possono essere esportati in un comodo formato CSV, permettendo un'analisi approfondita senza software proprietari o strumenti complessi."
+"Con un singolo dispositivo ALPHA è dunque possibile interrogare non solo i dispositivi ESAM, ma anche apparati prodotti da aziende leader come i PLC Siemens e i sistemi di controllo remoto di ABB.
+I dati acquisiti possono essere esportati in un comodo formato CSV, permettendo un'analisi approfondita senza software proprietari o strumenti complessi."
 
 
 
@@ -80,16 +82,13 @@ slide statiche tranne uml
 
 -------------------------------------Slide 16
 
-"Per questo motivo, anziché utilizzare l'ADC interno dell'ESP32, abbiamo scelto di integrare un convertitore esterno ADS1115 a 16 bit."
+"Per questo motivo, anziché utilizzare l'ADC interno dell'ESP32, abbiamo scelto di integrare un convertitore esterno ovvero ADS1115 a 16 bit."
 
 
 -------------------------------------Slide 17
 
 "Come mostrato in questo esempio, un solo bit di differenza incide enormemente sulla precisione. Nella slide si passa da 3 a 4 bit, raddoppiando i livelli da 8 a 16. Nel nostro progetto, passiamo dai 4096 livelli dell'ESP a oltre 65.000 dell'ADS, distribuiti sull'intera ampiezza del segnale."
 
--aggiungi 3 bit 4 bit sotto
-- togli obbiettivo precisione
-aggiungi nel nostro caso da 4096 a oltre 6500
 -------------------------------------Slide 18
 
 "Un'ulteriore sfida è stata quella di acquisire un'ampia varietà di segnali con un solo ingresso disponibile per il convertitore."
@@ -112,12 +111,14 @@ aggiungi nel nostro caso da 4096 a oltre 6500
 
 -------------------------------------Slide 22
 
-"Questo mi ha permesso di concentrarmi sulla creazione di un software semplice e versatile, implementando le migliori tecniche di progettazione apprese durante il mio percorso accademico. In questa slide, è mostrato un diagramma ad alto livello dei componenti principali."
+"Questo mi ha permesso di concentrarmi sulla creazione di un software semplice e versatile, implementando le migliori tecniche di progettazione apprese durante il mio percorso accademico.
+
+In questa slide, è mostrato un diagramma ad alto livello dei componenti principali."
 
 
 -------------------------------------Slide 23
 
-"Come potete vedere, ho illustrato i tre moduli principali: il MasterModbus, responsabile della comunicazione; il WifiManager, che si occupa della connettività wireless; e il WebServer, che gestisce il protocollo HTTP."
+"Come potete vedere, ho illustrato i tre controller principali: il MasterModbus, responsabile della comunicazione; il WifiManager, che si occupa della connettività wireless; e il WebServer, che gestisce l invio e ricezione di richieste HTTP."
 
 
 -------------------------------------Slide 24
@@ -128,25 +129,25 @@ aggiungi nel nostro caso da 4096 a oltre 6500
 
 -------------------------------------Slide 25
 
-"E per garantire un'interfaccia grafica consistente e coerente, vengono utilizzati i metodi forniti dalla classe ViewGeneric in ogni singola pagina web."
+"E per garantire un'interfaccia grafica coerente, ogi vista deve ereditare e utilizzare i componenti forniti dalla classe ViewGeneric"
 
 
 -------------------------------------Slide 26
 
-"Considerando le limitate risorse del microcontrollore, l'architettura è stata progettata con un'ottica di scalabilità.
 
-Se in futuro fosse necessario aumentare le prestazioni, il sistema può essere adattato per lavorare in modo distribuito.
+" è stata implementata una sezione dedicata al monitoraggio delle risorse, che ci permette di avere una diagnostica in tempo reale delle prestazioni del dispositivo."
 
-Ad esempio, è possibile spostare alcune funzionalità su un altro dispositivo e implementare un controller che si occupi sia di pubblicare i propri servizi che di scoprire quelli offerti dagli altri dispositivi sulla rete.
-
-Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
 
 
 -------------------------------------Slide 27
 
-"Per migliorare ulteriormente la stabilità e facilitare il debug, è stata implementata una sezione dedicata al monitoraggio delle risorse, che ci permette di avere una diagnostica in tempo reale delle prestazioni del dispositivo."
+inoltre
+"Considerando le limitate risorse del microcontrollore, l'architettura è stata progettata con un'ottica di scalabilità.
 
--aggiungi scritte frasi per monitoraggio delle risorse
+Se in futuro fosse necessario aumentare le prestazioni, il sistema può essere adattato per lavorare in modo distribuito.
+
+Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
+
 
 -------------------------------------Slide 28
  questa riassume le caratteristiche del progetto,
