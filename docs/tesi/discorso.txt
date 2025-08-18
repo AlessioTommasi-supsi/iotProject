@@ -148,6 +148,8 @@ Se in futuro fosse necessario aumentare le prestazioni, il sistema può essere a
 
 Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
 
+questo permette di avere un sistema piu stabile e piu prestante.
+
 
 -------------------------------------Slide 28
  questa riassume le caratteristiche del progetto,
@@ -161,6 +163,8 @@ Per i futuri sviluppi  ci sono diverse direzioni che si possono esplorare, tra c
 -Lo sviluppo di un sistema di logging su scheda SD,
 
 - e l'implementazione di un'architettura distribuita, che permetterà al sistema di scalare nel modo desiderato.
+
+- si puo inoltre pensare di integrare il dispositivo con sowtwere open source  come  Home Assistaint per la creazione di un ecosistema flessibile e stabile.
 
 
 -------------------------------------Slide 29
