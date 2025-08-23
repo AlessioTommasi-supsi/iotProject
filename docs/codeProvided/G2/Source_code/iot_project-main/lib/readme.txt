@@ -1,1 +1,0 @@
-The libraries used are included in the arduino library manager. The ones to download are: Adafruit_SSD130, which in turn will install Adafruit_BusIO and Adafruit_GFX_Library.

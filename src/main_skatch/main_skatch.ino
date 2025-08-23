@@ -36,13 +36,6 @@ void setup()
     //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
     WiFiManager *wifiManager = new WiFiManager();
     
-    /*
-    
-
-
-    */
-
-
     systemState->setWifiManager(wifiManager);
     
 
