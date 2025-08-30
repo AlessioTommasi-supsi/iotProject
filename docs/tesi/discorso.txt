@@ -16,23 +16,25 @@
 
 -------------------------------------Slide 4
 
-"L'attenzione costante all'innovazione ha spinto l'azienda a porsi un ulteriore obiettivo: semplificare l'interazione uomo-macchina in contesti industriali, applicando le più moderne tecnologie. Da questa esigenza è nata l'idea di ALPHA."
+"L'attenzione costante all'innovazione ha spinto l'azienda a porsi Numerosi obbiettivi, tra i quali realizzare un dispositivo con un interfaccia moderna, sicuro, altamente preciso e Flessibile
+
+
+Con questi requisiti nasce ALPHA."
 
 
 -------------------------------------Slide 5
 
- una delle sue caratteristiche principali è la possibilità di accedere alle sue funzionalità da qualsiasi dispositivo
-
+ una delle caratteristiche principali richieste è l elevata compatibilita.
 -------------------------------------Slide 6
 
- Alfa si basa sul microcontrollore ESP32 che, grazie al modulo Wi-Fi integrato, può connettersi a reti esistenti oppure operare in modalità stand-alone, creando una propria rete.
+ Obbiettivo raggiunto utilizzando il  microcontrollore ESP32 che, grazie al modulo Wi-Fi integrato, può connettersi a reti esistenti oppure operare in modalità stand-alone, creando una propria rete.
 
  Questa flessibilità lo rende facilmente integrabile in contesti industriali privi di infrastrutture."
 
 
 -------------------------------------Slide 7
 
-"Una volta selezionata la connettività desiderata, ALPHA si comporta come un web server, generando pagine web a cui l'utente può collegarsi per accedere alle sue funzionalità"
+"Una volta selezionata la connettività desiderata, ALPHA si comporta come un web server, SERVENDO pagine web a cui l'utente può collegarsi per accedere alle sue funzionalità"
 
 
 -------------------------------------Slide 8
@@ -43,19 +45,17 @@ l'accesso avviene completamente in locale, permettendo l'interazione con il disp
 
 -------------------------------------Slide 9
 
-"Questa caratteristica garantisce piena autonomia operativa ed è il punto di partenza per uno degli aspetti fondamentali del sistema: la SICUREZZA:
+"Questa caratteristica garantisce piena autonomia operativa ed è il punto di partenza per un altro degli aspetti fondamentali richiesti dal sistema: la SICUREZZA:
 
 -------------------------------------Slide 10
 
- In contesti industriali, dove la protezione delle informazioni è critica, la possibilità di operare in modo isolato offre un vantaggio significativo.
-
- inoltre rende il sistema capace di resistere a eventuali interferenze esterne e di ridurre al minimo i malfunzionamenti.
+la possibilità di operare in modo isolato rende il sistema capace di resistere a eventuali interferenze esterne e di ridurre al minimo i malfunzionamenti.
 
 
 
 -------------------------------------Slide 11
 
-"Tale affidabilità si accompagna a un'elevata compatibilità con dispositivi gia esistenti, resa possibile dall'utilizzo di protocolli industriali leader del settore."
+"a Tale affidabilità si accompagna a un'elevata compatibilità con dispositivi gia esistenti, resa possibile dall'utilizzo di protocolli industriali leader del settore."
 
 
 -------------------------------------Slide 12
@@ -70,24 +70,34 @@ Si basa su un'architettura master/slave in cui il master invia periodicamente ri
 
 -------------------------------------Slide 14
 
-"Con un singolo dispositivo ALPHA è dunque possibile interrogare non solo i dispositivi ESAM, ma anche apparati prodotti da aziende leader come i PLC Siemens e i sistemi di controllo remoto di ABB.
-I dati acquisiti possono essere esportati in un comodo formato CSV, permettendo un'analisi approfondita senza software proprietari o strumenti complessi."
+"Con un singolo dispositivo ALPHA è dunque possibile interrogare non solo i 16 dispositivi ESAM, ma anche apparati prodotti da altre aziende leader, come  80 PLC Siemens e 150 sistemi di controllo remoto di ABB.
+
+I dati acquisiti possono essere esportati in un comodo formato CSV, permettendo un'analisi approfondita senza software proprietari o strumenti complessi.
+
+"
 
 
 
 -------------------------------------Slide 15
 
-"Inoltre, ALPHA rimane fedele a uno dei principi cardine di ESAM: la precisione."
+"Inoltre, ALPHA risponde anche al requisito di elevata precisione richiesto da ESAM: "
 
 
 -------------------------------------Slide 16
 
-"Per questo motivo, anziché utilizzare l'ADC interno dell'ESP32, abbiamo scelto di integrare un convertitore esterno ovvero ADS1115 a 16 bit."
+" anziché utilizzare l'ADC interno dell'ESP32, si e' scelto di integrare un convertitore esterno ovvero ADS1115 a 16 bit."
 
 
 -------------------------------------Slide 17
 
-"Come mostrato in questo esempio, un solo bit di differenza incide enormemente sulla precisione. Nella slide si passa da 3 a 4 bit, raddoppiando i livelli da 8 a 16. Nel nostro progetto, passiamo dai 4096 livelli dell'ESP a oltre 65.000 dell'ADS, distribuiti sull'intera ampiezza del segnale."
+"Come mostrato in questo esempio, un solo bit di differenza incide enormemente sulla precisione.
+
+Nella slide si passa da 3 a 4 bit, raddoppiando i livelli da 8 a 16.
+
+Nel nostro progetto, passiamo dai 4096 livelli dell'ESP a oltre 65.000 dell'ADS, distribuiti sull'intera ampiezza del segnale.
+
+Soddisfacendo ampiamente la necessita richiesta
+"
 
 -------------------------------------Slide 18
 
