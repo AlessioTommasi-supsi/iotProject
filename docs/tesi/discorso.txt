@@ -139,7 +139,7 @@ In questa slide, è mostrato un diagramma ad alto livello dei componenti princip
 
 -------------------------------------Slide 25
 
-"E per garantire un'interfaccia grafica coerente, ogi vista deve ereditare e utilizzare i componenti forniti dalla classe ViewGeneric"
+"E per garantire un'interfaccia grafica coerente, ogni vista deve ereditare e utilizzare i componenti forniti dalla classe ViewGeneric"
 
 
 -------------------------------------Slide 26
@@ -151,14 +151,14 @@ In questa slide, è mostrato un diagramma ad alto livello dei componenti princip
 
 -------------------------------------Slide 27
 
-inoltre
-"Considerando le limitate risorse del microcontrollore, l'architettura è stata progettata con un'ottica di scalabilità.
+inoltre per non avere compromessi sulle prestazioni abbiamo selezionato le librerie esterne ottimizzate,
+e scritto l intera code base in c/cpp.
 
-Se in futuro fosse necessario aumentare le prestazioni, il sistema può essere adattato per lavorare in modo distribuito.
+infatti il sorgente e interamente scritto in c/cpp.
 
-Inoltre, alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
+e , alcune funzionalità avanzate di debug, come la pagina del pinout che mostreremo nella demo, non saranno visibili all'utente finale, ma solo a un tecnico specializzato nel caso in cui fosse necessario eseguire un'analisi sulla board."
 
-questo permette di avere un sistema piu stabile e piu prestante.
+per garantire prestazioni ottimali
 
 
 -------------------------------------Slide 28
@@ -180,6 +180,6 @@ Per i futuri sviluppi  ci sono diverse direzioni che si possono esplorare, tra c
 -------------------------------------Slide 29
 
 Detto ciò, Siamo giunti al termine di questa presentazione.
-Desidero ringraziare tutti per la vostra attenzione e, per qualsiasi domanda, sono a vostra completa disposizione."
+Desidero ringraziare tutti per la vostra attenzione e, per qualsiasi domanda, sono a vostra completa disposizione. ALtrimenti passiamo alla demo del prodotto"
 --------
 
