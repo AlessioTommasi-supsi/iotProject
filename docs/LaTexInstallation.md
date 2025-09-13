@@ -17,77 +17,76 @@ Latex prerequisites:
 Latex extention: 
 [Link:](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-Miktex: 
-- yay -Ss miktex
-- miktexsetup finish
-- initexmf --update-fndb
 
-Modifica il file  /home/none/.bashrc
-
-aggiungi la riga:
-
+### texlive:
 ```bash
-export PATH="/home/none/bin:$PATH"
+    sudo pacman -S texlive
 ```
 
-done none e' il nome utente di arch d ora in poi!
-
-- Apri miktex console, installa latexmk
-
-- verifica installazione del pacchetto:
-
+controlla che sia installato:
 ```bash
-    latexmk --v
+    pdflatex --version
 ```
 
+per installare librerie aggiuntive:
+```bash
+    sudo pacman -S LATEX-PACKAGE-NAME
+```
 
-modifica file settings.json:
+---
+
+modifica file **settings.json** come segue:
 
 si trova in questa cartella: /home/none/.config/Code/User/settings.json
 
- 
+oppure Ctrl + shift + p e cerca >user settings.json
 
+aggiungi al file la seguente righe:
+ 
 ```json
 
     // Configurazioni LaTeX Workshop
     "latex-workshop.latex.tools": [
         {
-            "name": "latexmk",
-            "command": "/home/none/bin/latexmk",
+            "name": "pdflatex",
+            "command": "pdflatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-pdf",
+                "-output-directory=%OUTDIR%",
                 "%DOC%"
+            ]
+        },
+        // Aggiungi un nuovo strumento per spostare il file
+        {
+            "name": "mv-pdf",
+            "command": "mv",
+            "args": [
+                "%OUTDIR%/%DOCFILE%.pdf",
+                "%DIR%"
             ]
         }
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk",
+            "name": "Compile and Move PDF",
             "tools": [
-                "latexmk"
+                "pdflatex", // Compila il documento e mette tutto in 'out'
+                "mv-pdf"    // Sposta il PDF nella cartella principale
             ]
         }
-    ]
+    ],
+    "latex-workshop.latex.recipe.default": "Compile and Move PDF",
+    "latex-workshop.latex.outDir": "./LatexBuildFiles",
+
 ```
 
 
-nota: se hai problemi la cartella di installazione latexmk la trovi qui nella console miktex:
 
-![alt text](image.png)
-
-
-oppure compila manualmente da terminale con un terminale nella stessa cartella del file .tex: mettendo tutti i file inutili in una cartella chiamata  .out: 
+oppure compila manualmente da terminale con un terminale nella stessa cartella del file .tex: mettendo tutti i file inutili in una cartella chiamata  ./LatexBuildFiles: 
 
 ```bash
-    latexmk -pdf -outdir=./out nomefile.tex
+    ./prova.tex && mv prova.{aux,log,fls} ./LatexBuildFiles
 ```
 
-
-se necessario esegui anche:
-
-```bash
-    source ~/.bashrc
-```
