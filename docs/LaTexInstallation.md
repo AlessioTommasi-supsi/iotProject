@@ -79,13 +79,12 @@ nota: se hai problemi la cartella di installazione latexmk la trovi qui nella co
 ![alt text](image.png)
 
 
-oppure compila manualmente da terminale con un terminale nella stessa cartella del file .tex:
+oppure compila manualmente da terminale con un terminale nella stessa cartella del file .tex: mettendo tutti i file inutili in una cartella chiamata  .out: 
 
 ```bash
-    latexmk -pdf nomefile.tex
-```bash
-    latexmk -pdf documento.tex
+    latexmk -pdf -outdir=./out nomefile.tex
 ```
+
 
 se necessario esegui anche:
 
