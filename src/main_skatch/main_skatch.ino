@@ -10,13 +10,20 @@
 #include "Esp32_38pinBoard.h"
 #include "Pin.h"
 
-const char *ssid = "HomeInternet";
-const char *password = "occhioallapennachecade";
+const char *ssid = "YOUT_PREFERRED_WIFI_SSID";
+const char *password = "YOUT_PREFERRED_WIFI_PW";
 
 SystemState *systemState;
 
 PinoutData *pinoutData;
 
+/**
+ * For the correct usage of this project you MUST install all library present on ./Library
+ * You can do it directly fron Arduino ide creating the zip of each subfolder present in ./Library
+ * and manually imported it:  Sketch ->include Library -> Add .zip library
+ * Or: copy All on your Arduino library installation folder,
+ * Default installation folder for arduino on Arch based Distro: ~/Arduino/libraries/
+ */
 
 void setup()
 {
@@ -25,26 +32,21 @@ void setup()
   try
   {
     systemState = SystemState::getInstance();
-
-    //pinoutData = new Esp32_38pin(); //pinout esp scollegato dalla board
-    
+    /**
+     *
+     * pinoutData = new Esp32_38pin(); //pinout esp scollegato dalla board!
+     * selezionare la tipologia corretta in base al microconntrolore utilizzato!
+     * E' possibile crearne uno custom come fatto ad esempio qui sotto
+     */
     pinoutData = new Esp32_38pinBoard();
     systemState->setPinoutData(pinoutData);
-    
-
-
-    //WiFiManager *wifiManager = new WiFiManager(ssid, password); // per comodita versione finale usa quello sotto
+    /**
+     * Se si vuole utilizzare modalita preferenziale connesso a una rete wifi
+     * decommentare questa riga e commentare quella sotto
+     */
+    //WiFiManager *wifiManager = new WiFiManager(ssid, password);
     WiFiManager *wifiManager = new WiFiManager();
-    
-    /*
-    
-
-
-    */
-
-
     systemState->setWifiManager(wifiManager);
-    
 
   }
   catch (...)
