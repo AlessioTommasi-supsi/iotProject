@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caricamento Dinamico con Pulsante</title>
+  <style>
+    /* Stile per il body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Usa "flex-start" per mostrare gli elementi dall'alto */
+      min-height: 100vh;
+      overflow: auto; /* Consente lo scrolling */
+      padding: 20px;
+    }
+
+    /* Stile per il pulsante */
+    #loadButton {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #loadButton:hover {
+      background-color: #45a049;
+    }
+
+    /* Messaggio iniziale di caricamento */
+    #loading {
+      font-size: 20px;
+      color: #555;
+      text-align: center;
+      display: none; /* Nascondi per l'uso dinamico */
+    }
+
+    /* Stile dei contenuti */
+    .content {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Messaggio di caricamento -->
+  <div id="loading">Caricamento in corso...</div>
+  
+  <!-- Pulsante per aggiungere contenuto -->
+  <button id="loadButton">Aggiungi Contenuto</button>
+
+  <script>
+    // Variabile globale per tenere traccia dell'indice dei contenuti aggiunti
+    let contentIndex = 0;
+  
+    // Funzione per caricare il contenuto dinamicamente dal backend ESP32
+    async function loadPageContent() {
+      try {
+        // Mostra il messaggio di caricamento (se esiste)
+        const loadingDiv = document.getElementById('loading');
+        if (loadingDiv) {
+          loadingDiv.style.display = 'block';
+        }
+  
+        // Effettua la richiesta GET al server ESP32
+        const response = await fetch('http://192.168.178.144/pinoutContent');
+  
+        // Controlla se la risposta è valida
+        if (!response.ok) {
+          throw new Error('Errore durante il caricamento dei dati: ' + response.status);
+        }
+  
+        // Recupera il contenuto testuale dalla risposta
+        const content = await response.text();
+  
+        // Crea un nuovo div per il contenuto
+        const newContentDiv = document.createElement('div');
+        newContentDiv.id = `contentAdd_${contentIndex}`;
+        newContentDiv.className = 'content';
+        newContentDiv.innerHTML = content;
+        contentIndex++;
+  
+        // Posiziona il nuovo contenuto prima del pulsante (se il pulsante esiste)
+        const loadButton = document.getElementById('loadButton');
+        if (loadButton) {
+          document.body.insertBefore(newContentDiv, loadButton);
+        } else {
+          // Se il pulsante non esiste, aggiungi il contenuto alla fine del body
+          document.body.appendChild(newContentDiv);
+        }
+  
+        // Nasconde il messaggio di caricamento (se esiste)
+        if (loadingDiv) {
+          loadingDiv.style.display = 'none';
+        }
+      } catch (error) {
+        // Gestisce gli errori e mostra un messaggio (se esiste)
+        const loadingDiv = document.getElementById('loading');
+        if (loadingDiv) {
+          loadingDiv.innerText = 'Errore durante il caricamento dei dati';
+        }
+        console.error(error);
+      }
+    }
+  
+    // Associa la funzione al pulsante (se esiste)
+    const loadButton = document.getElementById('loadButton');
+    if (loadButton) {
+      loadButton.addEventListener('click', loadPageContent);
+    }
+  
+    // Carica il primo contenuto all'avvio della pagina
+    loadPageContent();
+    loadPageContent();
+  </script>
+  
+
+</body>
+</html>

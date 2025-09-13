@@ -1,0 +1,210 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio - Alessio Tommasi</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/style.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/gear.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/logo.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/glass_effect.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/autoType.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/buttons.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/dashboard.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/particle_style.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 2000;
+        }
+    
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        label {
+            margin-bottom: 5px;
+        }
+    
+        input,
+        select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        .history-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+    
+        .history-table th,
+        .history-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+    
+        .history-table th {
+            background-color: #f2f2f2;
+        }
+    
+        .history-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    
+        .history-table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="main_container_absolute">
+        <div class="main_container_relative">
+            <div id="particles-js"></div>
+            <div class="navbar"><a href="/monitor">Monitor</a><a href="/pinout">Pinout</a><a href="/currentregister">Current
+                    Register</a><a href="/history">History</a><a href="/graph">Graph</a><a href="/config">Config</a>
+            </div>
+
+            <div id="textTypingContainer">
+                <div id="textTypingAnimation" class="glassEffect"></div>
+            </div>
+
+            <div class="absolute_dashboard_button_container">
+                <div class="dashboard_button_container">
+                    <button id="goAboutMeBtn" class="dashboard_link-button">&#9660;</button>
+                </div>
+            </div>
+
+            <div>
+
+
+                <div class="no_overflow">
+
+                    <div class="logo_container">
+                        <div class="gear_logo_container">
+                            <img class="gear" src="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/gearNobg.png" alt="Immagine senza sfondo">
+                        </div>
+                        <div class="logo">
+                            <img class="logo_image" src="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/logo.png" alt="Immagine senza sfondo">
+                        </div>
+                    </div>
+
+                    <div class="gear_container_left">
+                        <img class="gear" src="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/gearNobg.png" alt="Immagine senza sfondo">
+                    </div>
+
+                    <div class="gear_container_bottom">
+                        <img class="gear" src="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/gearNobg.png" alt="Immagine senza sfondo">
+                    </div>
+
+                </div>
+
+
+
+                <div class="next_page" id="aboutMeTitle">
+                    <div class="glass_container">
+                        <div class="glass_content">
+                            <div class="glass_container">
+                                <div class="image-with-text responsive_div">
+                                    <img class="project_maxwidth responsive_img"
+                                        src="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/c.png" alt="Description of the image">
+                                    <div class="project_maxwidth responsive_text">
+                                        <h3>iot Project </h3>
+                                        <p>
+                                            <button class="knowledge-button">C++</button>
+                                            <button class="knowledge-button">ESP32</button>
+                                            <button class="knowledge-button">MODBUS</button>
+                                            <button class="knowledge-button">CSS</button>
+                                        </p>
+                                        <p>
+                                            iotProject developed in SUPSI Master in Computer Science course IoT, focusing on ESP32, ESAM, and
+                                            Modbus Protocol.
+                                        </p>
+                                        <a href="https://github.com/AlessioTommasi-supsi/iotProject"> <button
+                                                class="download-button">docs</button> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="mailto:alessio.tommasi.lavoro@gmail.com"><button id="GetInTouchBtn">📲</button></a>
+                <a href="http://alessiotommasi.com/model/docs/curriculum.pdf"><button id="ResumeBtn">📖</button></a>
+
+                <!--  JavaScript files -->
+                <script src="http://alessiotommasi.com/view/js/rotation_on_scroll.js"></script>
+                <script src="http://alessiotommasi.com/view/js/autoType.js"></script>
+                <script src="http://alessiotommasi.com/view/js/scrollUp.js"></script>
+                <script src="http://alessiotommasi.com/view/js/class_switcher.js"></script>
+
+                <script src="http://alessiotommasi.com/view/js/particleLib/particles.js"></script>
+                <script src="http://alessiotommasi.com/view/js/particleLib/app.js"></script>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

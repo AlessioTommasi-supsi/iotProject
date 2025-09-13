@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio - Alessio Tommasi</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/AlessioTommasi-supsi/porfolio/main/html/view/images/logo.png"
+        type="image/png">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/style.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/gear.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/logo.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/glass_effect.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/autoType.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/buttons.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/dashboard.css">
+    <link rel="stylesheet" href="http://alessiotommasi.com/view/css/particle_style.css">
+    <title>Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .history-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .history-table th,
+        .history-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        .history-table th {
+            background-color: #f2f2f2;
+        }
+
+        .history-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .history-table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar"><a href="/monitor">Monitor</a><a href="/pinout">Pinout</a><a href="/currentregister">Current
+            Register</a><a href="/history">History</a><a href="/graph">Graph</a><a href="/config">Config</a></div>
+    <br><br><br><br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="circle_progressbar_chart-container"
+        style="font-family: Raleway, sans-serif; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; padding: 20px;">
+        <script>var charts = {};</script>
+        <div class="circle_progressbar_chart-wrapper"
+            style="display: flex; flex-direction: column; align-items: center; width: 45%; max-width: 300px; min-width: 150px; position: relative;">
+            <div class="circle_progressbar_label" style="font-size: 1.2rem; margin-bottom: 10px;"> HEAP</div> <canvas
+                id="circle_progressbar_chart_HEAP" class="circle_progressbar_chart"
+                style="width: 150px; height: 150px; box-sizing: border-box; display: block;" width="150"
+                height="150"></canvas>
+            <div class="circle_progressbar_center-label" id="labelHEAP"
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: #000; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                58.47 %</div>
+            <div class="circle_progressbar_percentage" style="font-size: 1rem; margin-top: 10px;">Utilizzato: 161620.00
+                / Totale: 281360.00</div>
+        </div>
+        <script>document.addEventListener('DOMContentLoaded', () => { const ctx = document.getElementById('circle_progressbar_chart_HEAP').getContext('2d'); const percentage = 57.44; createChart(ctx, percentage, 'circle_progressbar_chart_HEAP'); setInterval(() => { updateChart('monitorHeapData', ctx, 'labelHEAP', 'circle_progressbar_chart_HEAP'); }, 1000); });</script>
+    </div>
+    <script>function createChart(ctx, percentage, chartId) { if (charts[chartId]) { charts[chartId].destroy(); } charts[chartId] = new Chart(ctx, { type: 'doughnut', data: { datasets: [{ data: [percentage, 100 - percentage], backgroundColor: ['#4caf50', '#ddd'], borderWidth: 0 }] }, options: { cutout: '80%', animation: { duration: 0 }, plugins: { tooltip: { enabled: false }, legend: { display: false } } } }); } function updateChart(apiUrl, ctx, labelId, chartId) { fetch(apiUrl).then(response => response.json()).then(data => { const percentage = (data.used / data.total) * 100; createChart(ctx, percentage, chartId); document.getElementById(labelId).innerText = percentage.toFixed(2) + ' %'; }).catch(error => console.error('Error fetching data:', error)); }</script>
+    <br><br>
+    <h2> STACK USAGE: </h2> <br><br>
+    <div id="divMonitorHeapData">// prova a togliere il div
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div class="circle_progressbar_chart-container"
+            style="font-family: Raleway, sans-serif; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; padding: 20px;">
+            <script>var charts = {};</script>
+            <div class="circle_progressbar_chart-wrapper"
+                style="display: flex; flex-direction: column; align-items: center; width: 45%; max-width: 300px; min-width: 150px; position: relative;">
+                <div class="circle_progressbar_label" style="font-size: 1.2rem; margin-bottom: 10px;"> Pin23Stack</div>
+                <canvas id="circle_progressbar_chart_Pin23Stack" class="circle_progressbar_chart"
+                    style="width: 100%; height: auto;" width="200" height="200"></canvas>
+                <div class="circle_progressbar_center-label" id="labelPin23Stack"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: #000; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                    3 %</div>
+                <div class="circle_progressbar_percentage" style="font-size: 1rem; margin-top: 10px;">Utilizzato:
+                    1560.00 / Totale: 40000.00</div>
+            </div>
+            <script>document.addEventListener('DOMContentLoaded', () => { const ctx = document.getElementById('circle_progressbar_chart_Pin23Stack').getContext('2d'); const percentage = 3.90; createChart(ctx, percentage, 'circle_progressbar_chart_Pin23Stack'); setInterval(() => { updateChart('/monitorPinStack?pin=23', ctx, 'labelPin23Stack', 'circle_progressbar_chart_Pin23Stack'); }, 1000); });</script>
+            <div class="circle_progressbar_chart-wrapper"
+                style="display: flex; flex-direction: column; align-items: center; width: 45%; max-width: 300px; min-width: 150px; position: relative;">
+                <div class="circle_progressbar_label" style="font-size: 1.2rem; margin-bottom: 10px;"> Pin36Stack</div>
+                <canvas id="circle_progressbar_chart_Pin36Stack" class="circle_progressbar_chart"
+                    style="width: 100%; height: auto;" width="200" height="200"></canvas>
+                <div class="circle_progressbar_center-label" id="labelPin36Stack"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: #000; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                    3 %</div>
+                <div class="circle_progressbar_percentage" style="font-size: 1rem; margin-top: 10px;">Utilizzato:
+                    1548.00 / Totale: 40000.00</div>
+            </div>
+            <script>document.addEventListener('DOMContentLoaded', () => { const ctx = document.getElementById('circle_progressbar_chart_Pin36Stack').getContext('2d'); const percentage = 3.87; createChart(ctx, percentage, 'circle_progressbar_chart_Pin36Stack'); setInterval(() => { updateChart('/monitorPinStack?pin=36', ctx, 'labelPin36Stack', 'circle_progressbar_chart_Pin36Stack'); }, 1000); });</script>
+            <div class="circle_progressbar_chart-wrapper"
+                style="display: flex; flex-direction: column; align-items: center; width: 45%; max-width: 300px; min-width: 150px; position: relative;">
+                <div class="circle_progressbar_label" style="font-size: 1.2rem; margin-bottom: 10px;"> Pin22Stack</div>
+                <canvas id="circle_progressbar_chart_Pin22Stack" class="circle_progressbar_chart"
+                    style="width: 100%; height: auto;" width="200" height="200"></canvas>
+                <div class="circle_progressbar_center-label" id="labelPin22Stack"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: #000; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                    3 %</div>
+                <div class="circle_progressbar_percentage" style="font-size: 1rem; margin-top: 10px;">Utilizzato:
+                    1536.00 / Totale: 40000.00</div>
+            </div>
+            <script>document.addEventListener('DOMContentLoaded', () => { const ctx = document.getElementById('circle_progressbar_chart_Pin22Stack').getContext('2d'); const percentage = 3.84; createChart(ctx, percentage, 'circle_progressbar_chart_Pin22Stack'); setInterval(() => { updateChart('/monitorPinStack?pin=22', ctx, 'labelPin22Stack', 'circle_progressbar_chart_Pin22Stack'); }, 1000); });</script>
+        </div>
+        <script>function createChart(ctx, percentage, chartId) { if (charts[chartId]) { charts[chartId].destroy(); } charts[chartId] = new Chart(ctx, { type: 'doughnut', data: { datasets: [{ data: [percentage, 100 - percentage], backgroundColor: ['#4caf50', '#ddd'], borderWidth: 0 }] }, options: { cutout: '80%', animation: { duration: 0 }, plugins: { tooltip: { enabled: false }, legend: { display: false } } } }); } function updateChart(apiUrl, ctx, labelId, chartId) { fetch(apiUrl).then(response => response.json()).then(data => { const percentage = (data.used / data.total) * 100; createChart(ctx, percentage, chartId); document.getElementById(labelId).innerText = percentage.toFixed(2) + ' %'; }).catch(error => console.error('Error fetching data:', error)); }</script>
+    </div>
+    <script>function updateContent(api, divId) { fetch('192.168.178.144/monitorPinStackDataContent').then(response => response.text()).then(data => { document.getElementById(divId).innerHTML = data; }).catch(error => { console.error('Errore durante il recupero dei dati:', error); document.getElementById(divId).innerHTML = '<p>Errore durante il recupero dei dati</p>'; }); } document.addEventListener('DOMContentLoaded', () => { updateContent('/monitorPinStackDataContent', 'divMonitorHeapData'); setInterval(() => { updateContent('/monitorPinStackDataContent', 'divMonitorHeapData'); }, 10000); });</script>
+</body>
+
+</html>

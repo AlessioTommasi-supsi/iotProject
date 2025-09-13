@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configurazione Sistema - Segnali e Uscite</title>
+  <!-- Link a Font Awesome (CDN per le icone) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    /* Stili di base e layout */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    /* Navbar fissa */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      width: 100%;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      z-index: 2000;
+    }
+    
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    /* Contenitore con effetto glass */
+    .form-container {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      padding: 30px;
+      margin-top: 100px;
+      width: 90%;
+      max-width: 700px;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      padding: 15px;
+    }
+    
+    legend {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    
+    h3 {
+      margin: 15px 0 5px;
+      font-size: 1.1em;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    /* Bottone di invio */
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- Navbar con icone -->
+  <div class="navbar">
+    <a href="/monitor">
+      <i class="fas fa-desktop"></i>
+      <span>Monitor</span>
+    </a>
+    <a href="/pinout">
+      <i class="fas fa-microchip"></i>
+      <span>Pinout</span>
+    </a>
+    <a href="/currentregister">
+      <i class="fas fa-tasks"></i>
+      <span>Register</span>
+    </a>
+    <a href="/history">
+      <i class="fas fa-history"></i>
+      <span>History</span>
+    </a>
+    <a href="/graph">
+      <i class="fas fa-chart-line"></i>
+      <span>Graph</span>
+    </a>
+    <a href="/config">
+      <i class="fas fa-wifi"></i>
+      <span>Config</span>
+    </a>
+  </div>
+  
+  <!-- Contenitore principale del form -->
+  <div class="form-container">
+    <h2>Configurazione Sistema</h2>
+    <form id="configForm" action="submit_configuration" method="post">
+      
+      <!-- Sezione: Seleziona tipo di segnale in ingresso -->
+      <fieldset>
+        <legend>Seleziona il tipo di segnale in ingresso</legend>
+        <label for="signalType">Tipo di segnale:</label>
+        <select id="signalType" name="signalType" onchange="updateSignalSelection()">
+          <option value="analogico">Analogico</option>
+          <option value="digitale">Digitale</option>
+        </select>
+      </fieldset>
+      
+      <!-- Sezione: Seleziona tipo (visibile solo per analogico) -->
+      <fieldset id="analogSettingsField" style="display: none;">
+        <legend>Seleziona Tipo di Ingresso Analogico</legend>
+        <label for="analogType">Tipo:</label>
+        <select id="analogType" name="analogType" onchange="updateParameterSection()">
+          <option value="Tensione">Tensione</option>
+          <option value="Corrente">Corrente</option>
+          <option value="Resistenza">Resistenza</option>
+          <option value="Termocoppia">Termocoppia</option>
+          <option value="Pt100">Pt100</option>
+        </select>
+      </fieldset>
+      
+      <!-- Sezione: Impostazione dei parametri da parte dell'utente -->
+      <fieldset id="parameterFieldset">
+        <legend>Impostazione dei parametri da parte dell'utente</legend>
+        
+        <!-- Parametri per Tensione -->
+        <div id="paramsTensione" class="paramSection">
+          <h3>Ingresso in Tensione</h3>
+          <label for="inizioScalaTens">Inizio scala:</label>
+          <input type="number" id="inizioScalaTens" name="inizioScalaTens" placeholder="Inserisci inizio scala">
+          <label for="fondoScalaTens">Fondo scala:</label>
+          <input type="number" id="fondoScalaTens" name="fondoScalaTens" placeholder="Inserisci fondo scala">
+        </div>
+        
+        <!-- Parametri per Corrente -->
+        <div id="paramsCorrente" class="paramSection" style="display: none;">
+          <h3>Ingresso in Corrente</h3>
+          <label for="inizioScalaCorr">Inizio scala:</label>
+          <input type="number" id="inizioScalaCorr" name="inizioScalaCorr" placeholder="Inserisci inizio scala">
+          <label for="fondoScalaCorr">Fondo scala:</label>
+          <input type="number" id="fondoScalaCorr" name="fondoScalaCorr" placeholder="Inserisci fondo scala">
+        </div>
+        
+        <!-- Parametri per Resistenza -->
+        <div id="paramsResistenza" class="paramSection" style="display: none;">
+          <h3>Ingresso in Resistenza</h3>
+          <label for="inizioScalaRes">Inizio scala:</label>
+          <input type="number" id="inizioScalaRes" name="inizioScalaRes" placeholder="Inserisci inizio scala">
+          <label for="fondoScalaRes">Fondo scala:</label>
+          <input type="number" id="fondoScalaRes" name="fondoScalaRes" placeholder="Inserisci fondo scala">
+        </div>
+        
+        <!-- Parametri per Termocoppia -->
+        <div id="paramsTermocoppia" class="paramSection" style="display: none;">
+          <h3>Ingresso in Termocoppia</h3>
+          <label for="tipoTermocoppia">Tipo di termocoppia:</label>
+          <select id="tipoTermocoppia" name="tipoTermocoppia">
+            <option value="K">Tipo K</option>
+            <option value="J">Tipo J</option>
+            <option value="T">Tipo T</option>
+            <option value="E">Tipo E</option>
+          </select>
+        </div>
+        
+        <!-- Parametri per RTD (Pt100) -->
+        <div id="paramsRTD" class="paramSection" style="display: none;">
+          <h3>Ingresso RTD (es. Pt100)</h3>
+          <label for="tipoRTD">Tipo di termo resistenza:</label>
+          <select id="tipoRTD" name="tipoRTD">
+            <option value="pt100">Pt100</option>
+            <option value="pt1000">Pt1000</option>
+          </select>
+        </div>
+      </fieldset>
+      
+      <!-- Sezione: Gestione delle uscite digitali -->
+      <fieldset>
+        <legend>Gestione delle Uscite Digitali</legend>
+        <label for="digitalOutputAssociation">Associa Uscita Digitale a:</label>
+        <select id="digitalOutputAssociation" name="digitalOutputAssociation" onchange="toggleDigitalOutputSettings()">
+          <option value="digitale">Ingresso Digitale</option>
+          <option value="analogico">Ingresso Analogico (Allarme)</option>
+        </select>
+        
+        <div id="digitalOutputAnalogSettings" style="display: none;">
+          <label for="sogliaAllarme">Soglia Allarme (mA o V):</label>
+          <input type="number" id="sogliaAllarme" name="sogliaAllarme" placeholder="Inserisci soglia">
+          <label for="tipoSoglia">Tipo di Soglia:</label>
+          <select id="tipoSoglia" name="tipoSoglia">
+            <option value="minima">Minima</option>
+            <option value="massima">Massima</option>
+          </select>
+        </div>
+        
+        <div id="digitalOutputNote" style="margin-top: 10px;">
+          <em>Funzionalità: Se ingresso attivo, allora uscita attiva.</em>
+        </div>
+      </fieldset>
+      
+      <!-- Pulsante di invio -->
+      <button type="submit">Invia Configurazione</button>
+    </form>
+  </div>
+  
+  <script>
+    // Aggiorna la visibilità in base al tipo di segnale selezionato
+    function updateSignalSelection() {
+      var signalType = document.getElementById("signalType").value;
+      if (signalType === "digitale") {
+        document.getElementById("analogSettingsField").style.display = "block";
+      } else {
+        document.getElementById("analogSettingsField").style.display = "none";
+      }
+      updateParameterSection();
+    }
+    
+    // Aggiorna la sezione dei parametri in base al tipo scelto
+    function updateParameterSection() {
+      var signalType = document.getElementById("signalType").value;
+      var selectedType;
+      if (signalType === "digitale") {
+        selectedType = document.getElementById("analogType").value;
+      } else {
+        // Se digitale, assumiamo Tensione
+        selectedType = "Tensione";
+      }
+      
+      // Nasconde tutte le sezioni dei parametri
+      var sections = document.getElementsByClassName("paramSection");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+      
+      // Mostra la sezione in base alla scelta
+      if (selectedType === "Tensione") {
+        document.getElementById("paramsTensione").style.display = "block";
+      } else if (selectedType === "Corrente") {
+        document.getElementById("paramsCorrente").style.display = "block";
+      } else if (selectedType === "Resistenza") {
+        document.getElementById("paramsResistenza").style.display = "block";
+      } else if (selectedType === "Termocoppia") {
+        document.getElementById("paramsTermocoppia").style.display = "block";
+      } else if (selectedType === "Pt100") {
+        document.getElementById("paramsRTD").style.display = "block";
+      }
+    }
+    
+    // Gestione delle impostazioni per le uscite digitali
+    function toggleDigitalOutputSettings() {
+      var association = document.getElementById("digitalOutputAssociation").value;
+      if (association === "analogico") {
+        document.getElementById("digitalOutputAnalogSettings").style.display = "block";
+        document.getElementById("digitalOutputNote").style.display = "none";
+      } else {
+        document.getElementById("digitalOutputAnalogSettings").style.display = "none";
+        document.getElementById("digitalOutputNote").style.display = "block";
+      }
+    }
+    
+    // Inizializza al caricamento della pagina
+    document.addEventListener("DOMContentLoaded", function() {
+      updateSignalSelection();
+    });
+  </script>
+</body>
+</html>
