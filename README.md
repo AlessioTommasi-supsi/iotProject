@@ -15,6 +15,7 @@ Dal gestore schede assicurati di avere installato la seguente versione delle sch
 
 Versione di Arduino IDE da utilizzare: 2.3.4
 
+per compilare utilizzare Dev Module tra le scede di esp32 e selezionare Hurge App nella sezione partition scheme
 
 
 ![alt text](image/Library.png)
